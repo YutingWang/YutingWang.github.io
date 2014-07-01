@@ -1,0 +1,112 @@
+html {
+	background:url("i/background4.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	opacity: 1;
+}
+
+table{
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 1px;
+
+}
+
+body {
+ 	margin: 0px;
+
+ }
+
+
+ p {
+	color: black;
+	font-family: arial;
+	padding-right: 5%;
+	padding-left:  5%;
+}
+
+
+h2{
+	color:#D1D1D1;
+	text-align: center;
+}
+
+img{
+
+	text-align: center;
+}
+
+.date{
+	background-color:#FFD700;
+	text-align: right;
+	width:80px;
+	height:50px;
+	float:right;
+	padding-bottom: 10px;
+}
+
+.blog{
+	width: 50%;
+	height: auto;
+	background-color: #FFFFCC;
+	float:right;
+	margin-right:12%;
+	padding-top:20px;
+	padding-bottom:10px;
+	padding-left:50px;
+	padding-right: 50px;
+	margin-bottom: 50px;
+}
+
+.banner{
+	width:50%;
+	height:4%;
+	margin-left: 45%;
+	margin-top: 10%;
+	margin-bottom:10px;
+}
+.selfintro_left{
+	width:20%;
+	height:auto;
+	float:right;
+	margin-top:20px;
+	padding-left: 10px;
+	padding-right:10px;
+	background-color: #FFFFCC;
+}
+.selfintro_right{
+	width:20%;
+	height:auto;
+	float:right;
+	margin-top:20px;
+	padding-left: 10px;
+	padding-right:10px;
+	background-color: #FFFFCC;
+	margin-right: 15%;
+}
+.photo{
+	margin-top:20px;
+	float:right;
+	margin-right:10px;
+	margin-left:10px;
+	width:20%;
+	height:auto;
+	margin-bottom: 10%;
+}
+.homework{
+	float:left;
+	width:30%;
+	height:auto;
+	margin-left: 10px;
+	margin-right:10px;
+	margin-top:10px;
+	background-color:#FFCC33;
+}
+.foot{
+	float:left;
+	width:90%;
+	height:50px;
+	background-color: none;
+	margin-right:50px;
+	text-align: right;
+}
