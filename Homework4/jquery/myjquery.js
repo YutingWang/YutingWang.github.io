@@ -40,6 +40,15 @@ function roll()
 	$(".right").click();
 }
 
+function loadNews(){
+	for(var i = 0; i < 5; i++) 
+	{
+		a= $($($(".pic")[i]).children());
+		a.attr("src", dataObj.images[i].url);
+		$("h3")[i].innerText = dataObj.images[i].title;
+}
+loadNews();
+
 
 
 
