@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="https://YutingWang.github.io/Homework4/mystyle.css" />
+		<script type="text/javascript" src="https://YutingWang.github.io/Homework4/jquery/jquery-1.11.1.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		    $(".banner").load("https://YutingWang.github.io/Homework4/jquery/news.js",function(responseTxt,statusTxt,xhr){
+		      if(statusTxt=="success")
+		      {
+		       	data = responseTxt;
+		      	dataObj = eval('('+responseTxt+')');
+		      }
+		      if(statusTxt=="error")
+		        alert("Error: "+xhr.status+": "+xhr.statusText);
+		  	});
+		});
+		</script>
+	</head>
+
+	<body>
+	<div class="container">
+		<div class = "banner">
+			王雨婷的新闻网站
+		</div>
+		<div class = "news">
+			<div class="left">
+			aaaaaaaaaaa
+			</div>
+			<div class = "focus_view">
+				<ul>
+					<li class="pic" ><img src="pic/1.jpg"/></li>
+					<li class="pic" ><img src="pic/2.jpg"/></li>
+					<li class="pic" ><img src="pic/3.jpg"/></li>
+					<li class="pic" ><img src="pic/4.jpg"/></li>
+					<li class="pic" ><img src="pic/5.jpg"/></li>
+				</ul>
+			</div>
+			<div class="right">
+			aaaaaaaaaaa
+			</div>
+			<div class = "focus_text">
+				<ul>
+					<li class="show"><h3>大作业给力</h3></li>
+					<li class="show"><h3>啦啦啦啦啦</h3></li>
+					<li class="show"><h3>呜呜呜呜呜</h3></li>
+					<li class="show"><h3>补补u不不不</h3></li>
+					<li class="show"><h3>嘻嘻嘻嘻嘻</h3></li>
+				</ul>
+			</div>
+			<div class = "focus_slider">
+				<div class="but" id="0" onmouseover="click()">aaa</div>
+				<div class="but" id="1" onmouseover="click()">aaa</div>
+				<div class="but" id="2" onmouseover="click()">aaa</div>
+				<div class="but" id="3" onmouseover="click()">aaa</div>
+				<div class="but" id="4" onmouseover="click()">aaa</div>				
+			</div>	
+		</div>
+		<div class = "comment">
+		</div>
+	</div>
+	<script type="text/javascript" src="https://YutingWang.github.io/Homework4/myjquery.js"></script>
+	</body>
+</html>
