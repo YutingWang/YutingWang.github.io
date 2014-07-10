@@ -57,14 +57,14 @@
 		      		dataObj = eval('('+responseTxt+')');
 		      	}
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
-		      	$(".toDelete").remove();		      	
+		      	$(".toDelete").remove();	
+		      	for(var i = 0; i < 5; i++)
+				{
+					a= $($($(".pic")[i]).children());
+					a.attr("src", dataObj.images[i].url);
+					$("h3")[i].innerText = dataObj.images[i].title;
+				}	      	
 		  	});
-		  	for(var i = 0; i < 5; i++)
-			{
-				a= $($($(".pic")[i]).children());
-				a.attr("src", dataObj.images[i].url);
-				$("h3")[i].innerText = dataObj.images[i].title;
-			}		  
 		});
 	</script>
 	<script type="text/javascript" src="https://YutingWang.github.io/Homework4/jquery/myjquery.js"></script>
