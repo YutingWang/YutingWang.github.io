@@ -2,22 +2,22 @@
     images: [
         {
             url:'https://YutingWang.github.io/Homework4/pic/1.jpg',
-            title:'吾王归来!Fate新作官网公开'
+            title:'广西山顶机场曝光 投资8.5亿劈山而建'
         },
         {
             url:'https://YutingWang.github.io/Homework4/pic/2.jpg',
-            title:'X战警：逆转未来'
+            title:'中国人的一天：留守在山里的苗族女孩'
         },
         {
             url:'https://YutingWang.github.io/Homework4/pic/3.jpg',
-            title:'FROZEN：姐嫁奇缘'
+            title:'焦点人物：等待重生的孩子'
         },
         {
             url:'https://YutingWang.github.io/Homework4/pic/4.jpg',
-            title:'吾王归来!Fate新作官网公开'
+            title:'北京！你视而不见的日与夜'
         },
         {
             url:'https://YutingWang.github.io/Homework4/pic/5.jpg',
-            title:'X战警：逆转未来'
+            title:'徐才厚老家院落曝光：当地修公路直达徐家'
         }]
 }
