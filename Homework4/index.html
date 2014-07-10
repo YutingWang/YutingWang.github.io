@@ -4,24 +4,6 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="https://YutingWang.github.io/Homework4/jquery/mystyle.css" />
 		<script type="text/javascript" src="https://YutingWang.github.io/Homework4/jquery/jquery-1.11.1.js"></script>
-		<script type="text/javascript">
-		$(document).ready(function(){
-		    $(".toDelete").load('https://YutingWang.github.io/Homework4/jquery/news.js',function(responseTxt,statusTxt,xhr){
-		    	if(statusTxt=="success")
-		      	{
-		       		data = responseTxt;
-		      		dataObj = eval('('+responseTxt+')');
-		      	}
-		      	else if(statusTxt=="error")      alert("Error: "+xhr.status+": "+xhr.statusText);
-		      	$(".toDelete").remove();
-		      	for(var i = 0; i < 5; i++){
-					a= $($($(".pic")[i]).children());
-					a.attr("src", dataObj.images[i].url);
-					$("h3")[i].innerText = dataObj.images[i].title;
-				}
-		  	});		  
-		});
-		</script>
 	</head>
 
 	<body>
@@ -66,6 +48,27 @@
 		<div class = "comment">
 		</div>
 	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    $(".toDelete").load('https://YutingWang.github.io/Homework4/jquery/news.js',function(responseTxt,statusTxt,xhr){
+		    	if(statusTxt=="success")
+		      	{
+		       		data = responseTxt;
+		      		dataObj = eval('('+responseTxt+')');
+		      	}
+		      	else if(statusTxt=="error")      alert("Error: "+xhr.status+": "+xhr.statusText);
+		      	$(".toDelete").remove();		      	
+		  	});		  
+		});
+	</script>
 	<script type="text/javascript" src="https://YutingWang.github.io/Homework4/jquery/myjquery.js"></script>
+	<script>
+		for(var i = 0; i < 5; i++)
+		{
+			a= $($($(".pic")[i]).children());
+			a.attr("src", dataObj.images[i].url);
+			$("h3")[i].innerText = dataObj.images[i].title;
+		}
+	</script>
 	</body>
 </html>
