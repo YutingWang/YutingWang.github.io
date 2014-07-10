@@ -4,6 +4,7 @@ function loadNews(){
 		a= $($($(".pic")[i]).children());
 		a.attr("src", dataObj.images[i].url);
 		$("h3")[i].innerText = dataObj.images[i].title;
+	}
 }
 loadNews();
 
