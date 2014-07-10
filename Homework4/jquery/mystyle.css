@@ -83,7 +83,13 @@ li.pic{
 img{
 	width:100%;
 }
-.right .left{
+.right{
+	width:50px;
+	height:480px;
+	background-color: red;
+	float:left;
+}
+.left{
 	width:50px;
 	height:480px;
 	background-color: red;
