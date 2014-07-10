@@ -9,7 +9,7 @@
 		    $(".banner").load('https://YutingWang.github.io/master/Homework4/jquery/news.js',function(responseTxt,statusTxt,xhr){
 		      if(statusTxt=="success")
 		      {
-		       	//data = responseTxt;
+		       	data = responseTxt;
 		      	dataObj = eval('('+responseTxt+')');
 		      }
 		      else if(statusTxt=="error")
