@@ -5,8 +5,8 @@
 		<link rel="stylesheet" type="text/css" href="https://YutingWang.github.io/Homework4/jquery/mystyle.css" />
 		<script type="text/javascript" src="https://YutingWang.github.io/Homework4/jquery/jquery-1.11.1.js"></script>
 		<script type="text/javascript">
-		$(".banner").ready(function(){
-		    $(".banner").load('https://YutingWang.github.io/Homework4/jquery/news.js',function(responseTxt,statusTxt,xhr){
+		$("body").ready(function(){
+		    $(".toDelete").load('https://YutingWang.github.io/Homework4/jquery/news.js',function(responseTxt,statusTxt,xhr){
 		      if(statusTxt=="success")
 		      {
 		       	data = responseTxt;
@@ -14,6 +14,7 @@
 		      }
 		      else if(statusTxt=="error")
 		        alert("Error: "+xhr.status+": "+xhr.statusText);
+		     	toDelete.remove();
 		  	});
 		});
 		</script>
@@ -23,6 +24,7 @@
 	<div class="container">
 		<div class = "banner">
 			王雨婷的新闻网站
+			<div class="toDelete"></div>
 		</div>
 		<div class = "news">
 			<div class="left">
