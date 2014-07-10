@@ -22,8 +22,12 @@ for(var i = 0; i < b.length; i++){
 	$(b[i]).click(function(){
 		id = $(this).attr("id");
 		if(pre != id){
+			var img = $(b[pre]).children();
 			var pic = $("li.pic");	
 			var sho = $("li.show");
+			$(img).attr("src","https://YutingWang.github.io/Homework4/pic/button1.png");
+			img = $(b[id]).children();
+			$(img).attr("src","https://YutingWang.github.io/Homework4/pic/button1.png");
 			$(pic[pre]).fadeTo(0.5, 70);
 			$(pic[id]).fadeIn(800);
 			$(sho[id]).fadeIn(10);
