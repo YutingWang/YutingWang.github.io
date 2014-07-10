@@ -39,7 +39,7 @@ for(var i = 0; i < b.length; i++){
 	);
 }
 
-setInterval("roll()", 2000);
+setInterval("roll()", 4000);
 function roll()
 {
 	$(".right").click();
