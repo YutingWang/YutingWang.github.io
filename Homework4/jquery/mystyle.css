@@ -96,10 +96,16 @@ img{
 	float:left;
 }
 
+
+
 .focus_comments{
 	width:1000px;
 	height: auto;
-	background-color: blue;
+	margin-top:20px;
+	margin-bottom:50px;
+	background-color: white;
+	padding-left: 50px;
+	font-family: "微软雅黑";
 }
 
 .commentsBanner{
@@ -107,11 +113,13 @@ img{
 	height:50px;
 	background-color: beige;
 	overflow: hidden;
+	text-align: center;
+	font-size: 40px;
+
 }
 .floor{
 	width:100%;
 	height:100px;
-	background-color: yellow;
 	margin-top: 20px;
 }
 .photo{
@@ -124,7 +132,7 @@ img{
 	overflow: hidden;
 }
 .user{
-	width:500px;
+	width:800px;
 	height:100px;
 	margin:0px;
 	padding:0px;
@@ -137,5 +145,8 @@ img{
 .words{
 	height:50px;
 	background-color: beige;
-	margin-top:10px;
+	margin-top:5px;
+}
+{
+
 }
