@@ -45,6 +45,11 @@ function roll()
 	$(".right").click();
 }
 
+function buildCommentHTML(){
+	var html = "<li id='allComments'><div id='floor'><div id='photo'></div><div id='mywords'></div></div></li>"
+	for(var i =0; i < 3; i++)$($("ul")[2]).prepend(html);
+}
+
 
 
 
