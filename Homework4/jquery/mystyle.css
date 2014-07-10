@@ -46,12 +46,12 @@
 	float:left;
 	vertical-align: center;
 	margin-right:10px;
-	background-color: red;
-	-webkit-transition:background-color 0.2s;
+	background-image: "https://YutingWang.github.io/Homework4/pic/button1.png";
+	-webkit-transition:background-image 0.2s;
 
 }
 .but:hover{
-	background-color: yellow;
+	background-image: "https://YutingWang.github.io/Homework4/pic/button2.png";
 	click();
 }
 
