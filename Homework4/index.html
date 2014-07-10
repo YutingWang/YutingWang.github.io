@@ -6,13 +6,13 @@
 		<script type="text/javascript" src="https://YutingWang.github.io/Homework4/jquery/jquery-1.11.1.js"></script>
 		<script type="text/javascript">
 		$(document).ready(function(){
-		    $(".banner").load("https://YutingWang.github.io/Homework4/jquery/news.js",function(responseTxt,statusTxt,xhr){
+		    $(".banner").load('https://YutingWang.github.io/Homework4/jquery/news.js',function(responseTxt,statusTxt,xhr){
 		      if(statusTxt=="success")
 		      {
 		       	data = responseTxt;
 		      	dataObj = eval('('+responseTxt+')');
 		      }
-		      if(statusTxt=="error")
+		      else if(statusTxt=="error")
 		        alert("Error: "+xhr.status+": "+xhr.statusText);
 		  	});
 		});
