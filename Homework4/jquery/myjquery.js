@@ -44,6 +44,7 @@ for(var i = 0; i < b.length; i++){
 		}
 	);
 }
+
 setInterval("roll()", 2000);
 function roll()
 {
