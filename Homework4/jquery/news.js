@@ -23,27 +23,27 @@
         
     comments: [
         {
-            userName:"AAA"
+            userName:"AAA",
             url:"https://YutingWang.github.io/Homework4/pic/user1.jpg",
             words:"广西山顶机场曝光 投资8.5亿劈山而建"
         },
         {
-            userName:"BBB"
+            userName:"BBB",
             url:"https://YutingWang.github.io/Homework4/pic/user2.jpg",
             words:"中国人的一天：留守在山里的苗族女孩"
         },
         {
-            userName:"CCC"
+            userName:"CCC",
             url:"https://YutingWang.github.io/Homework4/pic/user3.jpg",
             words:"焦点人物：等待重生的孩子"
         },
         {
-            userName:"DDD"
+            userName:"DDD",
             url:"https://YutingWang.github.io/Homework4/pic/user4.jpg",
             words:"北京！你视而不见的日与夜"
         },
         {
-            userName:"EEE"
+            userName:"EEE",
             url:"https://YutingWang.github.io/Homework4/pic/user5.jpg",
             words: "徐才厚老家院落曝光：当地修公路直达徐家"
         }]
