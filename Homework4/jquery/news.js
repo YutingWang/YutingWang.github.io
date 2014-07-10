@@ -19,7 +19,7 @@
         {
             url:"https://YutingWang.github.io/Homework4/pic/5.jpg",
             title: "徐才厚老家院落曝光：当地修公路直达徐家"
-        }]
+        }],
         
     comments: [
         {
