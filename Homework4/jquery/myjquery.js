@@ -39,7 +39,7 @@ for(var i = 0; i < b.length; i++){
 	);
 }
 //======================图片滚动播放======================================================
-setInterval("roll()", 4000);
+setInterval("roll()", 6000);
 function roll()
 {
 	$(".right").click();
@@ -50,7 +50,7 @@ function roll()
 
 
 var page = 1;
-var allPage = 2;
+var allPage = 3;
 var commentPerPage = 3;
 loadComments(page);
 

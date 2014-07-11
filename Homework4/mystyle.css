@@ -111,22 +111,23 @@ img{
 
 }
 .floor{
-	width:100%;
+	width: auto;
 	height:100px;
 	margin-top: 20px;
 	display:none;
-	margin-left:50px;
+	padding-left: 50px;
+	/* background-color: azure; */
 }
 .photo{
 	width:100px;
 	height:100px;
-	margin:0px 10px 0px;
 	padding:0px;
 	float:left;
 	overflow: hidden;
+	margin-right: 30px;
 }
 .user{
-	width:800px;
+	width: 80%;
 	height:100px;
 	margin:0px;
 	padding:0px;
@@ -145,16 +146,22 @@ h1{
 	font-size: 30px;
 }
 .nextPage{
-	width: 150px;
+	width: 100%;
+	height: auto;
 	color: blue;
 	font-size: 15px;
 	padding: 0;
 	margin: 0;
-	margin-left: 90%;
+	margin-left: 80%;
+	margin-bottom: 1%;
 }
 #previous{
 	width:100px;
+	padding: 0;
+	float: left;
+	margin: 0;
 }
 #next{
 	width:100px;
+	float: left;
 }
