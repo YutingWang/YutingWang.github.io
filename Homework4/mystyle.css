@@ -152,3 +152,9 @@ h1{
 	margin: 0;
 	margin-left: 90%;
 }
+#previous{
+	width:100px;
+}
+#next{
+	width:100px;
+}

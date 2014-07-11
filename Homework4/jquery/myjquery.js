@@ -89,6 +89,6 @@ function loadComments(page){
 		});
 	if(page == 1) $("#previous").css("display", "none");
 	else $("#previous").css("display", "block");
-	if(page == allPage) $("#next").attr("display", "none");
+	if(page == allPage) $("#next").css("display", "none");
 	else $("#next").css("display", "block");
 }
