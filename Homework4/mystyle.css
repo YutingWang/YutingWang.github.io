@@ -18,12 +18,13 @@
 	font-size:30px;
 }
 .news{	
-	width:100%;
+	width: 1030px;
 	height:600px;
+	position: relative;
 }
 .focus_view{
 	position: relative;
-	width:900px;
+	width: 1000px;
 	height:480px;
 	overflow: hidden;
 	bottom:0;
@@ -84,19 +85,25 @@ li.pic{
 	display:none;
 }
 img{
-	width:100%;
+	width: 100%;
 }
 .right{
-	width:50px;
+	width: 30px;
 	height: 250px;
 	float:left;
 	padding-top: 250px;
+	position: absolute;
+	right: 20px;
+	z-index: 1;
 }
 .left{
-	width:50px;
+	width: 30px;
 	height: 250px;
 	float:left;
 	padding-top: 250px;
+	position: absolute;
+	z-index: 1;
+	left: 20px;
 }
 .focus_comments{
 	width:1000px;

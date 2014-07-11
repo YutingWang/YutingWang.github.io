@@ -1,3 +1,5 @@
+//================新闻区=====================================
+//设置左右点击切换图片
 $(".right").click(function(){
 	id = (Number(id)+1)%5;
 	b[id].click();
@@ -8,7 +10,13 @@ $(".left").click(function(){
 	b[id].click();
 }
 );
+//鼠标悬停显示左右切换按钮
+function opac_9(){$(".left").css("opacity", "0.9");$(".right").css("opacity", "0.9");}
+function opac_0(){$(".left").css("opacity", "0");$(".right").css("opacity", "0");}
+$(".news").attr("onmouseover", "opac_9()");
+$(".news").attr("onmouseout", "opac_0()");
 
+//localStorage本地存储
 var storage = window.localStorage;
 if(storage.currentpic == undefined) storage.currentpic = 0;
 var b = $(".but");
@@ -40,7 +48,7 @@ for(var i = 0; i < b.length; i++){
 		}
 	);
 }
-//======================图片滚动播放======================================================
+//图片滚动播放
 setInterval("roll()", 6000);
 function roll()
 {
@@ -48,15 +56,14 @@ function roll()
 }
 
 
-//======================评论区=====================================================
-
+//================评论区=====================================
 
 var page = 1;
 var allPage = 3;
 var commentPerPage = 3;
 loadComments(page);
 
-
+//单击上一页下一页
 $("#previous").click(function(){
 	page = page-1;
 	loadComments(page);
@@ -67,6 +74,7 @@ $("#next").click(function(){
 	loadComments(page);
 });
 
+//异步载入评论
 function loadComments(page){
 	$(".toDelete").ready(function(){
 		    $(".toDelete").load('https://YutingWang.github.io/Homework4/jquery/comment'+page+'.json',function(responseTxt,statusTxt,xhr){
@@ -87,6 +95,7 @@ function loadComments(page){
       	
 		  	});
 		});
+	//如果是第一页或者最后一页，就不显示
 	if(page == 1) $("#previous").css("display", "none");
 	else $("#previous").css("display", "block");
 	if(page == allPage) $("#next").css("display", "none");
