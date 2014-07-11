@@ -9,8 +9,8 @@ $(".left").click(function(){
 }
 );
 
-var storage = window.localstorage;
-if(!storage.getItem("currentpic")) storage.setItem("currentpic",0);
+var storage = window.localStorage;
+if(storage.currentpic == undefined) storage.currentpic = 0;
 var b = $(".but");
 var id = storage.currentpic;
 var pre = storage.currentpic;
