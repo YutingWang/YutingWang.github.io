@@ -47,26 +47,54 @@ function roll()
 
 
 //======================评论区=====================================================
+
+
 var page = 1;
-var allComments = 5;
+var allPage = 2;
 var commentPerPage = 3;
 loadComments(page);
-function loadComments(page){
-	for(i = Number(page-1)*Number(commentPerPage); i < commentPerPage; i++)	
-		$($(".floor")[i]).css("display", "block");
-}
-$(".previous").click(function(){
+
+
+$("#previous").click(function(){
 	page = page+1;
-	if(page*commentPerPage >= allComments) $(".next").attr("display", "none");
-	else $(".next").attr("display", "block");
+	alert(page);
 	loadComments(page);
 });
-$(".next").click(function(){
+
+$("#next").click(function(){
 	page = page-1;
-	if(page == 1) $(".previous").attr("display", "none");
-	else $(".previous").attr("display", "block");
+	alert(page);
 	loadComments(page);
-})
+});
+
+function loadComments(page){
+	$(document).ready(function(){
+		    $(".toDelete").load('https://YutingWang.github.io/Homework4/jquery/comments'+page+'.json',function(responseTxt,statusTxt,xhr){
+		    	if(statusTxt=="success")
+		      	{
+		       		data = responseTxt;
+		      		commentsObj = eval('('+responseTxt+')');
+		      	}
+		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
+		      	$(".toDelete").css("display", "none");		
+				for(var i = 0; i < commentsObj.length; i++)
+				{
+					$($(".photo").children()[i]).attr("src", commentsObj.comments[i].url);
+					$(".name")[i].innerText =  commentsObj.comments[i].userName;
+					$(".words")[i].innerText =  commentsObj.comments[i].words;
+					$($(".floor")[i]).css("display", "block");
+				}
+      	
+		  	});
+		});
+	if(page == 1) $("#previous").attr("display", "none");
+	else $("#previous").attr("display", "block");
+	if(page == allPage) $("#next").attr("display", "none");
+	else $("#next").attr("display", "block");
+}
+
+
+
 
 
 
