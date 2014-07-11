@@ -10,10 +10,10 @@ $(".left").click(function(){
 );
 
 var storage = window.localstorage;
-if(!storage.getItem("currentpic")) storage.setItem("currentpic",0);)
+if(!storage.getItem("currentpic")) storage.setItem("currentpic",0);
 var b = $(".but");
-var id = localstorage.currentpic;
-var pre = localstorage.currentpic;
+var id = storage.currentpic;
+var pre = storage.currentpic;
 f = $(".pic")[pre];
 $(f).css("display", "block");
 f = $(".show")[pre];
@@ -35,7 +35,7 @@ for(var i = 0; i < b.length; i++){
 			$(pic[pre]).fadeOut(10);
 			$(sho[pre]).fadeOut(10);
 			pre = id;
-			localstorage.currentpic = id;
+			storage.currentpic = id;
 			}
 		}
 	);
