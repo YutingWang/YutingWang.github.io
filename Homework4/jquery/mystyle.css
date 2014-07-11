@@ -10,7 +10,7 @@
 }
 .news{	
 	width:100%;
-	height:auto;
+	height:600px;
 }
 .focus_view{
 	position: relative;
@@ -86,14 +86,14 @@ img{
 .right{
 	width:50px;
 	height:480px;
-	background-color: red;
 	float:left;
+	padding-top: 100px;
 }
 .left{
 	width:50px;
 	height:480px;
-	background-color: red;
 	float:left;
+	padding-top: 100px;
 }
 
 
@@ -101,7 +101,7 @@ img{
 .focus_comments{
 	width:1000px;
 	height: auto;
-	margin-top:20px;
+	margin-top:50px;
 	margin-bottom:50px;
 	background-color: white;
 	padding-left: 50px;
@@ -147,6 +147,8 @@ img{
 	background-color: beige;
 	margin-top:5px;
 }
-{
 
+h1{
+	font-family: "微软雅黑";
+	font-size: 30px;
 }
