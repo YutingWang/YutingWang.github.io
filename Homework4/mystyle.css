@@ -41,18 +41,22 @@
 .pic{	display: none;}
 .focus_slider{
 	width:auto;
-	height:20px;
-	bottom:0;
+	height: 10px;
+	bottom: 30px;
+	right: 350px;
 	text-align: center;
 	float: right;
-	padding-right: 18%;
+	/* padding-right: 18%; */
+	position: relative;
+	opacity: 0.6;
 }
 .but{
 	width:50px;
+	height: 10px;
 	float:left;
 	vertical-align: center;
-	margin-right:10px;
-	background-color: rgb(209, 195, 195);
+	margin-right: 15px;
+	background-color: rgb(231, 224, 224);
 	-webkit-transition:background-color 0.2s;
 
 }
@@ -97,7 +101,7 @@ img{
 .focus_comments{
 	width:1000px;
 	height: auto;
-	margin-top:50px;
+	margin-top: 100px;
 	margin-bottom:50px;
 	background-color: white;
 	font-family: "Microsoft YaHei";
