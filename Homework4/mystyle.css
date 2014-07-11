@@ -1,9 +1,10 @@
-body{
+﻿body{
 	background-color: beige;
+	
 }
 .container{
 	width: 1200px;
-	height:800px;
+	height: 800px;
 	margin-left:10%;
 	margin-bottom:50px;
 	margin-top:0px;
