@@ -56,13 +56,13 @@ loadComments(page);
 
 
 $("#previous").click(function(){
-	page = page+1;
+	page = page-1;
 	alert(page);
 	loadComments(page);
 });
 
 $("#next").click(function(){
-	page = page-1;
+	page = page+1;
 	alert(page);
 	loadComments(page);
 });
@@ -92,19 +92,3 @@ function loadComments(page){
 	if(page == allPage) $("#next").attr("display", "none");
 	else $("#next").attr("display", "block");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
