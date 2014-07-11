@@ -38,17 +38,35 @@ for(var i = 0; i < b.length; i++){
 		}
 	);
 }
-
+//======================图片滚动播放=====================================================
 setInterval("roll()", 4000);
 function roll()
 {
 	$(".right").click();
 }
 
-function buildCommentHTML(){
-	var html = "<li id='allComments'><div id='floor'><div id='photo'></div><div id='mywords'></div></div></li>"
-	for(var i =0; i < 3; i++)$($("ul")[2]).prepend(html);
+
+//======================评论区=====================================================
+var page = 1;
+var allComments = 5;
+var commentPerPage = 3;
+loadComments(page);
+function loadComments(page){
+	for(i = Number(page-1)*Number(commentPerPage); i < commentPerPage; i++)	
+		$($(".floor")[i]).css("display", "block");
 }
+$(".previous").click(function(){
+	page = page+1;
+	if(page*commentPerPage >= allComments) $(".next").attr("display", "none");
+	else $(".next").attr("display", "block");
+	loadComments(page);
+});
+$(".next").click(function(){
+	page = page-1;
+	if(page == 1) $(".previous").attr("display", "none");
+	else $(".previous").attr("display", "block");
+	loadComments(page);
+})
 
 
 
