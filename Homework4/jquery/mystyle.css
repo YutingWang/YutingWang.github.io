@@ -1,8 +1,9 @@
-.container{
+﻿.container{
 	width:1000px;
 	height:800px;
 	margin-left:150px;
 	margin-bottom: 50px;
+	margin-up:0px;
 }
 .banner{
 	width:100%;
