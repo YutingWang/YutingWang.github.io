@@ -43,13 +43,14 @@
 .focus_slider{
 	width:auto;
 	height: 10px;
-	bottom: 30px;
-	right: 350px;
+	bottom: 40px;
+	right: 20px;
 	text-align: center;
 	float: right;
 	/* padding-right: 18%; */
 	position: relative;
 	opacity: 0.6;
+	z-index: 40;
 }
 .but{
 	width:50px;

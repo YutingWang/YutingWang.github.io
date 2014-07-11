@@ -37,7 +37,7 @@ for(var i = 0; i < b.length; i++){
 			$(img).attr("src","https://YutingWang.github.io/Homework4/pic/button1.png");
 			img = $(b[id]).children();
 			$(img).attr("src","https://YutingWang.github.io/Homework4/pic/button1.png");
-			$(pic[pre]).fadeTo(0.5, 70);
+			$(pic[pre]).fadeTo(0.8, 700;
 			$(pic[id]).fadeIn(800);
 			$(sho[id]).fadeIn(10);
 			$(pic[pre]).fadeOut(10);
