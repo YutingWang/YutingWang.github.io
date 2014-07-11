@@ -69,7 +69,7 @@ $("#next").click(function(){
 
 function loadComments(page){
 	$(document).ready(function(){
-		    $(".toDelete").load('https://YutingWang.github.io/Homework4/jquery/comments'+page+'.json',function(responseTxt,statusTxt,xhr){
+		    $(".toDelete").load('https://YutingWang.github.io/Homework4/jquery/comment'+page+'.json',function(responseTxt,statusTxt,xhr){
 		    	if(statusTxt=="success")
 		      	{
 		       		data = responseTxt;
