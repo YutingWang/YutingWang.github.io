@@ -186,8 +186,10 @@ h1{
 	padding: 0;
 	float: left;
 	margin: 0;
+	cursor:pointer;
 }
 #next{
 	width:100px;
 	float: left;
+	cursor:pointer;
 }
