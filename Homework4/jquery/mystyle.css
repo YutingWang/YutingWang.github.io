@@ -7,7 +7,7 @@ body{
 	height:800px;
 	margin-left: 10%;
 	margin-bottom: 50px;
-	margin-up:0px;
+	margin-top:0px;
 }
 .banner{
 	width:100%;
@@ -58,7 +58,7 @@ body{
 	background-repeat: no-repeat;
 	-webkit-transition:background-image 0.2s;*/
 	background-color: rgb(209, 195, 195);
-	-webkit-transition:background-color 0.2s;*/
+	-webkit-transition:background-color 0.2s;
 
 }
 .but:hover{
