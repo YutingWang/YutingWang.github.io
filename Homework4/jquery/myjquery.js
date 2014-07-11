@@ -87,8 +87,8 @@ function loadComments(page){
       	
 		  	});
 		});
-	if(page == 1) $("#previous").attr("display", "none");
-	else $("#previous").attr("display", "block");
+	if(page == 1) $("#previous").css("display", "none");
+	else $("#previous").css("display", "block");
 	if(page == allPage) $("#next").attr("display", "none");
-	else $("#next").attr("display", "block");
+	else $("#next").css("display", "block");
 }
