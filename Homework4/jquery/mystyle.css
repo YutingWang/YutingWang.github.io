@@ -20,6 +20,7 @@
 	overflow: hidden;
 	bottom:0;
 	float:left;
+	border:15px solid white;
 }
 .focus_text{
 	position:relative;
@@ -88,11 +89,13 @@ img{
 	width:50px;
 	height:480px;
 	float:left;
+	padding-top: 250px;
 }
 .left{
 	width:50px;
 	height:480px;
 	float:left;
+	padding-top: 250px;
 }
 
 
