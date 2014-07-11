@@ -68,7 +68,7 @@ $("#next").click(function(){
 });
 
 function loadComments(page){
-	$(document).ready(function(){
+	$(".toDelete").ready(function(){
 		    $(".toDelete").load('https://YutingWang.github.io/Homework4/jquery/comment'+page+'.json',function(responseTxt,statusTxt,xhr){
 		    	if(statusTxt=="success")
 		      	{
@@ -77,7 +77,7 @@ function loadComments(page){
 		      	}
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
 		      	$(".toDelete").css("display", "none");		
-				for(var i = 0; i < commentsObj.length; i++)
+				for(var i = 0; i < commentsObj.comments.length; i++)
 				{
 					$($(".photo").children()[i]).attr("src", commentsObj.comments[i].url);
 					$(".name")[i].innerText =  commentsObj.comments[i].userName;
