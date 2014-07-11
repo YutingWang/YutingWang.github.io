@@ -59,13 +59,11 @@ loadComments(page);
 
 $("#previous").click(function(){
 	page = page-1;
-	alert(page);
 	loadComments(page);
 });
 
 $("#next").click(function(){
 	page = page+1;
-	alert(page);
 	loadComments(page);
 });
 
