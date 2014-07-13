@@ -19,6 +19,7 @@ function loadLevel(){
 		  	});
 	});
 }
+
 function loadUrl(){
 	$("toDelete").ready(function(){
 //=================载入关卡中icon图标地址======urlObj===================
