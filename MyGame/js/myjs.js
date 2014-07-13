@@ -3,7 +3,6 @@ var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
 loadLevel();
 loadUrl();
-place();
 
 //=================载入关卡中元素位置===========levelObj================
 function loadLevel(){
@@ -17,11 +16,7 @@ function loadLevel(){
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
 		      	$(".toDelete").css("display", "none");	
 		  	});
-	});
-}
 //=================载入关卡中icon图标地址======urlObj===================
-function loadUrl(){
-	$("toDelete").ready(function(){
 		    $(".toDelete").load('https://YutingWang.github.io/MyGame/js/icon.json',function(responseTxt,statusTxt,xhr){
 		    	if(statusTxt=="success")
 		      	{
@@ -31,6 +26,7 @@ function loadUrl(){
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
 		      	$(".toDelete").css("display", "none");	
 		  	});
+		  	place();
 	});
 }
 
