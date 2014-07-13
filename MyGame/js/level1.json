@@ -1,0 +1,45 @@
+{
+	//.laser.length一共有多少个激光
+	//.laser[1].color 激光颜色 .angle角度 .x .y坐标
+	"laser":[
+		{	
+			"x":"3",
+			"y":"8", 
+			"angle":"0",
+			"color":"red"
+			},
+		{	
+			"x":"12",
+			"y":"6", 
+			"angle":"180",
+			"color":"blue"
+			},
+	],
+	//.target.length一共有多少个激光
+	//.target[1].color 颜色
+	//.target[1].x 坐标
+	"target":[
+		{
+			"color":"red",
+			"x":"12",
+			"y":"6"},
+		{
+			"color":"blue",
+			"x":"7",
+			"y":"9"}
+	],
+	//.mirror.length一共有多少种镜子
+	//.mirror[i].type镜子种类
+	//.mirror[i].num该种类镜子数量
+	"mirror":[
+		{"type":"90", "num":"2",},
+		{"type":"45", "num":"2",},
+		{"type":"0",  "num":"0"}
+	],
+	//.block.length一共有多少个激光
+	//.block[1].type 种类
+	//.block[1].x 坐标
+	"block":{
+
+	}
+}

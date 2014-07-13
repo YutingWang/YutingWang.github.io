@@ -1,0 +1,25 @@
+{
+	"url":{
+		"laser":{
+			"red":"",
+			"blue":""
+		},
+		"mirror":{
+			"reflex90":"",
+			"reflex45":"",
+			"reflexthrough":""
+		},
+		"target":{
+			"red":"",
+			"yellor":"",
+			"blue":"",
+			"green":"",
+			"black":"",
+			"white":""
+		},
+		"block":{
+			"type1":"",
+			"type2":""
+		}
+	}
+}

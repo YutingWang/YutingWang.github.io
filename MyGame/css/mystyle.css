@@ -1,0 +1,62 @@
+body{
+	background-image:url("http://image.tianjimedia.com/uploadImages/2013/097/10Y8954OB76F_2560x1600.jpg");
+	background-position:top;
+	background-size:100% auto;
+  	background-position:center;
+  	background-repeat:repeat-y;
+}
+.container{
+	positon:relatve;
+	width:1000px;
+	height:500px;
+	padding-left:10%;
+}
+.banner{
+	position: relative;
+	width:100%;
+	height:200px;
+	margin:5% 0 0;
+	color:white;
+	text-align: center;
+}
+.menu{
+	position: relative;
+	width:100%;
+	margin:0;
+	/* background-color: beige; */
+	text-align: center;
+	color: white;
+}
+.inmenu{
+	positon:relative;
+	width: 200px;
+	margin:0;
+	width: 60%;
+	height: 50px;
+	width: 200px;
+	margin-left: 40%;
+	margin-top:20px;
+}
+.start{
+	position: relative;	
+	/* width: 200px; */
+}
+.inmenu:hover{
+	border-bottom:3px dashed white;
+}
+
+.resume{
+	display:none;
+}
+.howToPlay{
+	position: relative;
+}
+h1{
+	blue;
+	margin:0;
+	padding:0;
+	/* width: 1px; */
+}
+div{
+	display:block;
+}
