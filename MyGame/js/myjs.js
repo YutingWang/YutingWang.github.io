@@ -15,7 +15,12 @@ function loadLevel(){
 		      	}
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
 		      	$(".toDelete").css("display", "none");	
+		      	if(urlObj != undefined && levelObj != undefined) place();
 		  	});
+	});
+}
+function loadUrl(){
+	$("toDelete").ready(function(){
 //=================载入关卡中icon图标地址======urlObj===================
 		    $(".toDelete").load('https://YutingWang.github.io/MyGame/js/icon.json',function(responseTxt,statusTxt,xhr){
 		    	if(statusTxt=="success")
@@ -25,8 +30,8 @@ function loadLevel(){
 		      	}
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
 		      	$(".toDelete").css("display", "none");	
+		      	if(urlObj != undefined && levelObj != undefined) place();
 		  	});
-		  	place();
 	});
 }
 

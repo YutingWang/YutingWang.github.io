@@ -10,13 +10,12 @@
         <div class="toDelete"></div>
 	    <table>
 		</table>
-	</div>    
-        <script type="text/javascript" src="js/myjs.js"></script>
+	</div>        
         <script>
         	for(var i = 0; i < 12; i++) $("table").prepend("<tr></tr>");
         	for(var i = 0; i < 12; i++) $("tr").prepend("<td></td>");
         	for(var i = 0; i < $("td").length; i++) $($("td")[i]).attr("id", i);
-
        </script>
+       <script type="text/javascript" src="js/myjs.js"></script>
     </body>
 </html>
