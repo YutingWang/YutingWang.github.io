@@ -2,7 +2,11 @@
 	"url":{
 		"laser":{
 			"red": "https://YutingWang.github.io/MyGame/icon/laser_red.png",
-			"blue":"https://YutingWang.github.io/MyGame/icon/laser_blue.png"
+			"blue":"https://YutingWang.github.io/MyGame/icon/laser_blue.png",
+			"orange":"https://YutingWang.github.io/MyGame/icon/laser_orange.png",
+			"yellow":"https://YutingWang.github.io/MyGame/icon/laser_yellow.png",
+			"purple":"https://YutingWang.github.io/MyGame/icon/laser_purple.png",
+			"blue":"https://YutingWang.github.io/MyGame/icon/laser_blue.png",
 		},
 		"mirror":{
 			"reflex90":     "https://YutingWang.github.io/MyGame/icon/mirror_1.png",
