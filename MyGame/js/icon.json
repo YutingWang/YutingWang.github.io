@@ -1,25 +1,25 @@
 {
 	"url":{
 		"laser":{
-			"red":"",
-			"blue":""
+			"red": "https://YutingWang.github.io/MyGame/icon/laser_red.png",
+			"blue":"https://YutingWang.github.io/MyGame/icon/laser_blue.png"
 		},
 		"mirror":{
-			"reflex90":"",
-			"reflex45":"",
-			"reflexthrough":""
+			"reflex90":     "https://YutingWang.github.io/MyGame/icon/mirror_1.png",
+			"reflex45":     "https://YutingWang.github.io/MyGame/icon/mirror_2.png",
+			"reflexthrough":"https://YutingWang.github.io/MyGame/icon/mirror_3.png"
 		},
 		"target":{
-			"red":"",
-			"yellor":"",
-			"blue":"",
-			"green":"",
-			"black":"",
-			"white":""
+			"red":   "https://YutingWang.github.io/MyGame/icon/target_red.png",
+			"yellor":"https://YutingWang.github.io/MyGame/icon/target_red.png",
+			"blue":  "https://YutingWang.github.io/MyGame/icon/target_red.png",
+			"green": "https://YutingWang.github.io/MyGame/icon/target_red.png",
+			"black": "https://YutingWang.github.io/MyGame/icon/target_red.png",
+			"white": "https://YutingWang.github.io/MyGame/icon/target_red.png"
 		},
 		"block":{
-			"type1":"",
-			"type2":""
+			"type1":"https://YutingWang.github.io/MyGame/icon/block_1.png",
+			"type2":"https://YutingWang.github.io/MyGame/icon/block_2.png"
 		}
 	}
 }
