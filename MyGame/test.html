@@ -9,12 +9,12 @@
     <div class="container">
 	    <table>
 		</table>
-	</div>
-    </body>
-    <script type="text/javascript" src="js/myjs.js"></script>
-    <script>
-    	for(var i = 0; i < 12; i++) $("table").prepend("<tr></tr>");
-    	for(var i = 0; i < 12; i++) $("tr").prepend("<td></td>");
-    	for(var i = 0; i < $("td").length; i++) $($("td")[i]).attr("id", i);
+	</div>    
+        <script type="text/javascript" src="js/myjs.js"></script>
+        <script>
+        	for(var i = 0; i < 12; i++) $("table").prepend("<tr></tr>");
+        	for(var i = 0; i < 12; i++) $("tr").prepend("<td></td>");
+        	for(var i = 0; i < $("td").length; i++) $($("td")[i]).attr("id", i);
     </script>
+    </body>
 </html>

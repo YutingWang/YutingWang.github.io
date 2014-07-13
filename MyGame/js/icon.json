@@ -7,6 +7,7 @@
 			"yellow":"https://YutingWang.github.io/MyGame/pic/laser_yellow.png",
 			"purple":"https://YutingWang.github.io/MyGame/pic/laser_purple.png",
 			"blue":"https://YutingWang.github.io/MyGame/pic/laser_blue.png",
+			"green":"https://YutingWang.github.io/MyGame/pic/laser_green.png",
 		},
 		"mirror":{
 			"reflex90":     "https://YutingWang.github.io/MyGame/pic/mirror_1.png",
@@ -15,15 +16,25 @@
 		},
 		"target":{
 			"red":   "https://YutingWang.github.io/MyGame/pic/target_red.png",
-			"yellor":"https://YutingWang.github.io/MyGame/pic/target_red.png",
-			"blue":  "https://YutingWang.github.io/MyGame/pic/target_red.png",
-			"green": "https://YutingWang.github.io/MyGame/pic/target_red.png",
-			"black": "https://YutingWang.github.io/MyGame/pic/target_red.png",
-			"white": "https://YutingWang.github.io/MyGame/pic/target_red.png"
+			"yellow":"https://YutingWang.github.io/MyGame/pic/target_yellow.png",
+			"blue":  "https://YutingWang.github.io/MyGame/pic/target_blue.png",
+			"green": "https://YutingWang.github.io/MyGame/pic/target_green.png",
+			"black": "https://YutingWang.github.io/MyGame/pic/target_black.png",
+			"white": "https://YutingWang.github.io/MyGame/pic/target_white.png",
+			"purple": "https://YutingWang.github.io/MyGame/pic/target_purple.png",
+			"orange": "https://YutingWang.github.io/MyGame/pic/target_orange.png",
+			"red1":   "https://YutingWang.github.io/MyGame/pic/target_red1.png",
+			"yellow1":"https://YutingWang.github.io/MyGame/pic/target_yellow1.png",
+			"blue1":  "https://YutingWang.github.io/MyGame/pic/target_blue1.png",
+			"green1": "https://YutingWang.github.io/MyGame/pic/target_green1.png",
+			"black1": "https://YutingWang.github.io/MyGame/pic/target_black1.png",
+			"white1": "https://YutingWang.github.io/MyGame/pic/target_white1.png",
+			"purple1": "https://YutingWang.github.io/MyGame/pic/target_purple1.png",
+			"orange1": "https://YutingWang.github.io/MyGame/pic/target_orange1.png"
 		},
 		"block":{
 			"type1":"https://YutingWang.github.io/MyGame/pic/block_1.png",
 			"type2":"https://YutingWang.github.io/MyGame/pic/block_2.png"
-		}
+		},
 	}
 }
