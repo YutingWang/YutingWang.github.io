@@ -1,5 +1,6 @@
 body{
-	background-image:url("https://YutingWang.github.io/MyGame/pic/background.jpg");
+/*	
+	background-image:url("https://YutingWang.github.io/MyGame/pic/background.jpg");*/
 	background-position:top;
 	background-size:100% auto;
   	background-position:center;
@@ -36,13 +37,19 @@ body{
 	width: 200px;
 	margin-left: 40%;
 	margin-top:20px;
+		background: #555;
+	border: 3px solid #fff;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
 }
 .start{
 	position: relative;	
 	/* width: 200px; */
+
 }
 .inmenu:hover{
-	border-bottom:3px dashed white;
+	border:3px dashed white;
 }
 
 .resume{
@@ -59,4 +66,22 @@ h1{
 }
 div{
 	display:block;
+}
+a{
+	text-decoration: none;
+	color:white;
+}
+table, td, tr{
+	empty-cells: show;
+	 border-collapse:collapse;
+
+}
+td{
+	width:30px;
+	height:30px;
+	border-color: blue;
+	border-width: 1px;
+	border-style: dashed;
+	background-repeat:no-repeat;
+	background-size:100%;
 }

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/mystyle.css" />
+        <script type="text/javascript" src="https://YutingWang.github.io/MyGame/js/jquery-1.11.1.js"></script>
+    </head>
+    <body>
+    <div class="container">
+	    <table>
+		</table>
+	</div>
+    </body>
+    <script type="text/javascript" src="js/myjs.js"></script>
+    <script>
+    	for(var i = 0; i < 12; i++) $("table").prepend("<tr></tr>");
+    	for(var i = 0; i < 12; i++) $("tr").prepend("<td></td>");
+    	for(var i = 0; i < $("td").length; i++) $($("td")[i]).attr("id", i);
+    </script>
+</html>
