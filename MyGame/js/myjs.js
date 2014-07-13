@@ -15,7 +15,7 @@ function loadLevel(){
 		      	}
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
 		      	$(".toDelete").css("display", "none");	
-		      	if(urlObj != undefined && levelObj != undefined) place();
+		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined") place();
 		  	});
 	});
 }
@@ -31,7 +31,7 @@ function loadUrl(){
 		      	}
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
 		      	$(".toDelete").css("display", "none");	
-		      	if(urlObj != undefined && levelObj != undefined) place();
+		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined") place();
 		  	});
 	});
 }
@@ -45,7 +45,7 @@ function place(){
 			var x = levelObj.laser[i].x;
 			var y = levelObj.laser[i].y;
 			var box = $("td")[Number(y*12)+Number(x)];
-			var url = urlObj.url.laser[c];
+			var url = urlObj.url.laser[color];
 			var ddd = "url"+"("+"'"+url+"'"+")";
 			$(box).css("background-image", ddd);
 		}
@@ -56,7 +56,7 @@ function place(){
 			var x = levelObj.target[i].x;
 			var y = levelObj.target[i].y;
 			var box = $("td")[Number(y*12)+Number(x)];
-			var url = urlObj.url.target[c+'1'];
+			var url = urlObj.url.target[color+'1'];
 			var ddd = "url"+"("+"'"+url+"'"+")";
 			$(box).css("background-image", ddd);
 		}
