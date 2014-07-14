@@ -76,14 +76,14 @@ function loadMirror(){
 	$("toDelete").ready(function(){
 		$("td").attr("ondrop", "drop(event)");
 		$("td").attr("ondragover", "allowDrop(event)");
-		for(var i = 0; i < 1; i++)//levelObj.mirror.length; i++)
+		for(var i = 0; i < levelObj.mirror.length; i++)
 		{
 			var mid = levelObj.mirror[i].mtype;
 			if(mid == '90') flag = 2;
 			else if(mid == "45") flag = 3;
 			else if(mid == "0") flag = 4;
 			var myimage = '<img draggable="true" ondragstart="drag(event)" id="dra" width="100%"/>';
-			$($("td")[1]).append(myimage);//TO EDIT
+			$($("td")[i]).append(myimage);//TO EDIT
 			$("img").attr("src", "https://YutingWang.github.io/MyGame/pic/mirror1.png");
 			$("img").attr("position","0");//To EDIT
 			$("img").click(function(){
