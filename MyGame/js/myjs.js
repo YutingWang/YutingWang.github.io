@@ -82,7 +82,7 @@ function loadMirror(){
 			if(mid == '90') flag = 2;
 			else if(mid == "45") flag = 3;
 			else if(mid == "0") flag = 4;
-			var myimage = '<img draggable="true" ondragstart="drag(event)" id="dra" width="100%"/>';
+			var myimage = '<img draggable="true" ondragstart="drag(event)" id="dra" width="100%" onclick="onclickM()"/>';
 			$($("td")[1]).append(myimage);//TO EDIT
 			$("img").attr("src", "https://YutingWang.github.io/MyGame/pic/mirror1.png");
 		}		
@@ -105,4 +105,8 @@ ev.preventDefault();
 var data=ev.dataTransfer.getData("Text");
 if($(ev.target).css("background-image") == "none")
 ev.target.appendChild(document.getElementById(data));
+}
+
+function onclickM(){
+	$(this).css("transform","rotate(90deg)");
 }
