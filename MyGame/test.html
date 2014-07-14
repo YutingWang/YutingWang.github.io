@@ -12,9 +12,10 @@
 		</table>
 	</div>        
         <script>
-        	for(var i = 0; i < 12; i++) $("table").prepend("<tr></tr>");
-        	for(var i = 0; i < 12; i++) $("tr").prepend("<td></td>");
+        	for(var i = 0; i < 8; i++) $("table").prepend("<tr></tr>");
+        	for(var i = 0; i < 8; i++) $("tr").prepend("<td></td>");
         	for(var i = 0; i < $("td").length; i++) $($("td")[i]).attr("id", i);
+                $("td").attr("ondrop","drop(event)"), "ondragover":"allowDrop(event)","draggable"="true","ondragstart"="drag(event)"});
        </script>
        <script type="text/javascript" src="js/myjs.js"></script>
     </body>

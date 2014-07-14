@@ -77,8 +77,8 @@ table, td, tr{
 
 }
 td{
-	width:30px;
-	height:30px;
+	width:60px;
+	height:60px;
 	border-color: blue;
 	border-width: 1px;
 	border-style: dashed;

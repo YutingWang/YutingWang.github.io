@@ -48,6 +48,9 @@ function place(){
 			var url = urlObj.url.laser[color];
 			var ddd = "url"+"("+"'"+url+"'"+")";
 			$(box).css("background-image", ddd);
+			if(levelObj.laser[i].angle == 0) $(box).css("transform","rotate(90deg)");
+			else if(levelObj.laser[i].angle == 180) $(box).css("transform","rotate(-90deg)");
+			else if(levelObj.laser[i].angle == 270) $(box).css("transform","rotate(180deg)");
 		}
 		//===========载入target============================
 		for(var i = 0; i < levelObj.target.length; i++)
