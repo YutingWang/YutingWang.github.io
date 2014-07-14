@@ -86,6 +86,16 @@ function loadMirror(){
 			$($("td")[1]).append(myimage);//TO EDIT
 			$("img").attr("src", "https://YutingWang.github.io/MyGame/pic/mirror1.png");
 			$("img").attr("position","0");//To EDIT
+			$("img").click(function(){
+				t = $(this).attr("position");
+				if(t == 0) $(this).css("transform","rotate(45deg)");
+				if(t == 1) $(this).css("transform","rotate(135deg)");
+				if(t == 2) $(this).css("transform","rotate(-135deg)");
+				if(t == 3) $(this).css("transform","rotate(-45deg)");
+				t = (Number(t)+1)%4;
+				t = String(t);
+				$(this).attr("position", t);
+			});
 		}		
 	});
 }
@@ -108,13 +118,3 @@ if($(ev.target).css("background-image") == "none")
 ev.target.appendChild(document.getElementById(data));
 }
 
-$("img").click(function(){
-	t = $(this).attr("position");
-	if(t == 0) $(this).css("transform","rotate(45deg)");
-	if(t == 1) $(this).css("transform","rotate(135deg)");
-	if(t == 2) $(this).css("transform","rotate(-135deg)");
-	if(t == 3) $(this).css("transform","rotate(-45deg)");
-	t = (Number(t)+1)%4;
-	t = String(t);
-	$(this).attr("position", t);
-});
