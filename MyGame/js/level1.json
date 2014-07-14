@@ -58,9 +58,9 @@
 	//.mirror[i].type镜子种类
 	//.mirror[i].num该种类镜子数量
 	"mirror":[
-		{"type":"90", "num":"2",},
-		{"type":"45", "num":"2",},
-		{"type":"0",  "num":"0"}
+		{"mtype":"90", "num":"2",},
+		{"mtype":"45", "num":"2",},
+		{"mtype":"0",  "num":"0"}
 	],
 	//.block.length一共有多少个激光
 	//.block[1].type 种类
