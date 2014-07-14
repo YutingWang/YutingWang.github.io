@@ -65,3 +65,29 @@ function place(){
 		}
 	});
 }
+loadMirror();
+function loadMirror(){
+	$("td").attr("ondrop", "drop(event)");
+	$("td").attr("ondragover", "allowDrop(event)");
+	var myimage = '<img draggable="true" ondragstart="drag(event)" id="hehe" width="100%"/>';
+	$($("td")[1]).append(myimage);
+	$("img").attr("src", "https://YutingWang.github.io/MyGame/pic/target_red.png");
+}
+
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+if($(ev.target).css("background-image") == "none")
+ev.target.appendChild(document.getElementById(data));
+}

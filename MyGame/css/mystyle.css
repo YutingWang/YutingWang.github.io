@@ -1,6 +1,5 @@
-body{
-/*	
-	background-image:url("https://YutingWang.github.io/MyGame/pic/background.jpg");*/
+body{	
+	background-image:url("https://YutingWang.github.io/MyGame/pic/background.jpg");
 	background-position:top;
 	background-size:100% auto;
   	background-position:center;
@@ -84,4 +83,8 @@ td{
 	border-style: dashed;
 	background-repeat:no-repeat;
 	background-size:100%;
+}
+
+img{
+	width:100%;
 }
