@@ -66,8 +66,10 @@ function loadUrl(){
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
 		      	$(".toDelete").css("display", "none");	
 		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined")
-		      	{place();loadMirror(); loadBlock();}
-		     var ct = document.getElementById("game_canvas");
+		      	{place();loadMirror(); loadBlock();}		     		  								
+	});
+		});
+	var ct = document.getElementById("game_canvas");
 			var cxt = ct.getContext("2d");
 			grid_size = 36;
 			cxt.clearRect(0,0,2000,2000);
@@ -75,12 +77,6 @@ function loadUrl(){
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
-		  	
-			
-			
-		
-	});
-	
 }
 
 function place(){
