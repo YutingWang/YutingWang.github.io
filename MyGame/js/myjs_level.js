@@ -29,7 +29,6 @@ for(var i = 0; i < $("td").length; i++)
 //=================本地存储==========================
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
-var level_Obj;
 loadLevel();
 loadUrl();
 
@@ -49,7 +48,7 @@ function loadLevel(){
 		      	$(".toDelete").css("display", "none");	
 		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined") 
 		      	{place();loadMirror();loadBlock();}
-		      window.level_obj = levelObj;
+		      
 		  	});
 	});
 	
@@ -75,7 +74,7 @@ function loadUrl(){
 			grid_size = 36;
 			cxt.clearRect(0,0,2000,2000);
 			console.log(window.level_obj);
-			for(var i = 0;i < window.level_obj.laser.length;i++){
+			for(var i = 0;i < window.levelObj.laser.length;i++){
 			draw_laser(cxt,level_Obj.laser[i].x, level_Obj.laser[i].y, level_Obj.laser[i].angle, level_Obj.laser[i].color);
 			}
 			
