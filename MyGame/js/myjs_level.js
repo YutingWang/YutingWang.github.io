@@ -124,8 +124,14 @@ function loadMirror(){
 				$($("td")[225+Number(k)]).append(myimage);//TO EDIT
 				c = $($($("td")[225+Number(k)]).children());
 				c.attr("src", urlObj.url.mirror["reflex"+mid]);
-				c.attr("position","0");//To EDIT
+				
 				c.attr("flag",flag);
+				if(flag == 3) 
+				{
+					c.attr("position","22.5");
+					css("transform","rotate(-22.5deg)");
+				}
+				else c.attr("position","0");//To EDIT
 				k++;
 			}			
 		}		
@@ -133,15 +139,8 @@ function loadMirror(){
 	$("img").click(function(){
 		t = $(this).attr("position");
 		t = (Number(t)+45)%360;
-		if(t == 45) $(this).css("transform","rotate(-45deg)");
-		if(t == 90) $(this).css("transform","rotate(-90deg)");
-		if(t == 135) $(this).css("transform","rotate(-135deg)");
-		if(t == 180) $(this).css("transform","rotate(-180deg)");
-		if(t == 225) $(this).css("transform","rotate(-225deg)");
-		if(t == 270) $(this).css("transform","rotate(90deg)");
-		if(t == 315) $(this).css("transform","rotate(45deg)");
-		if(t == 0) $(this).css("transform","rotate(0deg)");
-				t = String(t);
+		$(this).css("transform","rotate(-"+t+"deg)");
+		t = String(t);
 		$(this).attr("position", t);
 	});
 }
