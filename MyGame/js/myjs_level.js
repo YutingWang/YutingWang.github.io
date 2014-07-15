@@ -30,12 +30,15 @@ for(var i = 0; i < $("td").length; i++)
 //=================本地存储==========================
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
-loadLevel();
 loadUrl();
+loadLevel();
+
 
 
 //=================载入关卡中元素位置===========levelObj================
 function loadLevel(){
+	$("td").css("background-image","none");
+	$($("td").children()).remove();
 	$("toDelete").ready(function(){
 		    $(".toDelete").load('https://YutingWang.github.io/MyGame/js/level'+storage.level+'.json',function(responseTxt,statusTxt,xhr){
 		    	if(statusTxt=="success")
@@ -62,8 +65,8 @@ function loadUrl(){
 		      	}
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
 		      	$(".toDelete").css("display", "none");	
-		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined")
-		      	{place();loadMirror(); loadBlock();}
+		      	//if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined")
+		      	//{place();loadMirror(); loadBlock();}
 		  	});
 	});
 }
