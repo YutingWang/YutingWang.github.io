@@ -122,9 +122,9 @@ function loadMirror(){
 		for(var i = 0; i < levelObj.mirror.length; i++)
 		{
 			var mid = levelObj.mirror[i].mtype;
-			if(mid == '90') flag = 2;
-			else if(mid == "45") flag = 3;
-			else if(mid == "0") flag = 4;
+			if(mid == '90') flag = "1";
+			else if(mid == "45") flag = "2";
+			else if(mid == "0") flag = "3";
 			for(var j = 0; j < levelObj.mirror[i].num; j++)
 			{
 				var myimage = '<img draggable="true" ondragstart="drag(event)" id="dra'+i+j+'"width="100%"/>';
@@ -132,6 +132,7 @@ function loadMirror(){
 				c = $($($("td")[Number(i)+Number(j)]).children());
 				c.attr("src", urlObj.url.mirror["reflex"+mid]);
 				c.attr("position","0");//To EDIT
+				c.attr("flag",flag);
 			}			
 		}		
 	});
@@ -160,13 +161,17 @@ ev.preventDefault();
 function drag(ev)
 {
 ev.dataTransfer.setData("Text",ev.target.id);
+$($(ev.target).parents()).attr("flag","0");
 }
 
 function drop(ev)
 {
-ev.preventDefault();
-var data=ev.dataTransfer.getData("Text");
-if($(ev.target).css("background-image") == "none")
-ev.target.appendChild(document.getElementById(data));
+	ev.preventDefault();
+	var data=ev.dataTransfer.getData("Text");
+	if($(ev.target).css("background-image") == "none" %% $(ev.target).children().length == 0)
+	{
+		ev.target.appendChild(document.getElementById(data));
+		$(ev.target).attr("flag",$($(ev.target).children()).attr("flag"));
+	}
 }
 
