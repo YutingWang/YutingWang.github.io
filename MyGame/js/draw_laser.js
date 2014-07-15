@@ -74,8 +74,8 @@ target:5
 		cxt.beginPath();
         cxt.strokeStyle = light_color;
 		cxt.lineWidth = 5;
-        cxt.moveTo(0.5 + (ini_x - 0.5) * (grid_size), 0.5 + (ini_y - 0.5) * (grid_size + 1));
-        cxt.lineTo(0.5 + (tar_x - 0.5) * (grid_size), 0.5 + (tar_y - 0.5) * (grid_size + 1));
+        cxt.moveTo(0.5 + (ini_x - 0.5) * (grid_size), 0.5 + (ini_y - 0.5) * (grid_size));
+        cxt.lineTo(0.5 + (tar_x - 0.5) * (grid_size), 0.5 + (tar_y - 0.5) * (grid_size));
 		cxt.closePath();
         cxt.stroke();
 		cxt.restore();
@@ -86,8 +86,8 @@ target:5
 		cxt.beginPath();
         cxt.strokeStyle = light_color;
 		cxt.lineWidth = 5;
-        cxt.moveTo(0.5 + (ini_x - 0.5) * (grid_size), 0.5 + (ini_y - 0.5) * (grid_size + 1));
-        cxt.lineTo(0.5 + ((tar_x - 0.5) * (grid_size)+(ini_x - 0.5) * (grid_size))/2, 0.5 + ((tar_y - 0.5) * (grid_size + 1)+(ini_y - 0.5) * (grid_size + 1))/2);
+        cxt.moveTo(0.5 + (ini_x - 0.5) * (grid_size), 0.5 + (ini_y - 0.5) * (grid_size));
+        cxt.lineTo(0.5 + ((tar_x - 0.5) * (grid_size)+(ini_x - 0.5) * (grid_size))/2, 0.5 + ((tar_y - 0.5) * (grid_size)+(ini_y - 0.5) * (grid_size))/2);
 		cxt.closePath();
         cxt.stroke();
 		cxt.restore();
