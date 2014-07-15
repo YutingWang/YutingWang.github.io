@@ -108,9 +108,9 @@ function loadMirror(){
 	$("toDelete").ready(function(){
 		$("td").attr("ondrop", "drop(event)");
 		$("td").attr("ondragover", "allowDrop(event)");
-		for(var i = 0; i < levelObj.mirror.length; )
+		for(var i = 0; i < levelObj.mirror.length; i++)
 			a += Number(levelObj.mirror[i].num);
-		for(var i = 0; i < a; i++)
+		for(var i = 0; i < a; )
 		{
 			var mid = levelObj.mirror[i].mtype;
 			if(mid == '90') flag = 2;
