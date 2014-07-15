@@ -11,7 +11,7 @@ function BgHover(obj,flag){
 }
 N = 15;
 //=====================绘制格子==========================
-for(var i = 0; i < N; i++) $("table").prepend("<tr></tr>");
+for(var i = 0; i < N; i++) $("table.game_frame").prepend("<tr.game></tr>");
 for(var i = 0; i < N; i++) $("tr").prepend("<td></td>");
 for(var i = 0; i < $("td").length; i++) 
 {
@@ -34,7 +34,7 @@ cxt_t.moveTo(0,a);
 cxt_t.lineTo(300,a);
 }
 cxt_t.stroke();
-
+*/
 //=================本地存储==========================
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
@@ -89,7 +89,7 @@ function place(){
 			var ddd = "url"+"("+"'"+url+"'"+")";			
 			$(box).css("background-image", ddd);
 			//设置格子属性
-			$(box).attr("flag", "laser");			 
+			$(box).attr("flag", "-1");			 
 			$(box).attr("color", color);
 			$(box).attr("position", levelObj.laser[i].angle);
 			if(levelObj.laser[i].angle == 90) $(box).css("transform","rotate(-90deg)");	//旋转
@@ -107,7 +107,7 @@ function place(){
 			var ddd = "url"+"("+"'"+url+"'"+")";
 			$(box).css("background-image", ddd);
 			//设置格子属性
-			$(box).attr("flag", "target");
+			$(box).attr("flag", "5");
 			$(box).attr("color", color);
 			$(box).attr("position", 0);//0为暗色，1为亮色
 		}
@@ -122,9 +122,9 @@ function loadMirror(){
 		for(var i = 0; i < levelObj.mirror.length; i++)
 		{
 			var mid = levelObj.mirror[i].mtype;
-			if(mid == '90') flag = "mirror_1";
-			else if(mid == "45") flag = "mirror_2";
-			else if(mid == "0") flag = "mirror_3";
+			if(mid == '90') flag = "2";
+			else if(mid == "45") flag = "3";
+			else if(mid == "0") flag = "4";
 			for(var j = 0; j < levelObj.mirror[i].num; j++)
 			{
 				var myimage = '<img draggable="true" ondragstart="drag(event)" id="dra'+i+j+'"width="100%"/>';
