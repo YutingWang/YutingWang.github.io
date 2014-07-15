@@ -11,14 +11,21 @@ function BgHover(obj,flag){
 }
 N = 15;
 //=====================绘制格子==========================
-for(var i = 0; i < N; i++) $("table.game_frame").prepend("<tr.game></tr>");
-for(var i = 0; i < N; i++) $("tr").prepend("<td></td>");
+for(var i = 0; i < N; i++) $("table.game_frame").prepend("<tr id='game'></tr>");
+for(var i = 0; i < N; i++) $("tr#game").prepend("<td></td>");
+/*for(var i = 0; i < $("td").length; i++) 
+{
+    $($("td")[i]).attr("id", Number(i)+1);  //给格子编号id，从0开始
+    $($("td")[i]).attr("flag", 0);//给格子设置属性flag，0为空
+} */
+
+for(var i = 0; i < N; i++) $("table.game_tools").prepend("<tr id='tools'></tr>");
+for(var i = 0; i < 3; i++) $("tr#tools").prepend("<td></td>");
 for(var i = 0; i < $("td").length; i++) 
 {
     $($("td")[i]).attr("id", Number(i)+1);  //给格子编号id，从0开始
     $($("td")[i]).attr("flag", 0);//给格子设置属性flag，0为空
 } 
-
 var c_t = document.getElementById("tool_canvas");
 var cxt_t = c_t.getContext("2d");		
 cxt_t.lineWidth = 1;
@@ -34,7 +41,7 @@ cxt_t.moveTo(0,a);
 cxt_t.lineTo(300,a);
 }
 cxt_t.stroke();
-*/
+
 //=================本地存储==========================
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
