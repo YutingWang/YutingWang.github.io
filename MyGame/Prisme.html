@@ -4,55 +4,47 @@
 		<title>Prisme</title>
 		<meta charset = "utf-8"/>
 		<link rel="stylesheet" href="https://YutingWang.github.io/MyGame/css/mystyle_level.css" />
-		<style type = "text/css">
-		.main_frame{
-			position:absolute;
-			left:10%;
-			top:5%;
-			width:80%;
-			height:90%;
-			background-color:rgba(255,255,0,0.4);
-		}
+		<style type = "text/css">		
 		.game_frame{
 			position:absolute;
-			left:10%;
+			left:30%;
 			top:10%;
-			width:540px;
-			height:540px;
-			background-color:rgba(255,255,0,0.1);
-			border:1px solid #c3c3c3;
+			width:539px;
+			height:539px;
+			background-color:rgba(240, 249, 250, 0.94);
+			border:3px solid #c3c3c3;
 		}
 		.level_title{
-			float:right;
-			font-size:30px;
+		float:left;
+		font-size:30px;
 		}
 		.title_frame{
 			position:absolute;
-			left:67%;
+			left:10%;
 			top:10%;
-			width:15%;
+			width:100%;
 			height:20%;
 			overflow:hidden;
 		}
 		.level_frame{
 			position:absolute;
-			left:72%;
+			left:12%;
 			top:23%;
-			width:20%;
+			width:100%;
 			height:10%;
 			overflow:hidden;
 		}
 		.level_frame a{
 			text-decoration:none;
 			font-size:25px;
-			color:#000;
+			color:#AEFC39;
 		}
 		.level_frame a:hover{
-			color:rgba(0,0,0,0.5);
+			color:rgba(255,255,0,0.5);
 		}
 		.tool_frame{
 			position:absolute;
-			left:60%;
+			left:10%;
 			top:40%;
 			width:300px;
 			height:100px;
@@ -63,18 +55,18 @@
 		}
 		.button .reset_button{
 			position:absolute;
-			left:65%;
+			left:6%;
 			top:80%;
-			width:8%;
+			width:100%;
 			height:5%;
 			overflow:hidden;
 			//background-color:rgba(41,25,31,0.9);
 		}
 		.button .HTP_button{
 			position:absolute;
-			left:75%;
+			left:35%;
 			top:80%;
-			width:15%;
+			width:100%;
 			height:5%;
 			overflow:hidden;
 			//background-color:rgba(41,25,31,0.9);
@@ -82,52 +74,67 @@
 		.button a{		
 			text-decoration:none;
 			font-size:25px;
-			color:#000;
+			color:#AEFC39;
 		}
 		.HTP_button a:hover{
 			text-align:center;
 			cursor:help;
-			color:rgba(0,0,0,0.5);
+			color:rgba(255,255,0,0.5);
 		}
 		.reset_button a:hover{
 			text-align:center;
 			cursor:pointer;
-			color:rgba(0,0,0,0.5);
+			color:rgba(255,255,0,0.5);
 		}
-		
+		.show_title{
+			position:absolute;
+			left:0%;
+			top:0%;
+			width:25%;
+			height:100%;
+		}		
+		.hide_title{
+			position:absolute;
+			left:25%;
+			top:0%;
+			width:75%;
+			height:100%;
+		}
 		</style>
+		
 		<script type="text/javascript" src="https://YutingWang.github.io/MyGame/js/jquery2.0.0.min.js"></script>
 	</head>
 	
-	<body>
+	<body>			
+							
+		<canvas style = "position:absolute;left:30%;top:10%;" width = "541px" height = "541px" id ="game_canvas">Your browser does not support the canvas element.</canvas>
+		<canvas style = "position:absolute;left:75%;top:10%;" width = "73px" height = "541px" id ="tool_canvas">Your browser does not support the canvas element.</canvas>
+		<div class = "show_title" onmouseover = "BgHover(this,true)"></div>
+		<div class = "hide_title" onmouseover = "BgHover(this,false)"></div>
 		<div class = "toDelete"></div>
-		<table class = "game_frame" position>				
-		</table>			
-		<div class = "title_frame">
-			<h1 class = "level_title">Level 1</h1>
-		</div>
-		<div class = "level_frame">
-			<a href = "http://www.baidu.com" onclick = "">1</a>
-			<a href = "http://www.baidu.com" onclick = "">2</a>
-			<a href = "http://www.baidu.com" onclick = "">3</a>
-			<a href = "http://www.baidu.com" onclick = "">4</a>
-			<a href = "http://www.baidu.com" onclick = "">5</a>
-		</div>
-			
-			
-		<div class = "button">
-			<div class = "reset_button">
-				<a>Reset</a>
+		<div id= "title_move" style ="display:none;position:absolute;left:-20%;top:0%;width:25%;height:100%">
+			<div class = "title_frame">
+					<h1 class = "level_title"><font size = "7" color = "#AEFC39">Level 1</font></h1>
 			</div>
-			<div class = "HTP_button">
-				<a>How to play</a>
+			<div class = "level_frame">
+					<a href = "http://www.baidu.com" onclick = "">1</a>
+					<a href = "http://www.baidu.com" onclick = "">2</a>
+					<a href = "http://www.baidu.com" onclick = "">3</a>
+					<a href = "http://www.baidu.com" onclick = "">4</a>
+					<a href = "http://www.baidu.com" onclick = "">5</a>
+			</div>						
+			<div class = "button">
+				<div class = "reset_button">
+					<a>Reset</a>
+				</div>
+				<div class = "HTP_button">
+					<a>How to play</a>
+				</div>
 			</div>
 		</div>
-		
-		<canvas style = "position:absolute;left:10%;top:10%;" width = "540px" height = "540px" id ="game_canvas">Your browser does not support the canvas element.</canvas>
-		<canvas style = "position:absolute;left:65%;top:40%;" width = "301px" height = "101px" id ="tool_canvas">Your browser does not support the canvas element.</canvas>
-		
+		<table class = "game_frame"> </table>
+	</body>
 	
-		<script type="text/javascript" src="https://YutingWang.github.io/MyGame/js/myjs_level.js"></script>
-	</body>		
+   <script type="text/javascript" src="https://YutingWang.github.io/MyGame/js/myjs_level.js"></script>
+	
 </html>

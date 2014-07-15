@@ -1,3 +1,14 @@
+function BgHover(obj,flag){
+	if(flag){
+		//setInterval(show1,1000);
+		document.getElementById("title_move").style.display="";
+		document.getElementById("title_move").style.left="0%";
+	}
+	else{
+		console.log(1);
+		document.getElementById("title_move").style.display="none";
+		}
+	}
 N = 15;
 //=====================绘制格子==========================
 for(var i = 0; i < N; i++) $("table").prepend("<tr></tr>");
