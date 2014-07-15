@@ -20,7 +20,7 @@ target:5
         light_angle_x = convert_x(angle);
         light_angle_y = convert_y(angle);
 		num = light_x + light_angle_x  + (light_y - light_angle_y - 1) * 15;		
-		if(num == 68)	debugger;
+		
         if (judge_edge(light_x, light_y, light_angle_x, light_angle_y) == true) {
             draw_edge_line(cxt,light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
             return;
