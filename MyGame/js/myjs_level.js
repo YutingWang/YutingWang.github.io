@@ -8,7 +8,7 @@ function BgHover(obj,flag){
 		console.log(1);
 		document.getElementById("title_move").style.display="none";
 		}
-	}
+}
 N = 15;
 //=====================绘制格子==========================
 for(var i = 0; i < N; i++) $("table").prepend("<tr></tr>");
@@ -168,7 +168,7 @@ function drop(ev)
 {
 	ev.preventDefault();
 	var data=ev.dataTransfer.getData("Text");
-	if($(ev.target).css("background-image") == "none" %% $(ev.target).children().length == 0)
+	if($(ev.target).css("background-image") == "none" && $(ev.target).children().length == 0)
 	{
 		ev.target.appendChild(document.getElementById(data));
 		$(ev.target).attr("flag",$($(ev.target).children()).attr("flag"));
