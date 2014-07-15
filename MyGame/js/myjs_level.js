@@ -31,7 +31,7 @@ var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
 loadUrl();
 loadLevel();
-
+var levelObj;
 
 
 //=================载入关卡中元素位置===========levelObj================
