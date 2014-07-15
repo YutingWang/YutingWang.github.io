@@ -98,6 +98,14 @@ function loadMirror(){
 		t = (Number(t)+1)%4;
 		t = String(t);
 		$(this).attr("position", t);
+		if(storage.level == 1){
+			var ct = document.getElementById("game_canvas");
+			var cxt = ct.getContext("2d");
+			grid_size = 36;
+			cxt.clearRect(0,0,2000,2000);
+			draw_laser(15,2,180,"blue");
+			draw_laser(15,14,180,"red");
+		}
 	});
 }
 
@@ -109,6 +117,14 @@ ev.preventDefault();
 function drag(ev)
 {
 ev.dataTransfer.setData("Text",ev.target.id);
+if(storage.level == 1){
+			var ct = document.getElementById("game_canvas");
+			var cxt = ct.getContext("2d");
+			grid_size = 36;
+			cxt.clearRect(0,0,2000,2000);
+			draw_laser(15,2,180,"blue");
+			draw_laser(15,14,180,"red");
+		}
 }
 
 function drop(ev)
@@ -117,6 +133,14 @@ ev.preventDefault();
 var data=ev.dataTransfer.getData("Text");
 if($(ev.target).css("background-image") == "none")
 ev.target.appendChild(document.getElementById(data));
+if(storage.level == 1){
+			var ct = document.getElementById("game_canvas");
+			var cxt = ct.getContext("2d");
+			grid_size = 36;
+			cxt.clearRect(0,0,2000,2000);
+			draw_laser(15,2,180,"blue");
+			draw_laser(15,14,180,"red");
+		}
 }
 
 $(".howToPlay").click(function(){
