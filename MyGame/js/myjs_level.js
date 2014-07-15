@@ -108,17 +108,22 @@ function loadMirror(){
 	$("toDelete").ready(function(){
 		$("td").attr("ondrop", "drop(event)");
 		$("td").attr("ondragover", "allowDrop(event)");
-		for(var i = 0; i < levelObj.mirror.length; i++)
+		for(var i = 0; i < levelObj.mirror.length; )
+			a += Number(levelObj.mirror[i].num);
+		for(var i = 0; i < a; i++)
 		{
 			var mid = levelObj.mirror[i].mtype;
 			if(mid == '90') flag = 2;
 			else if(mid == "45") flag = 3;
 			else if(mid == "0") flag = 4;
-			var myimage = '<img draggable="true" ondragstart="drag(event)" id="dra" width="100%"/>';
-			$($("td")[i]).append(myimage);//TO EDIT
-			c = $($($("td")[i]).children());
-			c.attr("src", urlObj.url.mirror["reflex"+mid]);
-			c.attr("position","0");//To EDIT			
+			for(var j = 0; j < levelObj.mirror[i].num; i++,j++)
+			{
+				var myimage = '<img draggable="true" ondragstart="drag(event)" id='+i+'width="100%"/>';
+				$($("td")[i]).append(myimage);//TO EDIT
+				c = $($($("td")[i]).children());
+				c.attr("src", urlObj.url.mirror["reflex"+mid]);
+				c.attr("position","0");//To EDIT
+			}			
 		}		
 	});
 	$("img").click(function(){
