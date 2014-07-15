@@ -146,6 +146,14 @@ function loadMirror(){
 		$(this).css("transform","rotate(-"+t+"deg)");
 		t = String(t);
 		$(this).attr("position", t);
+		if(storage.level == 1){
+			var ct = document.getElementById("game_canvas");
+			var cxt = ct.getContext("2d");
+			grid_size = 36;
+			cxt.clearRect(0,0,2000,2000);
+			draw_laser(15,2,180,"blue");
+			draw_laser(15,14,180,"red");
+		}
 	});
 }
 
@@ -174,6 +182,14 @@ function drag(ev)
 {
 ev.dataTransfer.setData("Text",ev.target.id);
 $($(ev.target).parents()).attr("flag","0");
+if(storage.level == 1){
+			var ct = document.getElementById("game_canvas");
+			var cxt = ct.getContext("2d");
+			grid_size = 36;
+			cxt.clearRect(0,0,2000,2000);
+			draw_laser(15,2,180,"blue");
+			draw_laser(15,14,180,"red");
+		}
 }
 
 function drop(ev)
@@ -185,5 +201,13 @@ function drop(ev)
 		ev.target.appendChild(document.getElementById(data));
 		$(ev.target).attr("flag",$($(ev.target).children()).attr("flag"));
 	}
+	if(storage.level == 1){
+			var ct = document.getElementById("game_canvas");
+			var cxt = ct.getContext("2d");
+			grid_size = 36;
+			cxt.clearRect(0,0,2000,2000);
+			draw_laser(15,2,180,"blue");
+			draw_laser(15,14,180,"red");
+		}
 }
 
