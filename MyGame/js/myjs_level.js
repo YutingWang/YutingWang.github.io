@@ -29,7 +29,7 @@ for(var i = 0; i < $("td").length; i++)
 //=================本地存储==========================
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
-levelObj;
+var levelObj;
 loadLevel();
 loadUrl();
 
