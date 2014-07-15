@@ -76,7 +76,7 @@ function loadUrl(){
 			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
 			}
 	});
-		}
+		
 	});
 	
 }
