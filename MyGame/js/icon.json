@@ -33,8 +33,7 @@
 			"orange1": "https://YutingWang.github.io/MyGame/pic/target_orange1.png"
 		},
 		"block":{
-			"https://YutingWang.github.io/MyGame/pic/block.png"
-			
+			"block":"https://YutingWang.github.io/MyGame/pic/block.png"			
 		},
 	}
 }

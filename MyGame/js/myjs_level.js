@@ -63,7 +63,7 @@ function loadUrl(){
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
 		      	$(".toDelete").css("display", "none");	
 		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined")
-		      	{place();loadMirror();loadBlock();}
+		      	{place();loadMirror(); loadBlock();}
 		  	});
 	});
 }
@@ -148,7 +148,7 @@ function loadMirror(){
 
 function loadBlock(){
 	$("toDelete").ready(function(){
-		var url = urlObj.url.block;
+		var url = urlObj.url.block.block;
 		for(var i = 0; i < levelObj.block.x.length;i++)
 		{
 			var x = levelObj.block.x[i];
