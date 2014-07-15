@@ -81,9 +81,9 @@ function place(){
 			$(box).attr("flag", "laser");			 
 			$(box).attr("color", color);
 			$(box).attr("position", levelObj.laser[i].angle);
-			if(levelObj.laser[i].angle == 0) $(box).css("transform","rotate(90deg)");	//旋转
-			else if(levelObj.laser[i].angle == 180) $(box).css("transform","rotate(-90deg)");
-			else if(levelObj.laser[i].angle == 270) $(box).css("transform","rotate(180deg)");
+			if(levelObj.laser[i].angle == 90) $(box).css("transform","rotate(-90deg)");	//旋转
+			else if(levelObj.laser[i].angle == 180) $(box).css("transform","rotate(180deg)");
+			else if(levelObj.laser[i].angle == 270) $(box).css("transform","rotate(-90deg)");
 		}
 		//===========载入target============================
 		for(var i = 0; i < levelObj.target.length; i++)
@@ -126,11 +126,15 @@ function loadMirror(){
 	});
 	$("img").click(function(){
 		t = $(this).attr("position");
-		if(t == 0) $(this).css("transform","rotate(45deg)");
-		if(t == 1) $(this).css("transform","rotate(135deg)");
-		if(t == 2) $(this).css("transform","rotate(-135deg)");
-		if(t == 3) $(this).css("transform","rotate(-45deg)");
-		t = (Number(t)+1)%4;
+		if(t == 45) $(this).css("transform","rotate(-45deg)");
+		if(t == 90) $(this).css("transform","rotate(-90deg)");
+		if(t == 135) $(this).css("transform","rotate(-135deg)");
+		if(t == 180) $(this).css("transform","rotate(-180deg)");
+		if(t == 225) $(this).css("transform","rotate(135deg)");
+		if(t == 270) $(this).css("transform","rotate(90deg)");
+		if(t == 315) $(this).css("transform","rotate(45deg)");
+		if(t == 0) $(this).css("transform","rotate(0deg)");
+		t = (Number(t)+45)%180;
 		t = String(t);
 		$(this).attr("position", t);
 	});
