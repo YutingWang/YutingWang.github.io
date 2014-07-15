@@ -38,7 +38,7 @@ target:5
                 temp_angle = reflect_angle(angle, Number($('#'+ num +' '+'img').attr('position')));
                 t_x = convert_x(temp_angle);
                 t_y = convert_y(temp_angle);
-                draw_laser(cxt,light_x + t_x, light_y + t_y, temp_angle, light_color);
+                draw_laser(cxt,light_x + light_angle_x, light_y - light_angle_y, temp_angle, light_color);
                 break;
             case 3:
                 draw_laser_line(cxt,light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
