@@ -1,3 +1,11 @@
+body{	
+	background-image:url(pic/background2.jpg);
+	background-position:top;
+	background-size:100% auto;
+  	background-position:top left;
+  	background-repeat:repeat-y;
+}
+
 table, td, tr{
 	empty-cells: show;
 	 border-collapse:collapse;
