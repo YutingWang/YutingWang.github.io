@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Prisme</title>
 		<meta charset = "utf-8"/>
-		<link rel="stylesheet" href="css/mystyle.css" />
+		<link rel="stylesheet" href="css/mystyle_level.css" />
 		<style type = "text/css">
 		.main_frame{
 			position:absolute;
@@ -16,16 +15,16 @@
 		}
 		.game_frame{
 			position:absolute;
-			left:30px;
-			top:30px;
+			left:10%;
+			top:10%;
 			width:540px;
 			height:540px;
-			//background-color:rgba(255,255,255,0.9);
+			background-color:rgba(255,255,0,0.1);
 			border:1px solid #c3c3c3;
 		}
 		.level_title{
-		float:right;
-		font-size:30px;
+			float:right;
+			font-size:30px;
 		}
 		.title_frame{
 			position:absolute;
@@ -95,17 +94,17 @@
 			cursor:pointer;
 			color:rgba(0,0,0,0.5);
 		}
+		
 		</style>
 		<script type="text/javascript" src="js/jquery2.0.0.min.js"></script>
-		<script type="text/javascript" src="js/myjs.js"></script>
+		<script type="text/javascript" src="js/myjs_level.js"></script>
 	</head>
 	
-	<body>
-		
-		<div class = "main_frame">
+	<body>	
 			
-			<table class = "game_frame"> </table>
-			<canvas class = "game_frame" id ="game_canvas">Your browser does not support the canvas element.</canvas>
+			<table class = "game_frame">
+				
+			</table>			
 			<div class = "title_frame">
 				<h1 class = "level_title">Level 1</h1>
 			</div>
@@ -128,34 +127,10 @@
 			</div>
 			<div class = "game_frame">
 			</div>
-		</div>
-		<canvas class = "tool_frame" id ="tool_canvas">Your browser does not support the canvas element.</canvas>
+		
+		<canvas style = "position:absolute;left:10%;top:10%;" width = "540px" height = "540px" id ="game_canvas">Your browser does not support the canvas element.</canvas>
+		<canvas style = "position:absolute;left:65%;top:40%;" width = "301px" height = "101px" id ="tool_canvas">Your browser does not support the canvas element.</canvas>
 		<div class = "toDelete"></div>
-	</body>
-	
-	<script>
-        	for(var i = 0; i < 15; i++) $("table").prepend("<tr></tr>");
-        	for(var i = 0; i < 15; i++) $("tr").prepend("<td></td>");
-        	for(var i = 0; i < $("td").length; i++) $($("td")[i]).attr("id", i);  
-			
-			var c_t = document.getElementById("tool_canvas");
-			var cxt_t = c_t.getContext("2d");		
-			cxt_t.lineWidth = 1;
-			cxt_t.beginPath();
-			for(var a = 0.5;a < 300;a+= 50){
-				
-				cxt_t.moveTo(a,0);
-				cxt_t.lineTo(a,150);		
-				
-			}
-			
-			for(var a = 0.5;a < 100;a+=77){
-				
-				cxt_t.moveTo(0,a);
-				cxt_t.lineTo(300,a);		
-				
-			}
-			cxt_t.stroke();
-    </script>
-	
+	</body>	
+	<script type="text/javascript" src="js/myjs_level.js"></script>	
 </html>

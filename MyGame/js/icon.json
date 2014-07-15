@@ -12,7 +12,7 @@
 		"mirror":{
 			"reflex90":     "https://YutingWang.github.io/MyGame/pic/mirror1.png",
 			"reflex45":     "https://YutingWang.github.io/MyGame/pic/mirror2.png",
-			"reflexthrough":"https://YutingWang.github.io/MyGame/pic/mirror3.png"
+			"reflex0":"https://YutingWang.github.io/MyGame/pic/mirror3.png"
 		},
 		"target":{
 			"red":   "https://YutingWang.github.io/MyGame/pic/target_red.png",

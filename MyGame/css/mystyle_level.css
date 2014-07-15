@@ -1,0 +1,13 @@
+table, td, tr{
+	empty-cells: show;
+	 border-collapse:collapse;
+}
+td{
+	width:33px;
+	height:33px;
+	border-color: black;
+	border-width: 1px;
+	border-style: dashed;
+	background-repeat:no-repeat;
+	background-size:100%;
+}
