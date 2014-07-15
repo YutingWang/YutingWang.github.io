@@ -65,8 +65,8 @@ function loadUrl(){
 		      	}
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
 		      	$(".toDelete").css("display", "none");	
-		      	//if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined")
-		      	//{place();loadMirror(); loadBlock();}
+		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined")
+		      	{place();loadMirror(); loadBlock();}
 		  	});
 	});
 }
