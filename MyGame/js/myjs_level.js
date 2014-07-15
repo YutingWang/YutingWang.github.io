@@ -87,7 +87,7 @@ function place(){
 			var color = levelObj.laser[i].color;	 //激光器颜色
 			var x = levelObj.laser[i].x;			 //激光器x坐标
 			var y = levelObj.laser[i].y;			 //激光器y坐标
-			var box = $("td")[Number(y*N)+Number(x)];//对应所在格子的位置
+			var box = $("td")[Number(y-1)*N+Number(x)];//对应所在格子的位置
 			var url = urlObj.url.laser[color];		 //激光器图片地址
 			var ddd = "url"+"("+"'"+url+"'"+")";			
 			$(box).css("background-image", ddd);
@@ -105,7 +105,7 @@ function place(){
 			var color = levelObj.target[i].color;
 			var x = levelObj.target[i].x;
 			var y = levelObj.target[i].y;
-			var box = $("td")[Number(y*N)+Number(x)];
+			var box = $("td")[(y-1)*N+Number(x)];
 			var url = urlObj.url.target[color+'1'];
 			var ddd = "url"+"("+"'"+url+"'"+")";
 			$(box).css("background-image", ddd);
@@ -171,7 +171,7 @@ function loadBlock(){
 		{
 			var x = levelObj.block.x[i];
 			var y = levelObj.block.y[i];
-			var box = $("td")[Number(y*N)+Number(x)];
+			var box = $("td")[(y-1)*N+Number(x)];
 			var ddd = "url"+"("+"'"+url+"'"+")";
 			$(box).css("background-image", ddd);
 			//设置格子属性
