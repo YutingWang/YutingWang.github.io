@@ -74,6 +74,7 @@ function loadUrl(){
 			var cxt = ct.getContext("2d");
 			grid_size = 36;
 			cxt.clearRect(0,0,2000,2000);
+			console.log(window.level_obj);
 			for(var i = 0;i < window.level_obj.laser.length;i++){
 			draw_laser(cxt,level_Obj.laser[i].x, level_Obj.laser[i].y, level_Obj.laser[i].angle, level_Obj.laser[i].color);
 			}
