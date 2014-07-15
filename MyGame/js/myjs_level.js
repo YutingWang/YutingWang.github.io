@@ -73,7 +73,7 @@ function loadUrl(){
 			cxt.clearRect(0,0,2000,2000);
 			
 			for(var i = 0;i < levelObj.laser.length;i++){
-			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle, levelObj.laser[i].color);
+			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
 		  	
 			
@@ -163,7 +163,7 @@ function loadMirror(){
 			cxt.clearRect(0,0,2000,2000);
 			
 			for(var i = 0;i < levelObj.laser.length;i++){
-			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle, levelObj.laser[i].color);
+			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
 	});
 }
@@ -199,7 +199,7 @@ $($(ev.target).parents()).attr("flag","0");
 			cxt.clearRect(0,0,2000,2000);
 			
 			for(var i = 0;i < levelObj.laser.length;i++){
-			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle, levelObj.laser[i].color);
+			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
 }
 
@@ -218,7 +218,7 @@ function drop(ev)
 			cxt.clearRect(0,0,2000,2000);
 			
 			for(var i = 0;i < levelObj.laser.length;i++){
-			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle, levelObj.laser[i].color);
+			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
 }
 
