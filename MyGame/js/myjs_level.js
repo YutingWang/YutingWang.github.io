@@ -4,8 +4,7 @@ function BgHover(obj,flag){
 		document.getElementById("title_move").style.display="";
 		document.getElementById("title_move").style.left="0%";
 	}
-	else{
-		console.log(1);
+	else{		
 		document.getElementById("title_move").style.display="none";
 		}
 }
@@ -70,13 +69,12 @@ function loadUrl(){
 		      	{place();loadMirror(); loadBlock();}
 		  	});
 	});
-	if(storage.level == 1){
-			var ct = document.getElementById("game_canvas");
-			var cxt = ct.getContext("2d");
-			grid_size = 36;
-			cxt.clearRect(0,0,2000,2000);
-			draw_laser(cxt,15,2,180,"blue");
-			draw_laser(cxt,15,14,180,"red");
+	var ct = document.getElementById("game_canvas");
+		var cxt = ct.getContext("2d");
+		grid_size = 36;
+		cxt.clearRect(0,0,2000,2000);
+		for(var i = 0;i < levelObj.laser.length;i++){
+			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
 		}
 }
 
@@ -154,14 +152,15 @@ function loadMirror(){
 		$(this).css("transform","rotate(-"+t+"deg)");
 		t = String(t);
 		$(this).attr("position", t);
-		if(storage.level == 1){
-			var ct = document.getElementById("game_canvas");
-			var cxt = ct.getContext("2d");
-			grid_size = 36;
-			cxt.clearRect(0,0,2000,2000);
-			draw_laser(cxt,15,2,180,"blue");
-			draw_laser(cxt,15,14,180,"red");
+		
+		var ct = document.getElementById("game_canvas");
+		var cxt = ct.getContext("2d");
+		grid_size = 36;
+		cxt.clearRect(0,0,2000,2000);
+		for(var i = 0;i < levelObj.laser.length;i++){
+			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
 		}
+		
 	});
 }
 
@@ -190,13 +189,12 @@ function drag(ev)
 {
 ev.dataTransfer.setData("Text",ev.target.id);
 $($(ev.target).parents()).attr("flag","0");
-if(storage.level == 1){
-			var ct = document.getElementById("game_canvas");
-			var cxt = ct.getContext("2d");
-			grid_size = 36;
-			cxt.clearRect(0,0,2000,2000);
-			draw_laser(cxt,15,2,180,"blue");
-			draw_laser(cxt,15,14,180,"red");
+var ct = document.getElementById("game_canvas");
+		var cxt = ct.getContext("2d");
+		grid_size = 36;
+		cxt.clearRect(0,0,2000,2000);
+		for(var i = 0;i < levelObj.laser.length;i++){
+			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
 		}
 }
 
@@ -209,13 +207,12 @@ function drop(ev)
 		ev.target.appendChild(document.getElementById(data));
 		$(ev.target).attr("flag",$($(ev.target).children()).attr("flag"));
 	}
-	if(storage.level == 1){
-			var ct = document.getElementById("game_canvas");
-			var cxt = ct.getContext("2d");
-			grid_size = 36;
-			cxt.clearRect(0,0,2000,2000);
-			draw_laser(cxt,15,2,180,"blue");
-			draw_laser(cxt,15,14,180,"red");
+	var ct = document.getElementById("game_canvas");
+		var cxt = ct.getContext("2d");
+		grid_size = 36;
+		cxt.clearRect(0,0,2000,2000);
+		for(var i = 0;i < levelObj.laser.length;i++){
+			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
 		}
 }
 
