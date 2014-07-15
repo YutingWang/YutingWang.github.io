@@ -11,3 +11,6 @@ td{
 	background-repeat:no-repeat;
 	background-size:100%;
 }
+canvas{
+	z-index:-1;
+}
