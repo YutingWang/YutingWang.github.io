@@ -31,7 +31,6 @@ var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
 loadUrl();
 loadLevel();
-var levelObj;
 
 
 //=================载入关卡中元素位置===========levelObj================
@@ -68,14 +67,18 @@ function loadUrl(){
 		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined")
 		      	{place();loadMirror(); loadBlock();}
 		  	});
-	});
-	var ct = document.getElementById("game_canvas");
-		var cxt = ct.getContext("2d");
-		grid_size = 36;
-		cxt.clearRect(0,0,2000,2000);
-		for(var i = 0;i < levelObj.laser.length;i++){
+		  	$("toDelete").ready(function(){
+			var ct = document.getElementById("game_canvas");
+			var cxt = ct.getContext("2d");
+			grid_size = 36;
+			cxt.clearRect(0,0,2000,2000);
+			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
+			}
+	});
 		}
+	});
+	
 }
 
 function place(){
@@ -152,7 +155,7 @@ function loadMirror(){
 		$(this).css("transform","rotate(-"+t+"deg)");
 		t = String(t);
 		$(this).attr("position", t);
-		
+	$("toDelete").ready(function(){
 		var ct = document.getElementById("game_canvas");
 		var cxt = ct.getContext("2d");
 		grid_size = 36;
@@ -160,7 +163,7 @@ function loadMirror(){
 		for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
 		}
-		
+	});
 	});
 }
 
@@ -189,13 +192,15 @@ function drag(ev)
 {
 ev.dataTransfer.setData("Text",ev.target.id);
 $($(ev.target).parents()).attr("flag","0");
-var ct = document.getElementById("game_canvas");
+$("toDelete").ready(function(){
+		var ct = document.getElementById("game_canvas");
 		var cxt = ct.getContext("2d");
 		grid_size = 36;
 		cxt.clearRect(0,0,2000,2000);
 		for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
 		}
+	});
 }
 
 function drop(ev)
@@ -207,12 +212,14 @@ function drop(ev)
 		ev.target.appendChild(document.getElementById(data));
 		$(ev.target).attr("flag",$($(ev.target).children()).attr("flag"));
 	}
-	var ct = document.getElementById("game_canvas");
+	$("toDelete").ready(function(){
+		var ct = document.getElementById("game_canvas");
 		var cxt = ct.getContext("2d");
 		grid_size = 36;
 		cxt.clearRect(0,0,2000,2000);
 		for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
 		}
+	});
 }
 
