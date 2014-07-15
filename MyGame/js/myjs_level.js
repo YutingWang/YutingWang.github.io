@@ -70,6 +70,14 @@ function loadUrl(){
 		      	{place();loadMirror(); loadBlock();}
 		  	});
 	});
+	if(storage.level == 1){
+			var ct = document.getElementById("game_canvas");
+			var cxt = ct.getContext("2d");
+			grid_size = 36;
+			cxt.clearRect(0,0,2000,2000);
+			draw_laser(cxt,15,2,180,"blue");
+			draw_laser(cxt,15,14,180,"red");
+		}
 }
 
 function place(){
@@ -151,8 +159,8 @@ function loadMirror(){
 			var cxt = ct.getContext("2d");
 			grid_size = 36;
 			cxt.clearRect(0,0,2000,2000);
-			draw_laser(15,2,180,"blue");
-			draw_laser(15,14,180,"red");
+			draw_laser(cxt,15,2,180,"blue");
+			draw_laser(cxt,15,14,180,"red");
 		}
 	});
 }
@@ -187,8 +195,8 @@ if(storage.level == 1){
 			var cxt = ct.getContext("2d");
 			grid_size = 36;
 			cxt.clearRect(0,0,2000,2000);
-			draw_laser(15,2,180,"blue");
-			draw_laser(15,14,180,"red");
+			draw_laser(cxt,15,2,180,"blue");
+			draw_laser(cxt,15,14,180,"red");
 		}
 }
 
@@ -206,8 +214,8 @@ function drop(ev)
 			var cxt = ct.getContext("2d");
 			grid_size = 36;
 			cxt.clearRect(0,0,2000,2000);
-			draw_laser(15,2,180,"blue");
-			draw_laser(15,14,180,"red");
+			draw_laser(cxt,15,2,180,"blue");
+			draw_laser(cxt,15,14,180,"red");
 		}
 }
 

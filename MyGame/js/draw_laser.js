@@ -14,7 +14,7 @@ target:5
 
 	
 
-    function draw_laser(light_x, light_y, angle, light_color) 
+    function draw_laser(cxt,light_x, light_y, angle, light_color) 
     {
         var temp_angle,light_angle_x,light_angle_y,num;
         light_angle_x = convert_x(angle);
@@ -22,52 +22,52 @@ target:5
 		num = light_x + light_angle_x  + (light_y - light_angle_y - 1) * 15;		
 		if(num == 132)	debugger;
         if (judge_edge(light_x, light_y, light_angle_x, light_angle_y) == true) {
-            draw_edge_line(light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
+            draw_edge_line(cxt,light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
             return;
         }
         switch (Number($('#'+num).attr('flag'))) {
             case 0:
-                draw_laser_line(light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
-                draw_laser(light_x + light_angle_x, light_y - light_angle_y, angle, light_color);
+                draw_laser_line(cxt,light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
+                draw_laser(cxt,light_x + light_angle_x, light_y - light_angle_y, angle, light_color);
                 break;
             case 1:
-                draw_edge_line(light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
+                draw_edge_line(cxt,light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
                 break;
             case 2:
-                draw_laser_line(light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
+                draw_laser_line(cxt,light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
                 temp_angle = reflect_angle(angle, Number($('#'+ num +' '+'img').attr('position')));
                 t_x = convert_x(temp_angle);
                 t_y = convert_y(temp_angle);
-                draw_laser(light_x + t_x, light_y + t_y, temp_angle, light_color);
+                draw_laser(cxt,light_x + t_x, light_y + t_y, temp_angle, light_color);
                 break;
             case 3:
-                draw_laser_line(light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
+                draw_laser_line(cxt,light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
                 temp_angle = reflect_angle(angle, Number($('#'+ num +' '+'img').attr('position')));
                 t_x = convert_x(temp_angle);
                 t_y = convert_y(temp_angle);
-                draw_laser(light_x + light_angle_x, light_y - light_angle_y, temp_angle, light_color);
+                draw_laser(cxt,light_x + light_angle_x, light_y - light_angle_y, temp_angle, light_color);
                 break;
             case 4:
 			
-                draw_laser_line(light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
-                draw_laser(light_x + light_angle_x, light_y - light_angle_y, angle, light_color);
-                draw_edge_line(light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
+                draw_laser_line(cxt,light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
+                draw_laser(cxt,light_x + light_angle_x, light_y - light_angle_y, angle, light_color);
+                draw_edge_line(cxt,light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
                 temp_angle = reflect_angle(angle, Number($('#'+ num +' '+'img').attr('position')));
                 t_x = convert_x(temp_angle);
                 t_y = convert_y(temp_angle);
-                draw_laser(light_x + light_angle_x, light_y - light_angle_y, temp_angle, light_color);
+                draw_laser(cxt,light_x + light_angle_x, light_y - light_angle_y, temp_angle, light_color);
                 break;
             case 5:
-                draw_laser_line(light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
+                draw_laser_line(cxt,light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
                 if (same_color($('#'+num).attr('color'), light_color))
                     console.log("haha");
-                draw_laser(light_x + light_angle_x, light_y - light_angle_y, angle, light_color);
+                draw_laser(cxt,light_x + light_angle_x, light_y - light_angle_y, angle, light_color);
                 break;
             default:				
         }
     }
     
-    function draw_laser_line(ini_x, ini_y, tar_x, tar_y, light_color) {
+    function draw_laser_line(cxt,ini_x, ini_y, tar_x, tar_y, light_color) {
         
 		cxt.save();
 		cxt.beginPath();
@@ -80,7 +80,7 @@ target:5
 		cxt.restore();
     }
     
-    function draw_edge_line(ini_x, ini_y, tar_x, tar_y, light_color) {        
+    function draw_edge_line(cxt,ini_x, ini_y, tar_x, tar_y, light_color) {        
 		cxt.save();
 		cxt.beginPath();
         cxt.strokeStyle = light_color;
