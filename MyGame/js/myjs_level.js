@@ -129,7 +129,7 @@ function loadMirror(){
 				if(flag == 3) 
 				{
 					c.attr("position","22.5");
-					css("transform","rotate(-22.5deg)");
+					c.css("transform","rotate(-22.5deg)");
 				}
 				else c.attr("position","0");//To EDIT
 				k++;
