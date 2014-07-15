@@ -29,9 +29,8 @@ for(var i = 0; i < $("td").length; i++)
 //=================本地存储==========================
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
-loadUrl();
 loadLevel();
-
+loadUrl();
 
 //=================载入关卡中元素位置===========levelObj================
 function loadLevel(){
@@ -75,7 +74,7 @@ function loadUrl(){
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
 			}
-	});
+			});
 		
 	});
 	
@@ -192,7 +191,7 @@ function drag(ev)
 {
 ev.dataTransfer.setData("Text",ev.target.id);
 $($(ev.target).parents()).attr("flag","0");
-$("toDelete").ready(function(){
+	$("toDelete").ready(function(){
 		var ct = document.getElementById("game_canvas");
 		var cxt = ct.getContext("2d");
 		grid_size = 36;
