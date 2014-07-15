@@ -130,11 +130,11 @@ function loadMirror(){
 		if(t == 90) $(this).css("transform","rotate(-90deg)");
 		if(t == 135) $(this).css("transform","rotate(-135deg)");
 		if(t == 180) $(this).css("transform","rotate(-180deg)");
-		if(t == 225) $(this).css("transform","rotate(135deg)");
+		if(t == 225) $(this).css("transform","rotate(-225deg)");
 		if(t == 270) $(this).css("transform","rotate(90deg)");
 		if(t == 315) $(this).css("transform","rotate(45deg)");
 		if(t == 0) $(this).css("transform","rotate(0deg)");
-		t = (Number(t)+45)%180;
+		t = (Number(t)+45)%360;
 		t = String(t);
 		$(this).attr("position", t);
 	});
