@@ -49,9 +49,10 @@ function loadLevel(){
 		      	$(".toDelete").css("display", "none");	
 		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined") 
 		      	{place();loadMirror();loadBlock();}
+		      	level_obj = levelObj;
 		  	});
 	});
-	level_obj = levelObj;
+	
 }
 
 function loadUrl(){
