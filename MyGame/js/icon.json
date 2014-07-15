@@ -33,8 +33,8 @@
 			"orange1": "https://YutingWang.github.io/MyGame/pic/target_orange1.png"
 		},
 		"block":{
-			"type1":"https://YutingWang.github.io/MyGame/pic/block_1.png",
-			"type2":"https://YutingWang.github.io/MyGame/pic/block_2.png"
+			"https://YutingWang.github.io/MyGame/pic/block.png"
+			
 		},
 	}
 }

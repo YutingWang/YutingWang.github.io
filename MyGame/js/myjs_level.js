@@ -46,7 +46,7 @@ function loadLevel(){
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
 		      	$(".toDelete").css("display", "none");	
 		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined") 
-		      	{place();loadMirror();}
+		      	{place();loadMirror();loadBlock();}
 		  	});
 	});
 }
@@ -63,7 +63,7 @@ function loadUrl(){
 		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
 		      	$(".toDelete").css("display", "none");	
 		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined")
-		      	{place();loadMirror();}
+		      	{place();loadMirror();loadBlock();}
 		  	});
 	});
 }
@@ -121,8 +121,8 @@ function loadMirror(){
 			for(var j = 0; j < levelObj.mirror[i].num; j++)
 			{
 				var myimage = '<img draggable="true" ondragstart="drag(event)" id="dra'+i+j+'"width="100%"/>';
-				$($("td")[226+Number(k)]).append(myimage);//TO EDIT
-				c = $($($("td")[226+Number(k)]).children());
+				$($("td")[225+Number(k)]).append(myimage);//TO EDIT
+				c = $($($("td")[225+Number(k)]).children());
 				c.attr("src", urlObj.url.mirror["reflex"+mid]);
 				c.attr("position","0");//To EDIT
 				c.attr("flag",flag);
@@ -146,6 +146,21 @@ function loadMirror(){
 	});
 }
 
+function loadBlock(){
+	$("toDelete").ready(function(){
+		var url = urlObj.url.block;
+		for(var i = 0; i < levelObj.block.x.length;i++)
+		{
+			var x = levelObj.block.x[i];
+			var y = levelObj.block.y[i];
+			var box = $("td")[Number(y*N)+Number(x)];
+			var ddd = "url"+"("+"'"+url+"'"+")";
+			$(box).css("background-image", ddd);
+			//设置格子属性
+			$(box).attr("flag", "1");
+		}
+	});
+}
 //==============鼠标拖放====================================
 function allowDrop(ev)
 {
