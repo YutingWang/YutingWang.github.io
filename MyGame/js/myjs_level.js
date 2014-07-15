@@ -131,7 +131,7 @@ function loadMirror(){
 			else if(mid == "0") flag = "4";
 			for(var j = 0; j < levelObj.mirror[i].num; j++)
 			{
-				var myimage = '<img draggable="true" ondragstart="drag(event)" id="dra'+i+j+'"width="100%"/>';
+				var myimage = '<img draggable="true" ondragstart="drag(event)" id="dra'+i+j+'"width="90%"/>';
 				$($("td")[225+Number(k)]).append(myimage);//TO EDIT
 				c = $($($("td")[225+Number(k)]).children());
 				c.attr("src", urlObj.url.mirror["reflex"+mid]);
