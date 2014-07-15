@@ -29,7 +29,7 @@ for(var i = 0; i < $("td").length; i++)
 //=================本地存储==========================
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
-window.level_obj = new Object();
+var level_Obj;
 loadLevel();
 loadUrl();
 
@@ -49,7 +49,7 @@ function loadLevel(){
 		      	$(".toDelete").css("display", "none");	
 		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined") 
 		      	{place();loadMirror();loadBlock();}
-		      	window.level_obj = levelObj;
+		      window.level_obj = levelObj;
 		  	});
 	});
 	
@@ -158,7 +158,7 @@ function loadMirror(){
 		$(this).css("transform","rotate(-"+t+"deg)");
 		t = String(t);
 		$(this).attr("position", t);
-	var ct = document.getElementById("game_canvas");
+			var ct = document.getElementById("game_canvas");
 			var cxt = ct.getContext("2d");
 			grid_size = 36;
 			cxt.clearRect(0,0,2000,2000);
