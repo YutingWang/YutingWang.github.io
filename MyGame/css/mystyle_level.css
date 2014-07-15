@@ -1,5 +1,5 @@
 body{	
-	background-image:url(pic/background2.jpg);
+	background-image:url("https://YutingWang.github.io/MyGame/pic/background3.jpeg");
 	background-position:top;
 	background-size:100% auto;
   	background-position:top left;
@@ -21,4 +21,13 @@ td{
 }
 canvas{
 	z-index:-1;
+}
+.game_tools,.game_frame{
+	background-color:rgba(248, 236, 248, 0.28);
+}
+.level{
+	position:relative;
+	height:100px;
+	width:100px;
+	float:left;
 }

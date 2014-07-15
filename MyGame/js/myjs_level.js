@@ -12,11 +12,6 @@ N = 15;
 //=====================绘制格子==========================
 for(var i = 0; i < N; i++) $("table.game_frame").prepend("<tr id='game'></tr>");
 for(var i = 0; i < N; i++) $("tr#game").prepend("<td></td>");
-/*for(var i = 0; i < $("td").length; i++) 
-{
-    $($("td")[i]).attr("id", Number(i)+1);  //给格子编号id，从0开始
-    $($("td")[i]).attr("flag", 0);//给格子设置属性flag，0为空
-} */
 
 for(var i = 0; i < N; i++) $("table.game_tools").prepend("<tr id='tools'></tr>");
 for(var i = 0; i < 2; i++) $("tr#tools").prepend("<td></td>");
