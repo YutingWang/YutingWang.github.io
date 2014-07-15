@@ -1,13 +1,4 @@
-function BgHover(obj,flag){
-	if(flag){
-		//setInterval(show1,1000);
-		document.getElementById("title_move").style.display="";
-		document.getElementById("title_move").style.left="0%";
-	}
-	else{		
-		document.getElementById("title_move").style.display="none";
-		}
-}
+
 N = 15;
 //=====================绘制格子==========================
 for(var i = 0; i < N; i++) $("table.game_frame").prepend("<tr id='game'></tr>");

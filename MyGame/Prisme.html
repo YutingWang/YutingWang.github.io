@@ -4,104 +4,6 @@
 		<title>Prisme</title>
 		<meta charset = "utf-8"/>
 		<link rel="stylesheet" href="css/mystyle_level.css" />
-		<style type = "text/css">		
-		.game_frame{
-			position:absolute;
-			left:30%;
-			top:10%;
-			width:539px;
-			height:539px;
-
-			border:3px solid #c3c3c3;
-		}
-		.level_title{
-		float:left;
-		font-size:30px;
-		}
-		.title_frame{
-			position:absolute;
-			left:10%;
-			top:10%;
-			width:100%;
-			height:20%;
-			overflow:hidden;
-		}
-		.level_frame{
-			position:absolute;
-			left:12%;
-			top:23%;
-			width:100%;
-			height:10%;
-			overflow:hidden;
-		}
-		.level_frame a{
-			text-decoration:none;
-			font-size:25px;
-			color:#AEFC39;
-		}
-		.level_frame a:hover{
-			color:rgba(255,255,0,0.5);
-		}
-		.tool_frame{
-			position:absolute;
-			left:10%;
-			top:40%;
-			width:300px;
-			height:100px;
-			overflow:hidden;
-			background-color:rgba(255,255,255,1);
-		}
-		.button{
-		}
-		.button .reset_button{
-			position:absolute;
-			left:6%;
-			top:80%;
-			width:100%;
-			height:5%;
-			overflow:hidden;
-			//background-color:rgba(41,25,31,0.9);
-		}
-		.button .HTP_button{
-			position:absolute;
-			left:35%;
-			top:80%;
-			width:100%;
-			height:5%;
-			overflow:hidden;
-			//background-color:rgba(41,25,31,0.9);
-		}
-		.button a{		
-			text-decoration:none;
-			font-size:25px;
-			color:#AEFC39;
-		}
-		.HTP_button a:hover{
-			text-align:center;
-			cursor:help;
-			color:rgba(255,255,0,0.5);
-		}
-		.reset_button a:hover{
-			text-align:center;
-			cursor:pointer;
-			color:rgba(255,255,0,0.5);
-		}
-		.show_title{
-			position:absolute;
-			left:0%;
-			top:0%;
-			width:25%;
-			height:100%;
-		}		
-		.hide_title{
-			position:absolute;
-			left:25%;
-			top:0%;
-			width:75%;
-			height:100%;
-		}
-		</style>
-		
 		<script type="text/javascript" src="https://YutingWang.github.io/MyGame/js/jquery2.0.0.min.js"></script>
 	</head>
 	
@@ -109,40 +11,55 @@
 							
 		<canvas style = "position:absolute;left:30%;top:10%;" width = "541px" height = "541px" id ="game_canvas">Your browser does not support the canvas element.</canvas>
 		<canvas style = "position:absolute;left:75%;top:10%;" width = "73px" height = "541px" id ="tool_canvas">Your browser does not support the canvas element.</canvas>
-		<div class = "show_title" onmouseover = "BgHover(this,true)"></div>
-		<div class = "hide_title" onmouseover = "BgHover(this,false)"></div>
 		<div class = "toDelete"></div>
-		<div id= "title_move" style ="display:none;position:absolute;left:-20%;top:0%;width:25%;height:100%">
-			<div class = "title_frame">
-					<h1 class = "level_title"><font size = "7" color = "#AEFC39">Level 1</font></h1>
+		<div id= "title_move" style ="display:block;position:absolute;left:0%;top:0%;width:85%;height:100%">
+			<div id="title_move" style="display:block;position:absolute;left:0%;top:0%;width: 25%;height:100%;">
+			<div class="title_frame">
+				<h1 class="level_title"><font size="7" color="#AEFC39">Level 1</font></h1>
 			</div>
-			<div class = "level_frame">
-				<div class="level">
-				<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_01.png"></div>
-				<div class="level">
-				<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_02.png"></div>
-				<div class="level">
-				<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_03.png"></div>
-				<div class="level">
-				<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_04.png"></div>
-				<div class="level">
-				<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_05.png"></div>
-
+			<div class="level_frame">
+				<div class="level" style="position: absolute; top: 90px; left: -80px;width: 180px;">
+					<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_01.png"></div>
+				<div class="level" style="position: absolute; top: 0px;">
+					<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_01.png"></div>
+				<div class="level" style="    position: absolute;    top: 40px;    left: 90px;">
+					<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_02.png"></div>
+				<div class="level" style="    position: absolute;    left: 140px;    top: 130px;">
+					<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_03.png"></div>
+				<div class="level" style="    position: absolute;    left: 100px;    top: 230px;">
+					<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_04.png"></div>
+				<div class="level" style="    position: absolute;    top: 290px;">
+					<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_05.png"></div>		
 			</div>						
-			<div class = "button">
-				<div class = "reset_button">
+			<div class="button">
+				<div class="reset_button">
 					<a>Reset</a>
 				</div>
-				<div class = "HTP_button">
+				<div class="HTP_button">
 					<a>How to play</a>
 				</div>
 			</div>
 		</div>
-		<table class = "game_frame"> </table>
+		</div>
+		<table class = "game_frame" style= "position:absolute;left:30%;top:10%;"> </table>
 		<table class=  "game_tools" style = "position:absolute;left:75%;top:10%;" width = "73px" height = "541px" ></table>
 	</body>
 	<script type="text/javascript" src="js/draw_laser.js"></script>
    <script type="text/javascript" src="js/myjs_level.js"></script>
+   <script>
+   for(var i = 0; i < $("img").length; i++)
+   {
+	   $($("img")[i]).onmouseover(function(){
+	   		c = "https://YutingWang.github.io/MyGame/pic/levelButton1_0"+i+".png";
+	   		$($("img")[i]).attr("stc",c);
+	   });
+		$($("img")[i]).onmouseout(function(){
+		   	c = "https://YutingWang.github.io/MyGame/pic/levelButton_0"+i+".png";
+		   	$($("img")[i]).attr("stc",c);
+		});
+	}
+
+  	</script>
    
 	
 </html>

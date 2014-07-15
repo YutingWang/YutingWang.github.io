@@ -1,8 +1,8 @@
 body{	
-	background-image:url("https://YutingWang.github.io/MyGame/pic/background.jpg");
+	background-image:url("https://YutingWang.github.io/MyGame/pic/background3.jpeg");
 	background-position:top;
 	background-size:100% auto;
-  	background-position:center;
+  	background-position:top left;
   	background-repeat:repeat-y;
 }
 .container{
@@ -60,7 +60,6 @@ body{
 	position: relative;
 }
 h1{
-	blue;
 	margin:0;
 	padding:0;
 	/* width: 1px; */
