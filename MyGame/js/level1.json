@@ -53,6 +53,7 @@
 			"color":"green",
 			"x":"6",
 			"y":"4"}
+			
 	],
 	//.mirror.length一共有多少种镜子
 	//.mirror[i].type镜子种类
