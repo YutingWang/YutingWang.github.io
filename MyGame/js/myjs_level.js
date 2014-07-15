@@ -29,7 +29,7 @@ for(var i = 0; i < $("td").length; i++)
 //=================本地存储==========================
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
-var levelObj;
+var level_obj;
 loadLevel();
 loadUrl();
 
@@ -51,6 +51,7 @@ function loadLevel(){
 		      	{place();loadMirror();loadBlock();}
 		  	});
 	});
+	level_obj = levelObj;
 }
 
 function loadUrl(){
@@ -72,8 +73,8 @@ function loadUrl(){
 			var cxt = ct.getContext("2d");
 			grid_size = 36;
 			cxt.clearRect(0,0,2000,2000);
-			for(var i = 0;i < levelObj.laser.length;i++){
-			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
+			for(var i = 0;i < level_Obj.laser.length;i++){
+			draw_laser(cxt,level_Obj.laser[i].x, level_Obj.laser[i].y, level_Obj.laser[i].angle, level_Obj.laser[i].color);
 			}
 			
 		
@@ -155,15 +156,13 @@ function loadMirror(){
 		$(this).css("transform","rotate(-"+t+"deg)");
 		t = String(t);
 		$(this).attr("position", t);
-	$("toDelete").ready(function(){
-		var ct = document.getElementById("game_canvas");
-		var cxt = ct.getContext("2d");
-		grid_size = 36;
-		cxt.clearRect(0,0,2000,2000);
-		for(var i = 0;i < levelObj.laser.length;i++){
-			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
-		}
-	});
+	var ct = document.getElementById("game_canvas");
+			var cxt = ct.getContext("2d");
+			grid_size = 36;
+			cxt.clearRect(0,0,2000,2000);
+			for(var i = 0;i < level_Obj.laser.length;i++){
+			draw_laser(cxt,level_Obj.laser[i].x, level_Obj.laser[i].y, level_Obj.laser[i].angle, level_Obj.laser[i].color);
+			}
 	});
 }
 
@@ -192,15 +191,13 @@ function drag(ev)
 {
 ev.dataTransfer.setData("Text",ev.target.id);
 $($(ev.target).parents()).attr("flag","0");
-	$("toDelete").ready(function(){
-		var ct = document.getElementById("game_canvas");
-		var cxt = ct.getContext("2d");
-		grid_size = 36;
-		cxt.clearRect(0,0,2000,2000);
-		for(var i = 0;i < levelObj.laser.length;i++){
-			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
-		}
-	});
+	var ct = document.getElementById("game_canvas");
+			var cxt = ct.getContext("2d");
+			grid_size = 36;
+			cxt.clearRect(0,0,2000,2000);
+			for(var i = 0;i < level_Obj.laser.length;i++){
+			draw_laser(cxt,level_Obj.laser[i].x, level_Obj.laser[i].y, level_Obj.laser[i].angle, level_Obj.laser[i].color);
+			}
 }
 
 function drop(ev)
@@ -212,14 +209,12 @@ function drop(ev)
 		ev.target.appendChild(document.getElementById(data));
 		$(ev.target).attr("flag",$($(ev.target).children()).attr("flag"));
 	}
-	$("toDelete").ready(function(){
-		var ct = document.getElementById("game_canvas");
-		var cxt = ct.getContext("2d");
-		grid_size = 36;
-		cxt.clearRect(0,0,2000,2000);
-		for(var i = 0;i < levelObj.laser.length;i++){
-			draw_laser(cxt,levelObj.laser[i].x, levelObj.laser[i].y, levelObj.laser[i].angle, levelObj.laser[i].color);
-		}
-	});
+	var ct = document.getElementById("game_canvas");
+			var cxt = ct.getContext("2d");
+			grid_size = 36;
+			cxt.clearRect(0,0,2000,2000);
+			for(var i = 0;i < level_Obj.laser.length;i++){
+			draw_laser(cxt,level_Obj.laser[i].x, level_Obj.laser[i].y, level_Obj.laser[i].angle, level_Obj.laser[i].color);
+			}
 }
 
