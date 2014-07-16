@@ -34,6 +34,7 @@ loadUrl();
 
 //=================载入关卡中元素位置===========levelObj================
 function loadLevel(){
+	debugger;
 	$("td").css("background-image","none");
 	$("td").attr("flag","0");
 	$($("td").children()).remove();
@@ -265,6 +266,7 @@ for(var i = 1; i < $("img").length;i++)
 function levelChange(id){
 	alert(id);
 	localStorage.level = id;
+	loadLevel();
 	loadLevel();
 	$(".level_title")[0].innerText="LEVEL "+id;	
 	for(var i = 1; i <  $("img").length; i++)
