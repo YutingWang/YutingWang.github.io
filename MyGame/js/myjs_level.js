@@ -43,6 +43,8 @@ function levelChange(id){
 function loadLevel(){
 	$("td").css("background-image","none");
 	$("td").attr("flag","0");
+	$("td").removeAttr("color");
+	$("td").removeAttr("position");
 	$("td").attr("style","background-image:none");
 	$($("td").children()).remove();
 	//$("document").ready(function(){
