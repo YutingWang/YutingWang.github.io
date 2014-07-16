@@ -29,16 +29,22 @@ for(var i = 0; i < $("td").length; i++)
 //=================本地存储==========================
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
-//loadLevel();
 levelChange(storage.level);
 loadUrl();
 
+function levelChange(id){
+	pre = localStorage.level;
+	localStorage.level = Number(id);
+	loadLevel();
+	$($("img")[pre]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton_0"+pre+".png");
+	$($("img")[id]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton1_0"+id+".png");
+}
 //=================载入关卡中元素位置===========levelObj================
 function loadLevel(){
 	$("td").css("background-image","none");
 	$("td").attr("flag","0");
 	$($("td").children()).remove();
-	$("document").ready(function(){
+	//$("document").ready(function(){
 		    $(".toDelete").load('js/level'+storage.level+'.json',function(responseTxt,statusTxt,xhr){
 		    	if(statusTxt=="success")
 		      	{
@@ -55,16 +61,15 @@ function loadLevel(){
 		      		flag_t[i] = 0;
 		      	};
 		  	});
-	});
+	//});
 	
 }
 
 function loadUrl(){
-	$("toDelete").ready(function(){
+	//$("toDelete").ready(function(){
 //=================载入关卡中icon图标地址======urlObj===================
 		    $(".toDelete").load('js/icon.json',function(responseTxt,statusTxt,xhr){
-		    	if(statusTxt=="success")
-		      	{
+		    	if(sta/
 		       		data = responseTxt;
 		      		urlObj = eval('('+responseTxt+')');
 		      	}
@@ -73,8 +78,8 @@ function loadUrl(){
 		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined")
 		      	{place();loadMirror(); loadBlock();	
 		      	}     		  								
-	});
-		});	
+		});
+	//});	
 }
 
 function place(){
@@ -264,18 +269,6 @@ for(var i = 1; i < 6;i++)
 {
 	$($("img")[i]).attr("onclick","levelChange("+i+")");
 	$($("img")[i]).css("cursor","pointer");
-}
-
-function levelChange(id){
-	pre = localStorage.level;
-	localStorage.level = Number(id);
-	console.log(localStorage.level);
-	console.log(id);
-	setTimeout(loadLevel(),10);
-	setTimeout(loadLevel(),10);
-	//loadLevel();
-	$($("img")[pre]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton_0"+pre+".png");
-	$($("img")[id]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton1_0"+id+".png");
 }
 
 $($("img")[0]).attr("onclick","loadLevel()");
