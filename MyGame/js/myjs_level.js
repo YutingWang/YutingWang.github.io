@@ -44,6 +44,8 @@ function levelChange(id){
 }
 //=================载入关卡中元素位置===========levelObj================
 function loadLevel(){
+	storage.step = 0;
+	$("#step")[0].innerText = "你已经走了"+storage.step+"步";
 	$("td").css("background-image","none");
 	$("td").attr("flag","0");
 	$("td").removeAttr("color");
@@ -174,6 +176,7 @@ function loadMirror(){
 		$("[draggable='true']").click(function(){
 			storage.step++;
 			console.log(storage.step);
+			$("#step")[0].innerText = "你已经走了"+storage.step+"步";
 			var mirrorMusic = document.getElementById('mirrorMusic');
 			mirrorMusic.play();
 			t = $(this).attr("position");
@@ -235,12 +238,14 @@ function drag(ev)
 	}
 	storage.step++;
 	console.log(storage.step);
+	$("#step")[0].innerText = "你已经走了"+storage.step+"步";
 	var mirrorMusic = document.getElementById('mirrorMusic');
 	mirrorMusic.play();
 	if(success())
 	{		
 		showSuccess();
 		console.log(storage.step);
+		$("#step")[0].innerText = "你已经走了"+storage.step+"步";
 		storage.step = 0;
 	}
 }
@@ -344,4 +349,5 @@ function showButtons(){
 		$($("img#qcy")[i]).fadeIn(Number(i)*1000);
 	}
 $("document").attr("onclick", "console.log(1)");
+
 
