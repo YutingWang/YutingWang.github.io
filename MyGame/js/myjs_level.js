@@ -151,7 +151,7 @@ function loadMirror(){
 			else if(mid == "0") flag = "4";
 			for(var j = 0; j < levelObj.mirror[i].num; j++)
 			{
-				var myimage = '<img draggable="true" onclick = "clickTurn()" ondragstart="drag(event)" id="dra'+i+j+'"width="90%"/>';
+				var myimage = '<img draggable="true" ondragstart="drag(event)" id="dra'+i+j+'"width="90%"/>';
 				$($("td")[225+Number(k)]).append(myimage);//TO EDIT
 				c = $($($("td")[225+Number(k)]).children());
 				c.attr("src", urlObj.url.mirror["reflex"+mid]);
@@ -165,8 +165,28 @@ function loadMirror(){
 				else c.attr("position","0");//To EDIT
 				k++;
 			}			
-		}		
-	});
+		}
+		
+	});//============拖动图标的点击事件====================
+		$("[draggable='true']").click(function(){
+			t = $(this).attr("position");
+			t = (Number(t)+45)%360;
+			$(this).css("transform","rotate(-"+t+"deg)");
+			t = String(t);
+			$(this).attr("position", t);
+			var ct = document.getElementById("game_canvas");
+			var cxt = ct.getContext("2d");
+			grid_size = 36;
+			cxt.clearRect(0,0,2000,2000);
+			for (var i = levelObj.target.length - 1; i >= 0; i--)
+			{
+				flag_t[i] = 0;
+			};
+					for(var i = 0;i < levelObj.laser.length;i++){
+					draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
+					}
+					if(success()){showSuccess();}
+		});
 }
 
 function loadBlock(){
@@ -289,26 +309,4 @@ function hideSuccess(){
 $(".success").attr("onclick","hideSuccess()");
 
 
-//============拖动图标的点击事件====================
-$("[draggable='true']").attr("onclick","clickTurn()");
 
-function clickTurn()
-{
-	t = $(this).attr("position");
-	t = (Number(t)+45)%360;
-	$(this).css("transform","rotate(-"+t+"deg)");
-	t = String(t);
-	$(this).attr("position", t);
-	var ct = document.getElementById("game_canvas");
-	var cxt = ct.getContext("2d");
-	grid_size = 36;
-	cxt.clearRect(0,0,2000,2000);
-	for (var i = levelObj.target.length - 1; i >= 0; i--)
-	{
-		flag_t[i] = 0;
-	};
-			for(var i = 0;i < levelObj.laser.length;i++){
-			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
-			}
-			if(success()){showSuccess();}
-}
