@@ -20,14 +20,15 @@ td{
 	background-size:100%;
 }
 canvas{
-	z-index:-1;
+	z-index: 10;
 }
 .game_tools,.game_frame{
-	background-color: rgba(248, 236, 248, 0.48);
+	/* background-color: rgba(248, 236, 248, 0.48); */
 	border-color: white;
 	border-width: 2px;
 	border-style: dashed;
 
+	z-index: 5;
 }
 .level{
 	position:relative;
@@ -36,6 +37,15 @@ canvas{
 	margin-top: 10px;
 	/* float:left; */
 }
+		.back{
+			position:absolute;
+			left:30%;
+			top:10%;
+			width:539px;
+			height:539px;		
+		
+			background-color: rgba(255, 255, 255, 0.54);
+}
 
 		.game_frame{
 			position:absolute;
@@ -43,7 +53,9 @@ canvas{
 			top:10%;
 			width:539px;
 			height:539px;		
-		}
+		
+			z-index: 5;
+}
 		.level_title{
 		float:left;
 		font-size:30px;
@@ -56,7 +68,7 @@ canvas{
 			/* height:20%; */
 			overflow:hidden;
 		}
-		.level_frame{
+		.level_frame,{
 			position:absolute;
 			/* left:12%; */
 			top: 35%;
