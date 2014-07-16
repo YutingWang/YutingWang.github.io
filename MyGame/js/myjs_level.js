@@ -267,7 +267,7 @@ function success()
 
 for(var i = 1; i < 6;i++) 
 {
-	$($("img#qcy")[i]).attr("onclick","levelChange("+i+");loadLevel();");
+	$($("img#qcy")[i]).attr("onclick","levelChange("+i+");");
 	$($("img#qcy")[i]).css("cursor","pointer");
 }
 
