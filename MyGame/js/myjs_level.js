@@ -177,7 +177,7 @@ function loadMirror(){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
 			if(success()){
-		alert("success!");
+		showSuccess();
 	}
 	});
 }
@@ -218,7 +218,7 @@ $($(ev.target).parents()).attr("flag","0");
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
 	if(success()){
-		alert("success!");
+		showSuccess();
 	}
 }
 
@@ -242,7 +242,7 @@ function drop(ev)
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
 	if(success()){
-		alert("success!");
+		showSuccess();
 	}
 }
 
