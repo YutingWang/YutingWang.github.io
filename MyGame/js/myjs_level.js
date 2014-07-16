@@ -90,7 +90,7 @@ function place(){
 			//设置格子属性
 			$(box).attr("flag", "5");
 			$(box).attr("color", color);
-			$(box).attr("position", 0);//0为暗色，1为亮色
+			$(box).attr("position", i);//0为暗色，1为亮色
 		}
 		var ct = document.getElementById("game_canvas");
 			var cxt = ct.getContext("2d");
