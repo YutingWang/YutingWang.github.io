@@ -29,16 +29,16 @@ for(var i = 0; i < $("td").length; i++)
 //=================本地存储==========================
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
-loadLevel();
+//loadLevel();
+levelchange(storage.level);
 loadUrl();
 
 //=================载入关卡中元素位置===========levelObj================
 function loadLevel(){
-	debugger;
 	$("td").css("background-image","none");
 	$("td").attr("flag","0");
 	$($("td").children()).remove();
-	$("toDelete").ready(function(){
+	$("document").ready(function(){
 		    $(".toDelete").load('/MyGame/js/level'+storage.level+'.json',function(responseTxt,statusTxt,xhr){
 		    	if(statusTxt=="success")
 		      	{
