@@ -301,7 +301,17 @@ function showmusic(){$("audio").attr("controls","controls");}
 
 $(".help_button").attr("onmouseout","hideHelp()");
 $(".help_button").attr("onmouseover","showHelp()");
+$(".help_button").attr("onclick","showSecret()");
+
 function showHelp(){$(".help").css("display","block");}
+
+function showSecret(){
+	if( $(".secret").css("display") == "none")
+		$(".secret").css("display","block");
+	else{
+		$(".secret").css("display","none");
+	}
+}
 function hideHelp(){$(".help").css("display","none");}
 
 function showSuccess(){
