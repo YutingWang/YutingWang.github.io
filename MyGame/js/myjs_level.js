@@ -263,15 +263,13 @@ function success()
 for(var i = 1; i < 6;i++) 
 {
 	$($("img")[i]).attr("onclick","levelChange("+i+")");
-}
-for(var i = 0; i < 6;i++) 
-{
 	$($("img")[i]).css("cursor","pointer");
 }
 
 function levelChange(id){
 	pre = localStorage.level;
 	localStorage.level = id;
+	loadLevel();
 	loadLevel();
 	$($("img")[pre]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton_0"+pre+".png");
 	$($("img")[id]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton1_0"+id+".png");
@@ -284,6 +282,3 @@ $(".music_button").attr("onmouseover","showmusic()");
 
 function hidemusic(){$("audio").removeAttr("controls");}
 function showmusic(){$("audio").attr("controls","controls");}
-
-a = $(".HTP_button")[0];
-$(a).attr("onclick","levelChange(localStorage.level)");
