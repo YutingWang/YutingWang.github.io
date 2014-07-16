@@ -38,7 +38,7 @@ function loadLevel(){
 	$("td").css("background-image","none");
 	$("td").attr("flag","0");
 	$($("td").children()).remove();
-	$("document").ready(function(){
+	$(".toDelete").ready(function(){
 		    $(".toDelete").load('/MyGame/js/level'+storage.level+'.json',function(responseTxt,statusTxt,xhr){
 		    	if(statusTxt=="success")
 		      	{
@@ -259,21 +259,24 @@ function success()
 	if(ok)	return true;
 	return false;
 }
-for(var i = 1; i < $("img").length;i++) 
+
+for(var i = 1; i < 6;i++) 
 {
 	$($("img")[i]).attr("onclick","levelChange("+i+")");
 }
+for(var i = 0; i < 6;i++) 
+{
+	$($("img")[i]).css("cursor","pointer");
+}
+
 function levelChange(id){
-	alert(id);
+	pre = localStorage.level;
 	localStorage.level = id;
 	loadLevel();
-	loadLevel();
-	$(".level_title")[0].innerText="LEVEL "+id;	
-	for(var i = 1; i <  $("img").length; i++)
-		$($("img")[i]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton_0"+i+".png");
+	$($("img")[pre]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton_0"+pre+".png");
 	$($("img")[id]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton1_0"+id+".png");
 }
-$("HTP_botton").attr("onclick","loadLevel()");
+$($("img")[0]).attr("onclick","loadLevel()");
 $("audio").attr("onmouseout","hidemusic()");
 $("audio").attr("onmouseover","showmusic()");
 $(".music_button").attr("onmouseout","hidemusic()");
@@ -281,3 +284,6 @@ $(".music_button").attr("onmouseover","showmusic()");
 
 function hidemusic(){$("audio").removeAttr("controls");}
 function showmusic(){$("audio").attr("controls","controls");}
+
+a = $(".HTP_button")[0];
+$(a).attr("onclick","levelChange(localStorage.level)");

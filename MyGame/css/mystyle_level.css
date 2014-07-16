@@ -121,9 +121,8 @@ canvas{
 			background-color: rgba(255, 255, 255, 0.91);
 }
 		.HTP_button,.music_button{
-			position: relative;
 			/* left:35%; */
-			/* top:80%; */
+			top: 0;
 			width: 100px;
 			/* height:100px; */
 			overflow:hidden;
@@ -173,8 +172,8 @@ canvas{
 			width: 300px;			
 		
 			position: absolute;
-			left: 0px;
-			top: 160px;
+			left: -195px;
+			top: -20px;
 }
 		.music{
 			/* width:400px; */
