@@ -62,10 +62,10 @@ target:5
                 draw_laser_line(cxt,light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
                 if (same_color($('#'+num).attr('color'), light_color)){
                     flag_t[Number($('#'+num).attr('position'))] = 1;
-					$('#'+num).attr('style','background-image: url(pic/target_'+light_color+'.png);');
+					
 					}else{
 						flag_t[Number($('#'+num).attr('position'))] = 0;
-                        $('#'+num).attr('style','background-image: url(pic/target_'+light_color+'1.png);');
+                        
 					}
                 draw_laser(cxt,light_x + light_angle_x, light_y - light_angle_y, angle, light_color);
                 break;

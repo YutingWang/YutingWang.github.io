@@ -239,8 +239,16 @@ function drop(ev)
 
 function success()
 {
+	var ok = 1;
 	for(var i = 0;i < levelObj.target.length;i++){
-		if(flag_t[i] != 1)	return false;
+		if(flag_t[i] != 1){
+			ok = 0;
+			$('#'+num).attr('style','background-image: url(pic/target_'+levelObj.target[i].color+'1.png);');
+		}
+		else{
+			$('#'+num).attr('style','background-image: url(pic/target_'+levelObj.target[i].color+'.png);');
+		}
 	}
+	if(ok)	return true;
 	return true;
 }
