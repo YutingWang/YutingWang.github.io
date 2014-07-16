@@ -50,6 +50,9 @@ function loadLevel(){
 		      	{place();loadMirror();loadBlock();
 		      	}
 		      	flag_t = new Array(levelObj.target.length);
+		      	for (var i = levelObj.target.length - 1; i >= 0; i--) {
+		      		flag_t[i] = 0;
+		      	};
 		  	});
 	});
 	
