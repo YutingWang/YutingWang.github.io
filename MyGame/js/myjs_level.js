@@ -263,11 +263,19 @@ for(var i = 1; i < $("img").length;i++)
 	$($("img")[i]).attr("onclick","levelChange("+i+")");
 }
 function levelChange(id){
+	alert(id);
 	localStorage.level = id;
 	loadLevel();
-	alert(id);
+	$(".level_title")[0].innerText="LEVEL "+id;	
 	for(var i = 1; i <  $("img").length; i++)
 		$($("img")[i]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton_0"+i+".png");
 	$($("img")[id]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton1_0"+id+".png");
 }
 $("HTP_botton").attr("onclick","loadLevel()");
+$("audio").attr("onmouseout","hidemusic()");
+$("audio").attr("onmouseover","showmusic()");
+$(".music_button").attr("onmouseout","hidemusic()");
+$(".music_button").attr("onmouseover","showmusic()");
+
+function hidemusic(){$("audio").removeAttr("controls");}
+function showmusic(){$("audio").attr("controls","controls");}
