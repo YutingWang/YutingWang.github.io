@@ -288,9 +288,11 @@ function hidemusic(){$("audio").removeAttr("controls");}
 function showmusic(){$("audio").attr("controls","controls");}
 
 
-$(".smbb").attr("onmouseover","showMenu()");
-$(".button").attr("onmouseover","showMenu()");
-$(".smbb").attr("onmouseout","hideMenu()");
-$(".button").attr("onmouseout","hideMenu()");
-function showMenu(){$(".button").attr("display","block");}
-function hideMenu(){$(".button").attr("display","none");}
+$(".smbb").attr("onclick","showMenu()");
+function showMenu(){$(".button").css("display","block");}
+function hideMenu(){$(".button").css("display","none");}
+
+$($(".HTP_button")[1]).attr("onmouseout","hideHelp()");
+$($(".HTP_button")[1]).attr("onmouseover","showHelp()");
+function showHelp(){$(".help").css("display","block");}
+function hideHelp(){$(".help").css("display","none");}

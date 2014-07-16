@@ -103,8 +103,8 @@ canvas{
 		
     height: auto;
     position: absolute;
-    bottom: 20px;
-    right: 0;
+    bottom: 220px;
+    right: 20px;
     z-index: 10;
 }
 		.button .reset_button{
@@ -121,9 +121,9 @@ canvas{
 			background-color: rgba(255, 255, 255, 0.91);
 }
 		.HTP_button,.music_button{
-			/* left:35%; */
+			right: 0;
 			top: 0;
-			width: 100px;
+			width: 150px;
 			/* height:100px; */
 			overflow:hidden;
 			//background-color:rgba(41,25,31,0.9);
@@ -172,16 +172,31 @@ canvas{
 			width: 300px;			
 		
 			position: absolute;
-			left: -195px;
-			top: -20px;
-}
+			right: 0;
+			top: -100px;
+		}
 		.music{
 			/* width:400px; */
 			/* height:100px; */
 		}
 		.smbb{
-			position:relative;
-			width:300px;
-			height:300px;
+			position: absolute;
+			width: 150px;
+			height: 150px;
+		
+			bottom: 20px;
+			right: 20px;
+			z-index: 10;
 		}
+	.help{
+		position:absolute;
+		display:none;
+		width:150px;
+		height: 200px;
+		bottom: 370px;
+		right: 18px;
+		z-index:10;
+		border: 3px dashed rgb(197, 180, 180);
+		background-color: rgba(255, 255, 255, 0.91);
+	}
 
