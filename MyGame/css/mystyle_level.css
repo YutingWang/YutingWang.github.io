@@ -218,4 +218,5 @@ canvas{
 	
 		z-index: 90;
 		font-size: 3em;
+		display: none;
 	}
