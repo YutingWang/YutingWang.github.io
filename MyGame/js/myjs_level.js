@@ -30,7 +30,6 @@ for(var i = 0; i < $("td").length; i++)
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
 loadLevel();
-
 loadUrl();
 
 //=================载入关卡中元素位置===========levelObj================
@@ -49,7 +48,8 @@ function loadLevel(){
 		      	$(".toDelete").css("display", "none");	
 		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined") 
 		      	{place();loadMirror();loadBlock();
-		      	}flag_t = new Array([levelObj.target.length]);
+		      	}
+		      	flag_t = new Array(levelObj.target.length);
 		  	});
 	});
 	
