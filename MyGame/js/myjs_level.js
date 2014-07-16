@@ -311,4 +311,4 @@ function clickTurn()
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
 			if(success()){showSuccess();}
-});
+}
