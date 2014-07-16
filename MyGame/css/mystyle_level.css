@@ -190,11 +190,13 @@ a.green.button {
 		width: 200px;
 		height: 70px;
 		top: 70px;
-		left: 20px;
+		right: 50px;
 		z-index: 10;
 		border: 3px dashed rgb(255, 252, 252);
-		background-color: rgba(255, 255, 255, 0.67);
+		background-color: rgba(210, 43, 241, 0.67);
 		text-align: center;
-		/* border-radius: 10px; */
+		border-radius: 10px;
 		font-size: 1.6em;
+		color: white;
+		font-family: "微软雅黑";
 	}
