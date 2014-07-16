@@ -36,8 +36,8 @@ function levelChange(id){
 	pre = localStorage.level;
 	localStorage.level = Number(id);
 	loadLevel();
-	$($("img")[pre]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton_0"+pre+".png");
-	$($("img")[id]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton1_0"+id+".png");
+	$($("img#qcy")[pre]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton_0"+pre+".png");
+	$($("img#qcy")[id]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton1_0"+id+".png");
 }
 //=================载入关卡中元素位置===========levelObj================
 function loadLevel(){
@@ -267,11 +267,14 @@ function success()
 
 for(var i = 1; i < 6;i++) 
 {
-	$($("img")[i]).attr("onclick","levelChange("+i+")");
-	$($("img")[i]).css("cursor","pointer");
+	$($("img#qcy")[i]).attr("onclick","levelChange("+i+")");
+	$($("img#qcy")[i]).css("cursor","pointer");
 }
 
-$($("img")[0]).attr("onclick","loadLevel()");
+$($("img#qcy")[0]).attr("onclick","loadLevel()");
+
+
+
 $("audio").attr("onmouseout","hidemusic()");
 $("audio").attr("onmouseover","showmusic()");
 $(".music_button").attr("onmouseout","hidemusic()");

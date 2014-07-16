@@ -142,7 +142,7 @@ canvas{
 			padding: 0 10px 0;
 }
 		.HTP_button :hover{
-			cursor:help;
+			cursor:default;
 			color:white;
 		}
 		.reset_button :hover{
