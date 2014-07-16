@@ -240,7 +240,9 @@ function drop(ev)
 function success()
 {
 	var ok = 1;
+	var num = 0;
 	for(var i = 0;i < levelObj.target.length;i++){
+		num = Number(levelObj.target[i].x) + (Number(levelObj.target[i].y) -1)*15;
 		if(flag_t[i] != 1){
 			ok = 0;
 			$('#'+num).attr('style','background-image: url(pic/target_'+levelObj.target[i].color+'1.png);');
