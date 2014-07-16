@@ -293,3 +293,10 @@ $($(".HTP_button")[1]).attr("onmouseout","hideHelp()");
 $($(".HTP_button")[1]).attr("onmouseover","showHelp()");
 function showHelp(){$(".help").css("display","block");}
 function hideHelp(){$(".help").css("display","none");}
+function showSuccess(){
+	$(".success").css("display", "block");
+}
+function hideSuccess(){
+	$(".success").css("display", "none");
+}
+$(".success").attr("onclick","hideSuccess()");

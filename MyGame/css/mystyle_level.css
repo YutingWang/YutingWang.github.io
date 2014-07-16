@@ -200,3 +200,22 @@ canvas{
 		background-color: rgba(255, 255, 255, 0.91);
 	}
 
+		.success{
+		position:absolute;
+		top: 30%;
+		left: 29%;
+		width: 400px;
+		height: 200px;
+		background-color: rgba(141, 17, 52, 0.95);
+		z-index: 10;
+		/* display: none; */
+		border: 3px dashed rgb(252, 248, 248);
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		color: white;
+		padding: 0 20px 0;
+	
+		z-index: 90;
+		font-size: 3em;
+	}
