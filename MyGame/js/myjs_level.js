@@ -115,7 +115,9 @@ function place(){
 			var cxt = ct.getContext("2d");
 			grid_size = 36;
 			cxt.clearRect(0,0,2000,2000);
-			
+			for (var i = levelObj.target.length - 1; i >= 0; i--) {
+		      		flag_t[i] = 0;
+		      	};
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
@@ -163,7 +165,9 @@ function loadMirror(){
 			var cxt = ct.getContext("2d");
 			grid_size = 36;
 			cxt.clearRect(0,0,2000,2000);
-			
+			for (var i = levelObj.target.length - 1; i >= 0; i--) {
+		      		flag_t[i] = 0;
+		      	};
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
@@ -202,7 +206,9 @@ $($(ev.target).parents()).attr("flag","0");
 			var cxt = ct.getContext("2d");
 			grid_size = 36;
 			cxt.clearRect(0,0,2000,2000);
-			
+			for (var i = levelObj.target.length - 1; i >= 0; i--) {
+		      		flag_t[i] = 0;
+		      	};
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
@@ -224,7 +230,9 @@ function drop(ev)
 			var cxt = ct.getContext("2d");
 			grid_size = 36;
 			cxt.clearRect(0,0,2000,2000);
-			
+			for (var i = levelObj.target.length - 1; i >= 0; i--) {
+		      		flag_t[i] = 0;
+		      	};
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
