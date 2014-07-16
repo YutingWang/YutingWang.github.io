@@ -99,9 +99,10 @@ function place(){
 			$(box).attr("flag", "-1");			 
 			$(box).attr("color", color);
 			$(box).attr("position", levelObj.laser[i].angle);
-			if(levelObj.laser[i].angle == 90) $(box).css("transform","rotate(-90deg)");	//旋转
+			if(levelObj.laser[i].angle == 90) $(box).css("transform","rotate(270deg)");	//旋转
 			else if(levelObj.laser[i].angle == 180) $(box).css("transform","rotate(180deg)");
-			else if(levelObj.laser[i].angle == 270) $(box).css("transform","rotate(-90deg)");
+			else if(levelObj.laser[i].angle == 270) $(box).css("transform","rotate(90deg)");
+			else $(box).css("transform","rotate(0deg)");
 		}
 		//===========载入target============================
 		for(var i = 0; i < levelObj.target.length; i++)
