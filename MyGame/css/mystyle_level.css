@@ -185,14 +185,16 @@ a.green.button {
 	border-radius: 10px;
 	cursor:pointer;
 }
-	#secret{
-		position:absolute;
+	#step{
+		position: absolute;
 		width: 200px;
-		height: 200px;
-		bottom: 250px;
-		right: 35px;
-		z-index:10;
-		border: 3px dashed rgb(197, 180, 180);
-		background-color: rgba(255, 255, 255, 0.91);
-		text-align:center;
+		height: 70px;
+		top: 70px;
+		left: 20px;
+		z-index: 10;
+		border: 3px dashed rgb(255, 252, 252);
+		background-color: rgba(255, 255, 255, 0.67);
+		text-align: center;
+		/* border-radius: 10px; */
+		font-size: 1.6em;
 	}
