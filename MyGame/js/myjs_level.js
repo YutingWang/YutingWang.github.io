@@ -30,7 +30,7 @@ for(var i = 0; i < $("td").length; i++)
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
 //loadLevel();
-levelchange(storage.level);
+levelChange(storage.level);
 loadUrl();
 
 //=================载入关卡中元素位置===========levelObj================
