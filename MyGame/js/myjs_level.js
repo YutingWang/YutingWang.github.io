@@ -69,7 +69,7 @@ function loadUrl(){
 	//$("toDelete").ready(function(){
 //=================载入关卡中icon图标地址======urlObj===================
 		    $(".toDelete").load('js/icon.json',function(responseTxt,statusTxt,xhr){
-		    	if(statusTxt=="success")
+		    	if(statusTxt=="success"){
 		       		data = responseTxt;
 		      		urlObj = eval('('+responseTxt+')');
 		      	}
