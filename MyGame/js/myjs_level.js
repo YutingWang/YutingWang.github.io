@@ -43,7 +43,7 @@ function levelChange(id){
 function loadLevel(){
 	$("td").css("background-image","none");
 	$("td").attr("flag","0");
-	$("td").css("background-image","none");
+	$("td").attr("style","background-image:none");
 	$($("td").children()).remove();
 	//$("document").ready(function(){
 		    $(".toDelete").load('js/level'+storage.level+'.json',function(responseTxt,statusTxt,xhr){
