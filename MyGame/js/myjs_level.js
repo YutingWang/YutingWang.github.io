@@ -119,7 +119,7 @@ function place(){
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
-			if(success){
+			if(success == true){
 		alert("success!");
 	}
 	});
@@ -169,7 +169,7 @@ function loadMirror(){
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
-			if(success){
+			if(success == true){
 		alert("success!");
 	}
 	});
@@ -208,7 +208,7 @@ $($(ev.target).parents()).attr("flag","0");
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
-	if(success){
+	if(success == true){
 		alert("success!");
 	}
 }
@@ -230,7 +230,7 @@ function drop(ev)
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
-	if(success){
+	if(success == true){
 		alert("success!");
 	}
 }
