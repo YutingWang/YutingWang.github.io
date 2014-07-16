@@ -322,5 +322,12 @@ function hideSuccess(){
 }
 $(".success").attr("onclick","hideSuccess()");
 
+$("img#qcy").css("display","none");
+$($("img#qcy")[0]).css("display","block");
+showButtons();
+function showButtons(){
+	for(var i = 1; i < 6; i++)	
+		$($("img#qcy")[i]).fadeIn(Number(i)*1000);
+	}
 
 
