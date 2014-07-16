@@ -27,63 +27,63 @@
 	"target":[
 		{
 			"color":"red",
-			"x":"0",
-			"y":"7"},
-		{
-			"color":"green",
 			"x":"1",
 			"y":"7"},
 		{
-			"color":"blue",
+			"color":"green",
 			"x":"2",
 			"y":"7"},
 		{
-			"color":"red",
+			"color":"blue",
 			"x":"3",
 			"y":"7"},
 		{
-			"color":"green",
+			"color":"red",
 			"x":"4",
 			"y":"7"},
 		{
-			"color":"blue",
+			"color":"green",
 			"x":"5",
 			"y":"7"},
 		{
-			"color":"red",
+			"color":"blue",
 			"x":"6",
 			"y":"7"},
 		{
-			"color":"green",
+			"color":"red",
 			"x":"7",
 			"y":"7"},
 		{
-			"color":"blue",
+			"color":"green",
 			"x":"8",
 			"y":"7"},
 		{
-			"color":"red",
+			"color":"blue",
 			"x":"9",
 			"y":"7"},
 		{
-			"color":"green",
+			"color":"red",
 			"x":"10",
 			"y":"7"},
 		{
-			"color":"blue",
+			"color":"green",
 			"x":"11",
 			"y":"7"},
 		{
-			"color":"red",
+			"color":"blue",
 			"x":"12",
 			"y":"7"},
 		{
-			"color":"green",
+			"color":"red",
 			"x":"13",
 			"y":"7"},
 		{
-			"color":"blue",
+			"color":"green",
 			"x":"14",
+			"y":"7"},
+		{
+			"color":"blue",
+			"x":"15",
 			"y":"7"},
 		
 	],

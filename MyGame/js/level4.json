@@ -3,22 +3,10 @@
 	//.laser[1].color 激光颜色 .angle角度 .x .y坐标
 	"laser":[
 		{	
-			"x":"6",
-			"y":"14", 
-			"angle":"90",
-			"color":"green"
-			},
-		{	
-			"x":"7",
-			"y":"14", 
+			"x":"8",
+			"y":"15", 
 			"angle":"90",
 			"color":"blue"
-			},
-		{	
-			"x":"8",
-			"y":"14", 
-			"angle":"90",
-			"color":"red"
 			}
 	],
 	//.target.length一共有多少个激光
@@ -26,74 +14,49 @@
 	//.target[1].x 坐标
 	"target":[
 		{
-			"color":"red",
-			"x":"0",
-			"y":"7"},
-		{
-			"color":"green",
-			"x":"1",
-			"y":"7"},
+			"color":"blue",
+			"x":"12",
+			"y":"2"},
 		{
 			"color":"blue",
-			"x":"2",
-			"y":"7"},
-		{
-			"color":"red",
 			"x":"3",
-			"y":"7"},
-		{
-			"color":"green",
-			"x":"4",
-			"y":"7"},
-		{
-			"color":"blue",
-			"x":"5",
-			"y":"7"},
-		{
-			"color":"red",
-			"x":"6",
-			"y":"7"},
-		{
-			"color":"green",
-			"x":"7",
-			"y":"7"},
+			"y":"2"},
 		{
 			"color":"blue",
 			"x":"8",
-			"y":"7"},
-		{
-			"color":"red",
-			"x":"9",
-			"y":"7"},
-		{
-			"color":"green",
-			"x":"10",
-			"y":"7"},
+			"y":"2"},
 		{
 			"color":"blue",
-			"x":"11",
-			"y":"7"},
+			"x":"2",
+			"y":"6"},
 		{
-			"color":"red",
-			"x":"12",
-			"y":"7"},
+			"color":"blue",
+			"x":"6",
+			"y":"6"},
 		{
-			"color":"green",
-			"x":"13",
-			"y":"7"},
+			"color":"blue",
+			"x":"4",
+			"y":"10"},
 		{
 			"color":"blue",
 			"x":"14",
-			"y":"7"},
-		
+			"y":"10"},
+		{
+			"color":"blue",
+			"x":"4",
+			"y":"13"},
+		{
+			"color":"blue",
+			"x":"8",
+			"y":"13"}				
 	],
 	//.mirror.length一共有多少种镜子
 	//.mirror[i].type镜子种类
 	//.mirror[i].num该种类镜子数量
 	"mirror":[
-		{"mtype":"90", "num":"0"},
-		{"mtype":"45", "num":"15"},
-		{"mtype":"0",  "num":"0"}
+		{"mtype":"90", "num":"1"},
+		{"mtype":"45", "num":"0"},
+		{"mtype":"0",  "num":"4"}
 	],
 	//.block.x[1] 坐标
 	"block":{

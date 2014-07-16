@@ -1,8 +1,22 @@
-
+function BgHover(obj,flag){
+	if(flag){
+		//setInterval(show1,1000);
+		document.getElementById("title_move").style.display="";
+		document.getElementById("title_move").style.left="0%";
+	}
+	else{		
+		document.getElementById("title_move").style.display="none";
+		}
+}
 N = 15;
 //=====================绘制格子==========================
 for(var i = 0; i < N; i++) $("table.game_frame").prepend("<tr id='game'></tr>");
 for(var i = 0; i < N; i++) $("tr#game").prepend("<td></td>");
+/*for(var i = 0; i < $("td").length; i++) 
+{
+    $($("td")[i]).attr("id", Number(i)+1);  //给格子编号id，从0开始
+    $($("td")[i]).attr("flag", 0);//给格子设置属性flag，0为空
+} */
 
 for(var i = 0; i < N; i++) $("table.game_tools").prepend("<tr id='tools'></tr>");
 for(var i = 0; i < 2; i++) $("tr#tools").prepend("<td></td>");
@@ -16,6 +30,7 @@ for(var i = 0; i < $("td").length; i++)
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
 loadLevel();
+flag_t = new Array([levelObj.target.length]);
 loadUrl();
 
 //=================载入关卡中元素位置===========levelObj================
@@ -24,7 +39,7 @@ function loadLevel(){
 	$("td").attr("flag","0");
 	$($("td").children()).remove();
 	$("toDelete").ready(function(){
-		    $(".toDelete").load('https://YutingWang.github.io/MyGame/js/level'+storage.level+'.json',function(responseTxt,statusTxt,xhr){
+		    $(".toDelete").load('/MyGame/js/level'+storage.level+'.json',function(responseTxt,statusTxt,xhr){
 		    	if(statusTxt=="success")
 		      	{
 		       		data = responseTxt;
@@ -43,7 +58,7 @@ function loadLevel(){
 function loadUrl(){
 	$("toDelete").ready(function(){
 //=================载入关卡中icon图标地址======urlObj===================
-		    $(".toDelete").load('https://YutingWang.github.io/MyGame/js/icon.json',function(responseTxt,statusTxt,xhr){
+		    $(".toDelete").load('/MyGame/js/icon.json',function(responseTxt,statusTxt,xhr){
 		    	if(statusTxt=="success")
 		      	{
 		       		data = responseTxt;
@@ -100,6 +115,9 @@ function place(){
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
+			if(success){
+		alert("success!");
+	}
 	});
 }
 
@@ -147,6 +165,9 @@ function loadMirror(){
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
+			if(success){
+		alert("success!");
+	}
 	});
 }
 
@@ -183,6 +204,9 @@ $($(ev.target).parents()).attr("flag","0");
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
+	if(success){
+		alert("success!");
+	}
 }
 
 function drop(ev)
@@ -202,5 +226,17 @@ function drop(ev)
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
+	if(success){
+		alert("success!");
+	}
 }
 
+//==============判断过关====================================
+
+function success()
+{
+	for(var i = 0;i < levelObj.target.length;i++){
+		if(flag_t[i] != 1)	return false;
+	}
+	return true;
+}
