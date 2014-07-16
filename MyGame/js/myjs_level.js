@@ -269,11 +269,15 @@ function success()
 		}
 		else{
 			$('#'+num).attr('style','background-image: url(pic/target_'+levelObj.target[i].color+'.png);');
-			var lightMusic = document.getElementById('lightMusic');
-            lightMusic.play();
+			
 		}
 	}
-	if(ok)	return true;
+	if(ok)
+	{
+		var lightMusic = document.getElementById('lightMusic');
+        lightMusic.play();
+        return true;
+    }
 	return false;
 }
 
@@ -295,14 +299,11 @@ $(".music_button").attr("onmouseover","showmusic()");
 function hidemusic(){$("audio").removeAttr("controls");}
 function showmusic(){$("audio").attr("controls","controls");}
 
-
-function showMenu(){$(".button").css("display","block");}
-function hideMenu(){$(".button").css("display","none");}
-
-$($(".HTP_button")[1]).attr("onmouseout","hideHelp()");
-$($(".HTP_button")[1]).attr("onmouseover","showHelp()");
+$(".help_button").attr("onmouseout","hideHelp()");
+$(".help_button").attr("onmouseover","showHelp()");
 function showHelp(){$(".help").css("display","block");}
 function hideHelp(){$(".help").css("display","none");}
+
 function showSuccess(){
 	$(".success").css("display", "block");
 }
