@@ -13,6 +13,7 @@
 	//.target[1].color 颜色
 	//.target[1].x 坐标
 	"target":[
+	
 		{
 			"color":"red",
 			"x":"3",
