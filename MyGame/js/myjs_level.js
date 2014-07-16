@@ -49,7 +49,7 @@ function loadLevel(){
 		      	$(".toDelete").css("display", "none");	
 		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined") 
 		      	{place();loadMirror();loadBlock();
-		      	flag_t = new Array([levelObj.target.length]);}
+		      	}flag_t = new Array([levelObj.target.length]);
 		  	});
 	});
 	
@@ -68,7 +68,7 @@ function loadUrl(){
 		      	$(".toDelete").css("display", "none");	
 		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined")
 		      	{place();loadMirror(); loadBlock();	
-		      	flag_t = new Array([levelObj.target.length]);}	     		  								
+		      	}flag_t = new Array([levelObj.target.length]);	     		  								
 	});
 		});	
 }
