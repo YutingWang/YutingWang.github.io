@@ -99,14 +99,14 @@ canvas{
 			background-color:rgba(255,255,255,1);
 		}
 		.button{
-    width: 150px;
-		
-    height: auto;
-    position: absolute;
-    bottom: 220px;
-    right: 20px;
-    z-index: 10;
-}
+			    width: 150px;
+					
+			    height: auto;
+	
+			    bottom: 220px;
+			    right: 20px;
+			    z-index: 10;
+			}
 		.button .reset_button{
 			position: relative;
 			/* left:6%; */

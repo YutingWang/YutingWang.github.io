@@ -269,7 +269,7 @@ function success()
 		}
 		else{
 			$('#'+num).attr('style','background-image: url(pic/target_'+levelObj.target[i].color+'.png);');
-			var lightMusic = document.getElementById('mirrorMusic');
+			var lightMusic = document.getElementById('lightMusic');
             lightMusic.play();
 		}
 	}
