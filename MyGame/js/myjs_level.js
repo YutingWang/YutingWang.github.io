@@ -233,8 +233,10 @@ function drag(ev)
 	{
 		draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 	}
-	console.log(storage.step);
 	storage.step++;
+	console.log(storage.step);
+	var mirrorMusic = document.getElementById('mirrorMusic');
+	mirrorMusic.play();
 	if(success())
 	{		
 		showSuccess();
@@ -288,8 +290,6 @@ function success()
 	{
 		var lightMusic = document.getElementById('lightMusic');
         lightMusic.play();
-        storage.step++;
-        console.log(storage.step);
         return true;
     }
 	return false;
