@@ -220,3 +220,24 @@ canvas{
 		font-size: 3em;
 		display:none;
 	}
+
+	@-webkit-keyframes greenPulse {
+  from { background-color: rgb(140, 19, 197); -webkit-box-shadow: 0 0 9px rgb(114, 1, 167); }
+  50% { background-color: rgb(177, 64, 159); -webkit-box-shadow: 0 0 18px rgb(180, 22, 155); }
+  to { background-color: rgb(140, 19, 197); -webkit-box-shadow: 0 0 9px rgb(114, 1, 167); }
+}
+
+a.green.button {
+  -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+.wall-of-buttons {
+text-align: center;
+margin-top: 2em;
+margin-bottom: 2em;
+}
+.green.button {
+-webkit-animation-name: greenPulse;
+-webkit-animation-duration: 3s;
+}

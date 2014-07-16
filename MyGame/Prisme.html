@@ -33,20 +33,17 @@
 		<div  class="back" style= "position:absolute;left:25%;top:10%;"></div>
 		<table class = "game_frame" style= "position:absolute;left:25%;top:10%;"> </table>
 		<table class=  "game_tools" style = "position:absolute;left:68%;top:10%;" width = "73px" height = "541px" ></table>
-		<div class ="smbb"> 
-			<img src="pic/smbb.jpg" width="100%">		
-		</div>	
 		<div class="button">
 				<audio loop="loop" controls="" src="song/2.mp3">				
 				</audio>
 				<div class="HTP_button music_button">
-					<a>音乐</a>						
+					<a class="green button">音乐</a>						
 				</div>			
 				<div class="HTP_button">
-					<a>帮助</a>
+					<a class="green button">帮助</a>
 				</div>
 				<div class="HTP_button toIndex">
-					<a href="index.html">回到首页</a>
+					<a href="index.html" class="green button">回到首页</a>
 				</div>						
 		</div>
 		<div class= "help">
@@ -55,6 +52,12 @@
 		<div class="success" display="none">
 			<h1>太棒了！</h1>
 		</div>
+		<audio id="mirrorMusic">
+			<source src="song/mirror.mp3">
+		</audio>
+		<audio id="lightMusic">
+			<source src="song/light.mp3">
+		</audio>
 	</body>
 	<script type="text/javascript" src="js/draw_laser.js"></script>
   	<script type="text/javascript" src="js/myjs_level.js"></script>

@@ -62,7 +62,8 @@ target:5
                 draw_laser_line(cxt,light_x, light_y, light_x + light_angle_x, light_y - light_angle_y, light_color);
                 if (same_color($('#'+num).attr('color'), light_color)){
                     flag_t[Number($('#'+num).attr('position'))] = 1;
-					
+					var lightMusic = document.getElementById('mirrorMusic');
+                    lightMusic.play();
 					}else{
 						flag_t[Number($('#'+num).attr('position'))] = 0;
                         

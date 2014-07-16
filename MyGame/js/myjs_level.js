@@ -169,6 +169,8 @@ function loadMirror(){
 		
 	});//============拖动图标的点击事件====================
 		$("[draggable='true']").click(function(){
+			var mirrorMusic = document.getElementById('mirrorMusic');
+			mirrorMusic.play();
 			t = $(this).attr("position");
 			t = (Number(t)+45)%360;
 			$(this).css("transform","rotate(-"+t+"deg)");
@@ -224,7 +226,7 @@ $($(ev.target).parents()).attr("flag","0");
 			for(var i = 0;i < levelObj.laser.length;i++){
 			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 			}
-	if(success()){
+	if(success()){		
 		showSuccess();
 	}
 }
@@ -292,7 +294,6 @@ function hidemusic(){$("audio").removeAttr("controls");}
 function showmusic(){$("audio").attr("controls","controls");}
 
 
-$(".smbb").attr("onclick","showMenu()");
 function showMenu(){$(".button").css("display","block");}
 function hideMenu(){$(".button").css("display","none");}
 
