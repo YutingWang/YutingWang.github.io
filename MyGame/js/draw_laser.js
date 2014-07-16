@@ -104,7 +104,7 @@ target:5
     }
     
     function same_color(target, light_color) {
-        if (target.color == light_color){
+        if (target == light_color){
             return true;
         }
         return false;
