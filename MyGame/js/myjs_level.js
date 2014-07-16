@@ -1,3 +1,5 @@
+
+
 function BgHover(obj,flag){
 	if(flag){
 		//setInterval(show1,1000);
@@ -29,6 +31,7 @@ for(var i = 0; i < $("td").length; i++)
 //=================本地存储==========================
 var storage = window.localStorage;
 if(storage.level == undefined) storage.level = 1;
+if(storage.step == undefined) storage.step = 0;
 levelChange(storage.level);
 loadUrl();
 
@@ -214,20 +217,26 @@ ev.preventDefault();
 
 function drag(ev)
 {
-ev.dataTransfer.setData("Text",ev.target.id);
-$($(ev.target).parents()).attr("flag","0");
+	ev.dataTransfer.setData("Text",ev.target.id);
+	$($(ev.target).parents()).attr("flag","0");
 	var ct = document.getElementById("game_canvas");
-			var cxt = ct.getContext("2d");
-			grid_size = 36;
-			cxt.clearRect(0,0,2000,2000);
-			for (var i = levelObj.target.length - 1; i >= 0; i--) {
-		      		flag_t[i] = 0;
-		      	};
-			for(var i = 0;i < levelObj.laser.length;i++){
-			draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
-			}
-	if(success()){		
+	var cxt = ct.getContext("2d");
+	grid_size = 36;
+	cxt.clearRect(0,0,2000,2000);
+	for (var i = levelObj.target.length - 1; i >= 0; i--)
+	{
+		flag_t[i] = 0;
+	};
+	for(var i = 0;i < levelObj.laser.length;i++)
+	{
+		draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
+	}
+	storage.step++;
+	if(success())
+	{		
 		showSuccess();
+		alert(storage.step++);
+		storage.step = 0;
 	}
 }
 
@@ -276,6 +285,8 @@ function success()
 	{
 		var lightMusic = document.getElementById('lightMusic');
         lightMusic.play();
+        storage.step++;
+        console.log(storage.step);
         return true;
     }
 	return false;
