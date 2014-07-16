@@ -3,19 +3,19 @@
 	//.laser[1].color 激光颜色 .angle角度 .x .y坐标
 	"laser":[
 		{	
-			"x":"6",
+			"x":"7",
 			"y":"14", 
 			"angle":"90",
 			"color":"green"
 			},
 		{	
-			"x":"7",
+			"x":"8",
 			"y":"14", 
 			"angle":"90",
 			"color":"blue"
 			},
 		{	
-			"x":"8",
+			"x":"9",
 			"y":"14", 
 			"angle":"90",
 			"color":"red"
