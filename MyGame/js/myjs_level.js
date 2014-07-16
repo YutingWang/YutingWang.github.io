@@ -269,6 +269,8 @@ function success()
 		}
 		else{
 			$('#'+num).attr('style','background-image: url(pic/target_'+levelObj.target[i].color+'.png);');
+			var lightMusic = document.getElementById('mirrorMusic');
+            lightMusic.play();
 		}
 	}
 	if(ok)	return true;
