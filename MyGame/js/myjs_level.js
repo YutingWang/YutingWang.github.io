@@ -172,6 +172,8 @@ function loadMirror(){
 		
 	});//============拖动图标的点击事件====================
 		$("[draggable='true']").click(function(){
+			storage.step++;
+			console.log(storage.step);
 			var mirrorMusic = document.getElementById('mirrorMusic');
 			mirrorMusic.play();
 			t = $(this).attr("position");
@@ -226,16 +228,17 @@ function drag(ev)
 	for (var i = levelObj.target.length - 1; i >= 0; i--)
 	{
 		flag_t[i] = 0;
-	};
+	}
 	for(var i = 0;i < levelObj.laser.length;i++)
 	{
 		draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 	}
+	console.log(storage.step);
 	storage.step++;
 	if(success())
 	{		
 		showSuccess();
-		alert(storage.step++);
+		console.log(storage.step);
 		storage.step = 0;
 	}
 }
@@ -340,5 +343,5 @@ function showButtons(){
 	for(var i = 1; i < 6; i++)	
 		$($("img#qcy")[i]).fadeIn(Number(i)*1000);
 	}
-
+$("document").attr("onclick", "console.log(1)");
 
