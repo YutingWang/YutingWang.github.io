@@ -99,12 +99,12 @@ canvas{
 			background-color:rgba(255,255,255,1);
 		}
 		.button{
-    /* width: 60%; */
+    width: 150px;
 		
-    /* height: auto; */
+    height: auto;
     position: absolute;
-    top: 90px;
-    left: 220px;
+    bottom: 20px;
+    right: 0;
     z-index: 10;
 }
 		.button .reset_button{
@@ -167,8 +167,8 @@ canvas{
 		audio {
 			controls:"controls";
 			loop:"loop";
-			/* height:100px; */
-			/* float: left; */
+			height:100px;
+			float: left;
 			width: 300px;			
 		
 			position: absolute;
@@ -178,5 +178,10 @@ canvas{
 		.music{
 			/* width:400px; */
 			/* height:100px; */
+		}
+		.smbb{
+			position:relative;
+			width:300px;
+			height:300px;
 		}
 

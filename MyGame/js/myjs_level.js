@@ -39,7 +39,7 @@ function loadLevel(){
 	$("td").attr("flag","0");
 	$($("td").children()).remove();
 	$("document").ready(function(){
-		    $(".toDelete").load('/MyGame/js/level'+storage.level+'.json',function(responseTxt,statusTxt,xhr){
+		    $(".toDelete").load('js/level'+storage.level+'.json',function(responseTxt,statusTxt,xhr){
 		    	if(statusTxt=="success")
 		      	{
 		       		data = responseTxt;
@@ -62,7 +62,7 @@ function loadLevel(){
 function loadUrl(){
 	$("toDelete").ready(function(){
 //=================载入关卡中icon图标地址======urlObj===================
-		    $(".toDelete").load('/MyGame/js/icon.json',function(responseTxt,statusTxt,xhr){
+		    $(".toDelete").load('js/icon.json',function(responseTxt,statusTxt,xhr){
 		    	if(statusTxt=="success")
 		      	{
 		       		data = responseTxt;
@@ -262,21 +262,22 @@ function success()
 
 for(var i = 1; i < 6;i++) 
 {
-	$($("img")[i]).attr("onclick","levelChange_("+i+")");
+	$($("img")[i]).attr("onclick","levelChange("+i+")");
 	$($("img")[i]).css("cursor","pointer");
 }
 
 function levelChange(id){
 	pre = localStorage.level;
-	localStorage.level = id;
-	loadLevel();
+	localStorage.level = Number(id);
+	console.log(localStorage.level);
+	console.log(id);
+	setTimeout(loadLevel(),10);
+	setTimeout(loadLevel(),10);
+	//loadLevel();
 	$($("img")[pre]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton_0"+pre+".png");
 	$($("img")[id]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton1_0"+id+".png");
 }
-function levelChange_(id){
-	levelChange(id);
-	levelChange(id);
-}
+
 $($("img")[0]).attr("onclick","loadLevel()");
 $("audio").attr("onmouseout","hidemusic()");
 $("audio").attr("onmouseover","showmusic()");
@@ -285,3 +286,11 @@ $(".music_button").attr("onmouseover","showmusic()");
 
 function hidemusic(){$("audio").removeAttr("controls");}
 function showmusic(){$("audio").attr("controls","controls");}
+
+
+$(".smbb").attr("onmouseover","showMenu()");
+$(".button").attr("onmouseover","showMenu()");
+$(".smbb").attr("onmouseout","hideMenu()");
+$(".button").attr("onmouseout","hideMenu()");
+function showMenu(){$(".button").attr("display","block");}
+function hideMenu(){$(".button").attr("display","none");}
