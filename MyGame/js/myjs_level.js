@@ -258,3 +258,16 @@ function success()
 	if(ok)	return true;
 	return false;
 }
+for(var i = 1; i < $("img").length;i++) 
+{
+	$($("img")[i]).attr("onclick","levelChange("+i+")");
+}
+function levelChange(id){
+	localStorage.level = id;
+	loadLevel();
+	alert(id);
+	for(var i = 1; i <  $("img").length; i++)
+		$($("img")[i]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton_0"+i+".png");
+	$($("img")[id]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton1_0"+id+".png");
+}
+$("HTP_botton").attr("onclick","loadLevel()");

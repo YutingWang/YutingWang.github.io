@@ -20,7 +20,7 @@ td{
 	background-size:100%;
 }
 canvas{
-	z-index: 5;
+	z-index: 10;
 }
 .game_tools,.game_frame{
 	/* background-color: rgba(248, 236, 248, 0.48); */
@@ -59,19 +59,24 @@ canvas{
 		.level_title{
 		float:left;
 		font-size:30px;
-		}
+		font-color: white;
+		/* color: white; */
+}
 		.title_frame{
 			position: relative;
 			/* left:10%; */
-			/* top:10%; */
-			width:100%;
+			top: 100px;
+			width: 200px;
 			/* height:20%; */
 			overflow:hidden;
-		}
-		.level_frame,{
+		
+			border: 2px solid white;
+			background-color: rgba(253, 247, 247, 0.94);
+}
+		.level_frame{
 			position:absolute;
 			/* left:12%; */
-			top: 35%;
+			top: 200px;
 			width:100%;
 			height:400px;
 			overflow:hidden;
@@ -94,39 +99,57 @@ canvas{
 			background-color:rgba(255,255,255,1);
 		}
 		.button{
-		}
+    /* width: 60%; */
+		
+    /* height: auto; */
+    position: absolute;
+    top: 90px;
+    left: 220px;
+    z-index: 10;
+}
 		.button .reset_button{
 			position: relative;
 			/* left:6%; */
 			/* top:80%; */
-			width:100%;
+			/* width:100%; */
 			height:5%;
 			overflow:hidden;
 			//background-color:rgba(41,25,31,0.9);
-		}
-		.button .HTP_button{
+		
+			border: 3px dashed rgb(197, 180, 180);
+			float: left;
+			background-color: rgba(255, 255, 255, 0.91);
+}
+		.HTP_button,.music_button{
 			position: relative;
 			/* left:35%; */
 			/* top:80%; */
-			width:100%;
-			height:5%;
+			width: 100px;
+			/* height:100px; */
 			overflow:hidden;
 			//background-color:rgba(41,25,31,0.9);
-		}
+			border: 2px dashed rgb(178, 167, 167);
+			background-color: rgba(253, 247, 247, 0.94);
+			/* margin-left: 20px; */
+			cursor: pointer;
+			margin-top: 20px;
+}
 		.button a{		
 			text-decoration:none;
-			font-size:25px;
-			color:#AEFC39;
-		}
-		.HTP_button a:hover{
-			text-align:center;
+			font-size: 1.2em;
+			/* color: #AEFC39; */
+		
+			font-family: "微软雅黑";
+			padding: 0 10px 0;
+}
+		.HTP_button :hover{
 			cursor:help;
-			color:rgba(255,255,0,0.5);
+			color:white;
 		}
-		.reset_button a:hover{
+		.reset_button :hover{
 			text-align:center;
 			cursor:pointer;
-			color:rgba(255,255,0,0.5);
+			color:white;
 		}
 		.show_title{
 			position:absolute;
@@ -141,5 +164,20 @@ canvas{
 			top:0%;
 			width:75%;
 			height:100%;
+		}
+		audio {
+			controls:"controls";
+			loop:"loop";
+			/* height:100px; */
+			/* float: left; */
+			width: 300px;			
+		
+			position: absolute;
+			left: 0px;
+			top: 160px;
+}
+		.music{
+			/* width:400px; */
+			/* height:100px; */
 		}
 

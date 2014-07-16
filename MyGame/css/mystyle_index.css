@@ -42,6 +42,7 @@ body{
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
+	cursor:pointer;
 }
 .start{
 	position: relative;	
@@ -58,6 +59,7 @@ body{
 }
 .howToPlay{
 	position: relative;
+	cursor:help;
 }
 h1{
 	margin:0;
@@ -129,6 +131,22 @@ border-radius: 10px;
 color: white;
 	padding: 0 20px 0;
 }
+#setup{
+		position:absolute;
+	top: 20%;
+	left: 38%;
+	width: 35%;
+	height: 400px;
+	background-color: rgba(141, 17, 52, 0.95);
+	z-index: 10;
+	display: none;
+	border: 3px dashed rgb(252, 248, 248);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	color: white;
+		padding: 0 20px 0;
+	}
 h2{
 	font-family:"微软雅黑";
 	font-size:1.6em;

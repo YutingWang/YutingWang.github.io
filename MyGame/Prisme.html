@@ -9,48 +9,53 @@
 	
 	<body>			
 							
-		<canvas style = "position:absolute;left:30%;top:10%;" width = "541px" height = "541px" id ="game_canvas">Your browser does not support the canvas element.</canvas>
-		<canvas style = "position:absolute;left:75%;top:10%;" width = "73px" height = "541px" id ="tool_canvas">Your browser does not support the canvas element.</canvas>
-		<div class = "toDelete"></div>
-		<div id="title_move" style="display:block;position:absolute;left:0%;top:0%;width: 25%;height:100%;">
+		<canvas style = "position:absolute;left:30%;top:10%;" width = "541px" height = "541px" id ="game_canvas">Your browser does not support the canvas element.
+		</canvas>
+		<canvas style = "position:absolute;left:75%;top:10%;" width = "73px" height = "541px" id ="tool_canvas">Your browser does not support the canvas element.
+		</canvas>
+		<div class = "toDelete">
+		</div>
+		<div id="title_move" style="display:block;position: relative;left:0%;top:0%;width: 25%;height: auto;padding-top: 10px;">
 			<div class="title_frame">
-				<h1 class="level_title"><font size="7" color="#AEFC39">Level 1</font></h1>
+				<h1 class="level_title">Level 1</h1>
 			</div>
 			<div class="level_frame">
 				<div class="level" style="position: absolute; top: 90px; left: -80px;width: 180px;">
-					<img width="100%" src="pic/levelButton_01.png"></div>
+					<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_01.png"></div>
 				<div class="level" style="position: absolute; top: 0px;">
-					<img width="100%" src="pic/levelButton_01.png"></div>
+					<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_01.png"></div>
 				<div class="level" style="    position: absolute;    top: 40px;    left: 90px;">
-					<img width="100%" src="pic/levelButton_02.png"></div>
+					<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_02.png"></div>
 				<div class="level" style="    position: absolute;    left: 140px;    top: 130px;">
-					<img width="100%" src="pic/levelButton_03.png"></div>
+					<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_03.png"></div>
 				<div class="level" style="    position: absolute;    left: 100px;    top: 230px;">
-					<img width="100%" src="pic/levelButton_04.png"></div>
+					<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_04.png"></div>
 				<div class="level" style="    position: absolute;    top: 290px;">
-					<img width="100%" src="pic/levelButton_05.png"></div>		
+					<img width="100%" src="https://YutingWang.github.io/MyGame/pic/levelButton_05.png"></div>		
 			</div>						
 			<div class="button">
-				<div class="reset_button">
-					<a>Reset</a>
+				<div class="HTP_button">
+					<a>重新开始</a>
 				</div>
 				<div class="HTP_button">
-					<a>How to play</a>
+					<a>帮助</a>
 				</div>
-			</div>
+				<div class="music_button">
+					<a>音乐</a>						
+				</div>				
+				<audio controls="controls" loop="loop" src="song/2.mp3">
+				
+			</audio></div>			
+		    
+		   
 		</div>
 		<div  class="back" style= "position:absolute;left:30%;top:10%;"></div>
-		<table class = "game_frame" style= "position:absolute;left:30%;top:10%;"> 
-		</table>
-		<table class=  "game_tools" style = "position:absolute;left:75%;top:10%;" width = "73px" height = "541px" >
-			
-		</table>
+		<table class = "game_frame" style= "position:absolute;left:30%;top:10%;"> </table>
+		<table class=  "game_tools" style = "position:absolute;left:75%;top:10%;" width = "73px" height = "541px" ></table>
+		
 	</body>
-	
-   <script type="text/javascript" src="js/myjs_level.js"></script>
-   <script type="text/javascript" src="js/draw_laser.js"></script>
-   <script>
-  	</script>
+	<script type="text/javascript" src="js/draw_laser.js"></script>
+  	<script type="text/javascript" src="js/myjs_level.js"></script>
    
 	
 </html>
