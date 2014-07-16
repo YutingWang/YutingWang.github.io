@@ -38,7 +38,7 @@ function loadLevel(){
 	$("td").css("background-image","none");
 	$("td").attr("flag","0");
 	$($("td").children()).remove();
-	$(".toDelete").ready(function(){
+	$("document").ready(function(){
 		    $(".toDelete").load('/MyGame/js/level'+storage.level+'.json',function(responseTxt,statusTxt,xhr){
 		    	if(statusTxt=="success")
 		      	{
