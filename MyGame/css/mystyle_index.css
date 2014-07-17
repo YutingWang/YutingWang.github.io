@@ -23,7 +23,6 @@ body{
 	position: relative;
 	width:100%;
 	margin:0;
-	/* background-color: beige; */
 	text-align: center;
 	color: white;
 	font-family: fantasy;
@@ -37,7 +36,7 @@ body{
 	width: 200px;
 	margin-left: 40%;
 	margin-top:20px;
-		background: #555;
+	background: #555;
 	border: 3px solid #fff;
 	border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -46,14 +45,11 @@ body{
 }
 .start{
 	position: relative;	
-	/* width: 200px; */
-
 }
 .inmenu:hover{
 	border:3px dashed white;
 	background:red;
 }
-
 .resume{
 	display:none;
 }
@@ -100,39 +96,6 @@ img{
 
 #howToPlay{
 	position:absolute;
-top: 20%;
-left: 38%;
-width: 35%;
-height: 400px;
-background-color: rgba(141, 17, 52, 0.95);
-z-index: 10;
-display: none;
-border: 3px dashed rgb(252, 248, 248);
-border-radius: 10px;
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
-color: white;
-	padding: 0 20px 0;
-}
-
-#about{
-	position:absolute;
-top: 20%;
-left: 38%;
-width: 35%;
-height: 400px;
-background-color: rgba(141, 17, 52, 0.95);
-z-index: 10;
-display: none;
-border: 3px dashed rgb(252, 248, 248);
-border-radius: 10px;
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
-color: white;
-	padding: 0 20px 0;
-}
-#setup{
-		position:absolute;
 	top: 20%;
 	left: 38%;
 	width: 35%;
@@ -145,7 +108,40 @@ color: white;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	color: white;
-		padding: 0 20px 0;
+	padding: 0 20px 0;
+}
+
+#about{
+	position:absolute;
+	top: 20%;
+	left: 38%;
+	width: 35%;
+	height: 400px;
+	background-color: rgba(141, 17, 52, 0.95);
+	z-index: 10;
+	display: none;
+	border: 3px dashed rgb(252, 248, 248);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	color: white;
+	padding: 0 20px 0;
+}
+#setup{
+	position:absolute;
+	top: 20%;
+	left: 38%;
+	width: 35%;
+	height: 400px;
+	background-color: rgba(141, 17, 52, 0.95);
+	z-index: 10;
+	display: none;
+	border: 3px dashed rgb(252, 248, 248);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	color: white;
+	padding: 0 20px 0;
 	}
 h2{
 	font-family:"微软雅黑";
