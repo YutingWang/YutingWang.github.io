@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Prisme</title>
+		<title>Light From Stars</title>
 		<meta charset = "utf-8"/>
 		<link rel="stylesheet" href="css/mystyle_level.css" />
 		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 	</head>
 	
 	<body>							
-		<canvas style = "position:absolute;left:25%;top:10%;" width = "541px" height = "541px" id ="game_canvas">Your browser does not support the canvas element.
+		<canvas style = "position:absolute;left:250px;top:100px;" width = "541px" height = "541px" id ="game_canvas">Your browser does not support the canvas element.
 		</canvas>
-		<canvas style = "position:absolute;left:68%;top:10%;" width = "73px" height = "541px" id ="tool_canvas">Your browser does not support the canvas element.
+		<canvas style = "position:absolute;left:880px;top:100px;" width = "73px" height = "541px" id ="tool_canvas">Your browser does not support the canvas element.
 		</canvas>
 		<div class = "toDelete">
 		</div>
@@ -30,13 +30,13 @@
 					<img id="qcy"width="100%" src="pic/levelButton_05.png"></div>		
 			</div>		   
 		</div>
-		<div  class="back" style= "position:absolute;left:25%;top:10%;"></div>
-		<div  class="back1" style= "position:absolute;left:68%;top:10%"></div>
-		<table class = "game_frame" style= "position:absolute;left:25%;top:10%;"> </table>
-		<table class=  "game_tools" style = "position:absolute;left:68%;top:10%;" width = "73px" height = "541px" ></table>
-		<div class="button" style="position: absolute; right: 40px; bottom: 40px;">
-			<audio loop="loop" controls="" src="song/2.mp3"></audio>
-			<div class="music_button" style="border-radius: 10px;">
+		<div  class="back" style= "position:absolute;left:250px;top:100px;"></div>
+		<div  class="back1" style= "position:absolute;left:880px;top:100px"></div>
+		<table class = "game_frame" style= "position:absolute;left:250px;top:100px;"> </table>
+		<table class=  "game_tools" style = "position:absolute;left:880px;top:100px;" width = "73px" height = "541px" ></table>
+		<div class="button" style="position: absolute; left: 1050px; top: 400px;">
+			<audio loop="loop" autoplay="autoplay" controls="" onmouseout="hidemusic()" onmouseover = "showmusic()" src="song/2.mp3"></audio>
+			<div class="music_button" style="border-radius: 10px;" onmouseout="hidemusic()" onmouseover = "showmusic()">
 				<a class="green button" style="">音乐</a>						
 			</div>			
 			<div class="help_button">
@@ -46,11 +46,11 @@
 				<a href="index.html" class="green button">回到首页</a>
 			</div>						
 		</div>
-		<div class= "help">
+		<div class= "help" style="position: absolute; left: 1050px; top: 200px;">
 			<p>真的要看答案么</p>
 			<p>再想想呗，很容易的</p>
 		</div>
-		<div class= "secret">
+		<div class= "secret" style="position: absolute; left: 1050px; top: 200px;">
 			<p><a href="pic/secret1.jpg">第一关</a></p>
 			<p><a href="pic/secret2.jpg">第二关</a></p>
 			<p><a href="pic/secret3.jpg">第三关</a></p>
@@ -66,7 +66,7 @@
 		<audio id="lightMusic">
 			<source src="song/light.mp3">
 		</audio>
-		<div id="step"><a class="green button">a</a>
+		<div id="step" style="position: absolute; left: 1050px; top: 50px;"><a class="green button">a</a>
 	    </div>
 	</body>
 	<script type="text/javascript" src="js/draw_laser.js"></script>

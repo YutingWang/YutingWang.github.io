@@ -1,29 +1,11 @@
-
-
-function BgHover(obj,flag){
-	if(flag){
-		//setInterval(show1,1000);
-		document.getElementById("title_move").style.display="";
-		document.getElementById("title_move").style.left="0%";
-	}
-	else{		
-		document.getElementById("title_move").style.display="none";
-		}
-}
-N = 15;
 //=====================绘制格子==========================
+N = 15;
 for(var i = 0; i < N; i++) $("table.game_frame").prepend("<tr id='game'></tr>");
 for(var i = 0; i < N; i++) $("tr#game").prepend("<td></td>");
-/*for(var i = 0; i < $("td").length; i++) 
-{
-    $($("td")[i]).attr("id", Number(i)+1);  //给格子编号id，从0开始
-    $($("td")[i]).attr("flag", 0);//给格子设置属性flag，0为空
-} */
 
 for(var i = 0; i < N; i++) $("table.game_tools").prepend("<tr id='tools'></tr>");
 for(var i = 0; i < 2; i++) $("tr#tools").prepend("<td></td>");
-for(var i = 0; i < $("td").length; i++) 
-{
+for(var i = 0; i < $("td").length; i++){ 
     $($("td")[i]).attr("id", Number(i)+1);  //给格子编号id，从0开始
     $($("td")[i]).attr("flag", 0);//给格子设置属性flag，0为空
 } 
@@ -35,6 +17,7 @@ if(storage.step == undefined) storage.step = 0;
 levelChange(storage.level);
 loadUrl();
 
+//=================切换关卡===========================
 function levelChange(id){
 	pre = localStorage.level;
 	localStorage.level = Number(id);
@@ -42,7 +25,8 @@ function levelChange(id){
 	$($("img#qcy")[pre]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton_0"+pre+".png");
 	$($("img#qcy")[id]).attr("src","https://YutingWang.github.io/MyGame/pic/levelButton1_0"+id+".png");
 }
-//=================载入关卡中元素位置===========levelObj================
+
+//=================载入关卡中元素位置===========================
 function loadLevel(){
 	storage.step = 0;
 	$("#step")[0].innerText = "你已经走了"+storage.step+"步";
@@ -52,51 +36,48 @@ function loadLevel(){
 	$("td").removeAttr("position");
 	$("td").attr("style","background-image:none");
 	$($("td").children()).remove();
-	//$("document").ready(function(){
-		    $(".toDelete").load('js/level'+storage.level+'.json',function(responseTxt,statusTxt,xhr){
-		    	if(statusTxt=="success")
-		      	{
-		       		data = responseTxt;
-		      		levelObj = eval('('+responseTxt+')');
-		      	}
-		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
-		      	$(".toDelete").css("display", "none");	
-		      	$("td").css("background-image","none");
-		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined") 
-		      	{
-		      		$("td").attr("style","background-image:none");
-		      		place();loadMirror();loadBlock();
-		      	}
 
-		      	flag_t = new Array(levelObj.target.length);
-		      	for (var i = levelObj.target.length - 1; i >= 0; i--) {
-		      		flag_t[i] = 0;
-		      	};
-		  	});
-	//});
+    $(".toDelete").load('js/level'+storage.level+'.json',function(responseTxt,statusTxt,xhr){
+    	if(statusTxt=="success")
+      	{
+       		data = responseTxt;
+      		levelObj = eval('('+responseTxt+')');
+      	}
+      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
+      	$(".toDelete").css("display", "none");	
+      	$("td").css("background-image","none");
+      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined") 
+      	{
+      		$("td").attr("style","background-image:none");
+      		place();loadMirror();loadBlock();
+      	}
+
+      	flag_t = new Array(levelObj.target.length);
+      	for (var i = levelObj.target.length - 1; i >= 0; i--) {
+      		flag_t[i] = 0;
+      	};
+  	});
+}
+
+//=================载入关卡中icon图标地址======urlObj===================
+function loadUrl(){
+    $(".toDelete").load('js/icon.json',function(responseTxt,statusTxt,xhr){
+    	if(statusTxt=="success"){
+       		data = responseTxt;
+      		urlObj = eval('('+responseTxt+')');
+      	}
+      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
+      	$(".toDelete").css("display", "none");	
+      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined")
+      	{place();loadMirror(); loadBlock();	
+      	}     		  								
+	});
 	
 }
 
-function loadUrl(){
-	//$("toDelete").ready(function(){
-//=================载入关卡中icon图标地址======urlObj===================
-		    $(".toDelete").load('js/icon.json',function(responseTxt,statusTxt,xhr){
-		    	if(statusTxt=="success"){
-		       		data = responseTxt;
-		      		urlObj = eval('('+responseTxt+')');
-		      	}
-		      	else if(statusTxt=="error") alert("Error: "+xhr.status+": "+xhr.statusText);
-		      	$(".toDelete").css("display", "none");	
-		      	if(typeof(urlObj) != "undefined" && typeof(levelObj) != "undefined")
-		      	{place();loadMirror(); loadBlock();	
-		      	}     		  								
-		});
-	//});	
-}
-
+//===========载入激光器============================
 function place(){
-	$("toDelete").ready(function(){
-		//===========载入激光器============================
+	$("toDelete").ready(function(){		
 		for(var i = 0; i < levelObj.laser.length; i++)
 		{
 			var color = levelObj.laser[i].color;	 //激光器颜色
@@ -142,7 +123,7 @@ function place(){
 	});
 }
 
-
+//=================载入镜子===================
 function loadMirror(){
 	$("toDelete").ready(function(){
 		$("td").attr("ondrop", "drop(event)");
@@ -170,35 +151,36 @@ function loadMirror(){
 				else c.attr("position","0");//To EDIT
 				k++;
 			}			
+		}	
+	});
+	//============拖动图标的点击事件====================
+	$("[draggable='true']").click(function(){
+		storage.step++;
+		console.log(storage.step);
+		$("#step")[0].innerText = "你已经走了"+storage.step+"步";
+		var mirrorMusic = document.getElementById('mirrorMusic');
+		mirrorMusic.play();
+		t = $(this).attr("position");
+		t = (Number(t)+45)%360;
+		$(this).css("transform","rotate(-"+t+"deg)");
+		t = String(t);
+		$(this).attr("position", t);
+		var ct = document.getElementById("game_canvas");
+		var cxt = ct.getContext("2d");
+		grid_size = 36;
+		cxt.clearRect(0,0,2000,2000);
+		for (var i = levelObj.target.length - 1; i >= 0; i--)
+		{
+			flag_t[i] = 0;
+		};
+		for(var i = 0;i < levelObj.laser.length;i++){
+		draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 		}
-		
-	});//============拖动图标的点击事件====================
-		$("[draggable='true']").click(function(){
-			storage.step++;
-			console.log(storage.step);
-			$("#step")[0].innerText = "你已经走了"+storage.step+"步";
-			var mirrorMusic = document.getElementById('mirrorMusic');
-			mirrorMusic.play();
-			t = $(this).attr("position");
-			t = (Number(t)+45)%360;
-			$(this).css("transform","rotate(-"+t+"deg)");
-			t = String(t);
-			$(this).attr("position", t);
-			var ct = document.getElementById("game_canvas");
-			var cxt = ct.getContext("2d");
-			grid_size = 36;
-			cxt.clearRect(0,0,2000,2000);
-			for (var i = levelObj.target.length - 1; i >= 0; i--)
-			{
-				flag_t[i] = 0;
-			};
-					for(var i = 0;i < levelObj.laser.length;i++){
-					draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
-					}
-					if(success()){showSuccess();}
-		});
+		if(success()){showSuccess();}
+	});
 }
 
+//=================载入障碍===================
 function loadBlock(){
 	$("toDelete").ready(function(){
 		var url = urlObj.url.block.block;
@@ -214,26 +196,23 @@ function loadBlock(){
 		}
 	});
 }
+
 //==============鼠标拖放====================================
-function allowDrop(ev)
-{
-ev.preventDefault();
+function allowDrop(ev){
+	ev.preventDefault();
 }
 
-function drag(ev)
-{
+function drag(ev){
 	ev.dataTransfer.setData("Text",ev.target.id);
 	$($(ev.target).parents()).attr("flag","0");
 	var ct = document.getElementById("game_canvas");
 	var cxt = ct.getContext("2d");
 	grid_size = 36;
 	cxt.clearRect(0,0,2000,2000);
-	for (var i = levelObj.target.length - 1; i >= 0; i--)
-	{
+	for (var i = levelObj.target.length - 1; i >= 0; i--){
 		flag_t[i] = 0;
 	}
-	for(var i = 0;i < levelObj.laser.length;i++)
-	{
+	for(var i = 0;i < levelObj.laser.length;i++){
 		draw_laser(cxt,Number(levelObj.laser[i].x), Number(levelObj.laser[i].y), Number(levelObj.laser[i].angle), levelObj.laser[i].color);
 	}
 	storage.step++;
@@ -241,8 +220,7 @@ function drag(ev)
 	$("#step")[0].innerText = "你已经走了"+storage.step+"步";
 	var mirrorMusic = document.getElementById('mirrorMusic');
 	mirrorMusic.play();
-	if(success())
-	{		
+	if(success()){		
 		showSuccess();
 		console.log(storage.step);
 		$("#step")[0].innerText = "你已经走了"+storage.step+"步";
@@ -275,7 +253,6 @@ function drop(ev)
 }
 
 //==============判断过关====================================
-
 function success()
 {
 	var ok = 1;
@@ -291,29 +268,19 @@ function success()
 			
 		}
 	}
-	if(ok)
-	{
+	if(ok){
 		var lightMusic = document.getElementById('lightMusic');
         lightMusic.play();
         return true;
     }
 	return false;
 }
-
-for(var i = 1; i < 6;i++) 
-{
+//=================添加鼠标点击和悬停事件===================
+for(var i = 1; i < 6;i++) {
 	$($("img#qcy")[i]).attr("onclick","levelChange("+i+");");
 	$($("img#qcy")[i]).css("cursor","pointer");
 }
-
 $($("img#qcy")[0]).attr("onclick","loadLevel()");
-
-
-
-$("audio").attr("onmouseout","hidemusic()");
-$("audio").attr("onmouseover","showmusic()");
-$(".music_button").attr("onmouseout","hidemusic()");
-$(".music_button").attr("onmouseover","showmusic()");
 
 function hidemusic(){$("audio").removeAttr("controls");}
 function showmusic(){$("audio").attr("controls","controls");}
@@ -331,23 +298,22 @@ function showSecret(){
 		$(".secret").css("display","none");
 	}
 }
+
 function hideHelp(){$(".help").css("display","none");}
 
 function showSuccess(){
 	$(".success").css("display", "block");
 }
+
 function hideSuccess(){
 	$(".success").css("display", "none");
 }
-$(".success").attr("onclick","hideSuccess()");
 
-$("img#qcy").css("display","none");
-$($("img#qcy")[0]).css("display","block");
-showButtons();
 function showButtons(){
 	for(var i = 1; i < 6; i++)	
 		$($("img#qcy")[i]).fadeIn(Number(i)*1000);
 	}
-$("document").attr("onclick", "console.log(1)");
-
-
+$(".success").attr("onclick","hideSuccess()");
+$("img#qcy").css("display","none");
+$($("img#qcy")[0]).css("display","block");
+showButtons();

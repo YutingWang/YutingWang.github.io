@@ -1,11 +1,10 @@
 body{	
 	background-image:url("https://YutingWang.github.io/MyGame/pic/background3.jpeg");
 	background-position:top;
-	background-size:100% auto;
+	
   	background-position:top left;
   	background-repeat:repeat-y;
 }
-
 table, td, tr{
 	empty-cells: show;
 	 border-collapse:collapse;
@@ -22,7 +21,17 @@ td{
 canvas{
 	z-index: 4;
 }
-.game_tools,.game_frame{
+.game_frame{
+	border-color: white;
+	border-width: 2px;
+	border-style: dashed;
+
+	z-index: 5;
+}
+.game_tools{
+	position: absolute;
+	left: :600px;
+	top:400px;
 	border-color: white;
 	border-width: 2px;
 	border-style: dashed;
@@ -35,132 +44,111 @@ canvas{
 	width: 80px;
 	margin-top: 10px;
 }
-		.back{
-			position:absolute;
-			left:30%;
-			top:10%;
-			width:539px;
-			height:539px;		
-		
-			background-color: rgba(255, 255, 255, 0.54);
-}
-		.back1{
-			position:absolute;
-			width:70px;
-			height:539px;		
-		
-			background-color: rgba(255, 255, 255, 0.54);
-}
-		.game_frame{
-			position:absolute;
-			left:30%;
-			top:10%;
-			width:539px;
-			height:539px;		
-			z-index: 5;
-}
-		.level_title{
-		float:left;
-		font-size:30px;
-		font-color: white;
-}
-		.title_frame{
-			position: relative;
-			top: 100px;
-			width: 200px;
-			overflow:hidden;
-		
-			border: 2px solid white;
-			background-color: rgba(253, 247, 247, 0.94);
-}
-		.level_frame{
-			position:absolute;
-			top: 200px;
-			width:100%;
-			height:400px;
-			overflow:hidden;
-		}
+.back{
+	position:absolute;
+	left:300px;
+	top:100px;
+	width:539px;
+	height:539px;		
 
+	background-color: rgba(255, 255, 255, 0.54);
+}
+.back1{
+	position:absolute;
+	width:70px;
+	height:539px;		
+	background-color: rgba(255, 255, 255, 0.54);
+}
+.game_frame{
+	position:absolute;
+	left:300px;
+	top:100px;
+	width:539px;
+	height:539px;		
+	z-index: 5;
+}
+.level_title{
+	float:left;
+	font-size:30px;
+	font-color: white;
+}
+.title_frame{
+	position: relative;
+	top: 100px;
+	width: 200px;
+	overflow:hidden;
 
-		.tool_frame{
-			position:absolute;
-			left:10%;
-			top:40%;
-			width:300px;
-			height:100px;
-			overflow:hidden;
-			background-color:rgba(255,255,255,1);
-		}
+	border: 2px solid white;
+	background-color: rgba(253, 247, 247, 0.94);
+}
+.level_frame{
+	position:absolute;
+	top: 200px;
+	width:100%;
+	height:400px;
+	overflow:hidden;
+}
+.tool_frame{
+	position:absolute;
+	left:800px;
+	top:400px;
+	width:300px;
+	height:100px;
+	overflow:hidden;
+	background-color:rgba(255,255,255,1);
+}	
+audio {
+	controls:"controls";
+	loop:"loop";
+	height:100px;
+	float: left;
+	width: 300px;			
 
-		.show_title{
-			position:absolute;
-			left:0%;
-			top:0%;
-			width:25%;
-			height:100%;
-		}		
-		.hide_title{
-			position:absolute;
-			left:25%;
-			top:0%;
-			width:75%;
-			height:100%;
-		}
-		audio {
-			controls:"controls";
-			loop:"loop";
-			height:100px;
-			float: left;
-			width: 300px;			
-		
-			position: absolute;
-			right: 0;
-			top: -100px;
-		}
-		a{
-			text-decoration: none;
-		}
-	.help,.secret{
-		position:absolute;
-		display:none;
-		width: 200px;
-		height: 200px;
-		bottom: 250px;
-		right: 35px;
-		z-index:10;
-		border: 3px dashed rgb(197, 180, 180);
-		background-color: rgba(255, 255, 255, 0.91);
-		text-align:center;
-	}
-
+	position: absolute;
+	right: 0;
+	top: -100px;
+}
+a{
+	text-decoration: none;
+}
+.help,.secret{
+	position:absolute;
+	display:none;
+	width: 200px;
+	height: 200px;
+	bottom: 250px;
+	right: 35px;
+	z-index:10;
+	border: 3px dashed rgb(197, 180, 180);
+	background-color: rgba(255, 255, 255, 0.91);
+	text-align:center;
+}
 .success{
-		position:absolute;
-		top: 10%;
-		left: 25%;
-		width: 495px;
-		height: 536px;
-		background-color: rgba(141, 85, 179, 0.71);
-		z-index: 10;
-		/* display: none; */
-		border: 3px dashed rgb(252, 248, 248);
-		border-radius: 10px;
-		-moz-border-radius: 10px;
-		-webkit-border-radius: 10px;
-		color: white;
-		padding: 0 20px 0;
-	
-		z-index: 90;
-		font-size: 3em;
-		text-align: center;
-		display:none;
-	}
+	position:absolute;
+	top: 10%;
+	left: 25%;
+	width: 495px;
+	height: 536px;
+	background-color: rgba(141, 85, 179, 0.71);
+	z-index: 10;
+	/* display: none; */
+	border: 3px dashed rgb(252, 248, 248);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	color: white;
+	padding: 0 20px 0;
 
-	@-webkit-keyframes greenPulse {
+	z-index: 90;
+	font-size: 3em;
+	text-align: center;
+	display:none;
+}
+@-webkit-keyframes greenPulse {
   from { background-color: rgb(140, 19, 197); -webkit-box-shadow: 0 0 9px rgb(114, 1, 167); }
   50% { background-color: rgb(177, 64, 159); -webkit-box-shadow: 0 0 18px rgb(180, 22, 155); }
   to { background-color: rgb(140, 19, 197); -webkit-box-shadow: 0 0 9px rgb(114, 1, 167); }
 }
-
 a.green.button {
   -webkit-animation-name: greenPulse;
   -webkit-animation-duration: 2s;
@@ -185,18 +173,18 @@ a.green.button {
 	border-radius: 10px;
 	cursor:pointer;
 }
-	#step{
-		position: absolute;
-		width: 200px;
-		height: 70px;
-		top: 70px;
-		right: 50px;
-		z-index: 10;
-		border: 3px dashed rgb(255, 252, 252);
-		background-color: rgba(210, 43, 241, 0.67);
-		text-align: center;
-		border-radius: 10px;
-		font-size: 1.6em;
-		color: white;
-		font-family: "微软雅黑";
-	}
+#step{
+	position: absolute;
+	width: 200px;
+	height: 70px;
+	top: 70px;
+	left: 850px;
+	z-index: 10;
+	border: 3px dashed rgb(255, 252, 252);
+	background-color: rgba(210, 43, 241, 0.67);
+	text-align: center;
+	border-radius: 10px;
+	font-size: 1.6em;
+	color: white;
+	font-family: "微软雅黑";
+}
