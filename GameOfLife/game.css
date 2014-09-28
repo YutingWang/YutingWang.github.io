@@ -1,0 +1,33 @@
+table, td, tr{
+	empty-cells: show;
+	border-collapse:collapse;
+}
+td{
+	width:30px;
+	height:30px;
+	border-color: #ccc;
+	border-width: 1px;
+	border-style: solid;
+}
+body{
+	background-color: #ccc;
+}
+.container{
+	margin-left: 100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width:1200px;
+	height:500px;
+}
+.game{
+	margin:0 auto;
+	padding-left: 150px;
+
+}
+.button{
+	width: 300px;
+	height: 500px;
+	top: 50px;
+	left: 900px;
+	position: absolute;
+}
