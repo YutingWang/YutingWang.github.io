@@ -1,6 +1,7 @@
 
 N = 3;
-future = new Array(9);
+future = new Array(N*N);
+now = new Array(N*N);
 /*
 **细胞编号如下：
 **A1 B1 A2
@@ -9,8 +10,7 @@ future = new Array(9);
  */
 test('test', function() {    
 	//所有细胞周围有1个活细胞的情况（A1除外）
-	now = null;
-	now = new Array(9);
+
 	now = [1, 0, 0, 0, 0, 0, 0, 0, 0];
 	deepEqual(changeCell(),[0,0,0,0,0,0,0,0,0],'one cell passed');
 
