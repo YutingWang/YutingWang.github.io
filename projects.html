@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Yuting Wang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href=" css/vendor/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href=" css/flat-ui.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <style>
+      body {
+        min-height: 2000px;
+        padding-top: 70px;
+      }
+      .myClass{
+        padding: 48px 60px 48px 60px;
+        /* padding-right: 60px; */
+        /* padding-top: 40px; */
+        border-radius: 6px;
+        background: #eee;
+      }
+      hr{
+        border-top: 1px solid #7F8C8D;
+      }
+      .mytag{
+            position: relative;
+    display: inline-block;
+    height: 27px;
+    padding: 6px 21px;
+    margin: 0 5px 5px 0;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 15px;
+    color: #EEEEEE;
+    vertical-align: middle;
+    background-color: #1ABC9C;
+    border-radius: 4px;
+      }
+    </style>
+        <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="#">Yuting Wang</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="myClass">
+        <div class="project">
+          <h4>Statistical Analysis for Set-Top Box</h4>
+          <div class="tags" style="float:right;">
+            <span class="mytag">Distributed Database</span>
+            <span class="mytag">Spark</span>
+            <span class="mytag">Hadoop</span>
+            <span class="mytag">Scala</span>
+          </div>
+          <p><em>October 2015</em>, Group Member,Tsinghua University</p>
+          <p>It could perform real-time statistical analysis on 6 scenarios including number of channel-turnning, time of TV-watching,top-30 channels with most clicks,top-30 channels with longest watching time,user behavior analysis, (what a given user do on a single day),and recommending 7 channel to a given user according to his watching history. We use Hadoop for data storage, Spark for data procsssing, and Play Framework(a web application framework,MVC) to display result.
+            <span class="fui-info-circle picIcon_show" onClick="showPic(1)" style="color: #1abc9c;"></span>
+            <span class="fui-info-circle picIcon_hide" onclick="hidePic(1)" style="display:none;"></span>
+          </p>          
+          <div class="row projectPic"  style="display:none;">
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" href="#">
+              <img alt="100%x100" src="img/1.jpg" data-holder-rendered="true" style="height: 100%; width: 100%; display: block;">
+              </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" href="#">
+              <img alt="100%x100" src="img/2.jpg" data-holder-rendered="true" style="height: 100%; width: 100%; display: block;">
+              </a>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="project">
+          <h4>Online Ticket Office</h4>
+          <div class="tags" style="float:right;">
+            <span class="mytag">Wechat</span>
+            <span class="mytag">Django</span>
+            <span class="mytag">Python</span>
+          </div>
+          <p><em>December 2014</em>, Group Member,Tsinghua University</p>
+          <p> Designed and developed a unique online ticket booking system based on Python and Django. Through this system, students in Tsinghua could be aware of current activities, buy film tickets and choose seats using WeChat.  
+            <span class="fui-info-circle picIcon_show" onClick="showPic(1)" style="color: #1abc9c;"></span>
+            <span class="fui-info-circle picIcon_hide" onclick="hidePic(1)" style="display:none;"></span>
+          </p>          
+          <div class="row projectPic"  style="display:none;">
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" href="#">
+              <img alt="100%x100" src="img/1.jpg" data-holder-rendered="true" style="height: 100%; width: 100%; display: block;">
+              </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" href="#">
+              <img alt="100%x100" src="img/2.jpg" data-holder-rendered="true" style="height: 100%; width: 100%; display: block;">
+              </a>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="project">
+          <h4>Healthy Diet</h4> 
+          <div class="tags" style="float:right;">
+            <span class="mytag">Android</span>
+            <span class="mytag">Java</span>
+          </div>         
+          <p><em>November 2014</em>, Group Member, Tsinghua University</p>          
+          <p>Developed an android application using Java with the intention to help user managing every day’s diet. By inputting what they eat, user could know how much vitamin, calorie and mineral substance they consume on a certain day and get a score on how healthy that day’s diet is. This app was awarded as the Top 3 application in the software-engineering class within 12 applications.
+          </p>
+          <hr />
+        </div>
+
+        <div class="project">
+          <h4>Q&A Online Community</h4>
+          <div class="tags" style="float:right;">
+            <span class="mytag">MVC</span>
+            <span class="mytag">C#</span>
+            <span class="mytag">MySQL</span>
+          </div>
+          <p><em>August 2014</em>, Group Member, Tsinghua University</p>
+          <p>Worked with three group members to development a wonderful website where questions can be created, answered, edited and organized users. 
+          </p>
+          <hr />
+        </div>
+
+        <div class="project">
+          <h4>Light From The Stars</h4>
+          <div class="tags" style="float:right;">
+            <span class="mytag">HTML5</span>
+            <span class="mytag">CSS</span>
+            <span class="mytag">JavaScript</span>
+          </div>
+          <p><em>July 2014</em>, Group Member, Tsinghua University</p>
+          <p>An interesting online game based on web front-end development(HTML5, JS, CSS, Ajax).
+          </p>
+          <hr />
+        </div>
+        <div class="project">
+          <h4>Content Based Image Retrival System</h4>
+          <div class="tags" style="float:right;">
+            <span class="mytag">Data Mining</span>
+            <span class="mytag">C++</span>
+          </div>
+          <p><em>May 2014</em>, Group Member,Tsinghua University</p>
+          <p> Find similar pictures for user with self-designed features extraction method, and advanced data structure R-tree. The dataset contains 5000 pictures in 10 categories.
+            <span class="fui-info-circle picIcon_show" onClick="showPic(2)" style="color: #1abc9c;"></span>
+            <span class="fui-info-circle picIcon_hide" onclick="hidePic(2)" style="display:none;"></span></p>
+          <div class="row projectPic"  style="display:none;">
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" href="#">
+                <img alt="100%x100" src="img/3.jpg" data-holder-rendered="true" style="height: 100%; width: 100%; display: block;">
+              </a>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="project">
+          <h4>Article Recommendation System</h4>
+          <div class="tags" style="float:right;">
+            <span class="mytag">Data Mining</span>
+            <span class="mytag">C++</span>
+          </div>
+          <p><em>May 2014</em>,Group Member, Tsinghua University</p>
+          <p>Using K-NN, Collaborative Flitering(CF), Content Based (CB) method and Mixed algorithm to recommand articles to users on a given dataset. 
+          </p>
+          <hr />
+        </div>
+        <div class="project">
+          <h4>Chinese Language Webpage Retrieval System</h4>
+          <div class="tags" style="float:right;">
+            <span class="mytag">Data Structure</span>
+            <span class="mytag">C++</span>
+          </div>
+          <p><em>December 2013</em>, Tsinghua University</p>
+          <p> Created a system which users could search in Chinese in a given webpage packages consisted of 2000 pages and get a list of pages which contain the key sentence. Different data structure to organize the pages such as balanced binary tree and hash dictionary were embedded in the program. 
+          </p>
+          <hr />
+        </div>
+      </div><!-- /myclass -->
+
+    </div> <!-- /container -->
+
+
+    <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+    <script src=" js/vendor/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src=" js/vendor/video.js"></script>
+    <script src=" js/flat-ui.min.js"></script>
+    <script>
+    function showPic(index){
+      $($(".projectPic")[index-1]).slideDown(1000);
+      $($(".picIcon_show")[index-1]).hide();
+      $($(".picIcon_hide")[index-1]).show();
+    }
+    function hidePic(index){
+      $($(".projectPic")[index-1]).slideUp(1000);
+      $($(".picIcon_show")[index-1]).show();
+      $($(".picIcon_hide")[index-1]).hide();
+    }
+    </script>
+  </body>
+</html>
