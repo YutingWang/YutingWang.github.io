@@ -1,0 +1,83 @@
+<html lang="zh-CN"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Narrow Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="css/mycss.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container head_bar" onclick="alert(1);">
+      <div class="logo_tagline">        
+        <div class="logo">
+          <img src="img/logo.png" alt="Home">
+        </div>
+        <div class="tagline">
+          <div id="language" class="language">
+              <ul class="nav navbar-right" style="margin-right: 0px;">
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Language <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Francis</a></li>
+                    <li><a href="#">Chinese</a></li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+          <div id="tel" class="tel">081-1234-1234</div>
+        </div>
+      </div>
+    </div>
+    <div class="container menu">
+      <div class="_nav">
+        <ul class="nav navbar-nav">
+              <li ><a class="menuItem" href="Home.html">Home</a></li>
+              <li ><a class="menuItem" href="productA.html">ProductA</a></li>
+              <li ><a class="menuItem" href="productB.html">ProductB</a></li>
+              <li><a href="Contact.html" class="menuItem" >Contact</a></li>      
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" id="products" style="display:block"> 
+      </div> 
+      <div class="row" id="product">
+      </div>
+
+        
+    </div>
+    <footer class="footer" style="text-align:center">
+          <p>© Company 2014</p>
+        </footer>
+    </div> <!-- /container -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/product.js"></script>
+    <script>
+      loadProduct(data["food"]);
+    </script>
+
+</body>
+</html>

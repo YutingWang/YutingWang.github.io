@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+
+    </style>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="css/mycss.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container head_bar" onclick="alert(1);">
+      <div class="logo_tagline">        
+        <div class="logo">
+          <img src="img/logo.png" alt="Home">
+        </div>
+        <div class="tagline">
+          <div id="language" class="language">
+              <ul class="nav navbar-right" style="margin-right: 0px;">
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Language <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Francis</a></li>
+                    <li><a href="#">Chinese</a></li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+          <div id="tel" class="tel">081-1234-1234</div>
+        </div>
+      </div>
+    </div>
+    <div class="container menu">
+      <div class="_nav">
+        <ul class="nav navbar-nav">
+              <li ><a class="menuItem" href="Home.html">Home</a></li>
+              <li ><a class="menuItem" href="productA.html">ProductA</a></li>
+              <li ><a class="menuItem" href="productB.html">ProductB</a></li>
+              <li><a href="Contact.html" class="menuItem" >Contact</a></li>            
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!--Map-->
+    <div class="container">
+      <div class="leftContainer"> 
+        <h2>Contact Us</h2> 
+        <p>Tel:(450)269-2212</p>  
+        <p>Email:abc@gmail.com</p>           
+        <h3>Opening Hours</h3>
+        <p>Mon : 9am - 10pm<br>
+           Tue : 9am - 10pm<br>
+           Wed : 9am - 10pm<br>
+           Thu : 9am - 10pm<br>
+           Fri : 9am - 10pm<br>
+           Sat : 9am - 10pm<br></p>            
+      </div>
+      <div class="rightContainer">
+        <div id="map"></div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/map.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnX8m9nkCDuc2PsWG20jVZA-M27Cp3Mks&callback=initMap">
+    </script>
+    <script src="js/bootstrap.js"></script>
+    
+    
+    
+  </body>
+</html>
